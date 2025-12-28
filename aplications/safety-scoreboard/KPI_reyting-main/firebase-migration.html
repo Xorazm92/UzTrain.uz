@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔄 Firebase → LocalStorage Migration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .step {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .step h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .status.pending {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .status.loading {
+            background: #cfe2ff;
+            color: #084298;
+            border: 1px solid #b6d4fe;
+        }
+
+        .status.success {
+            background: #d1e7dd;
+            color: #0f5132;
+            border: 1px solid #badbcc;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #842029;
+            border: 1px solid #f5c2c7;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 10px 5px;
+            display: inline-block;
+        }
+
+        .btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .log {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+
+        .log-line {
+            margin-bottom: 5px;
+        }
+
+        .data-preview {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .company-item {
+            padding: 10px;
+            background: white;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔄 Firebase → LocalStorage</h1>
+        <p class="subtitle">Ma'lumotlarni Firebase'dan LocalStorage'ga ko'chirish</p>
+
+        <div id="status" class="status pending">
+            ⏳ Tayyor. "Boshlash" tugmasini bosing.
+        </div>
+
+        <div class="info-box">
+            <strong>ℹ️ Bu narsa qiladi:</strong>
+            <ol style="margin-left: 20px; margin-top: 10px;">
+                <li>Firebase'dagi barcha ma'lumotlarni o'qiydi (bir marta)</li>
+                <li>LocalStorage'ga ko'chiradi</li>
+                <li>Keyin Firebase o'chiriladi va faqat LocalStorage ishlatiladi</li>
+                <li>Quota muammosi bo'lmaydi</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">1</span>Firebase Ulanishi</h2>
+            <div id="firebase-status">Tekshirilmoqda...</div>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">2</span>Ma'lumotlarni Yuklash</h2>
+            <div id="data-status">Kutilmoqda...</div>
+            <div id="data-preview" class="data-preview" style="display: none;"></div>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">3</span>LocalStorage'ga Saqlash</h2>
+            <div id="save-status">Kutilmoqda...</div>
+        </div>
+
+        <div class="actions">
+            <button id="start-btn" class="btn btn-success" onclick="startMigration()">
+                🚀 Boshlash
+            </button>
+            <button id="verify-btn" class="btn" onclick="verifyData()" style="display: none;">
+                ✅ Tekshirish
+            </button>
+            <a href="index.html" class="btn" id="continue-btn" style="display: none; text-decoration: none;">
+                ➡️ Tizimga O'tish
+            </a>
+        </div>
+
+        <div class="warning-box" style="margin-top: 30px;">
+            <strong>⚠️ Muhim:</strong>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Bu jarayon bir marta bajariladi</li>
+                <li>Internet ulanishi kerak</li>
+                <li>Jarayon tugaguncha sahifani yopmang</li>
+                <li>Keyin Firebase o'chiriladi va faqat LocalStorage ishlatiladi</li>
+            </ul>
+        </div>
+
+        <div class="log" id="console-log"></div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        const logs = [];
+        let db = null;
+        let migratedData = [];
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const emoji = type === 'success' ? '✅' : type === 'error' ? '❌' : type === 'warning' ? '⚠️' : 'ℹ️';
+            const logMessage = `[${timestamp}] ${emoji} ${message}`;
+            logs.push(logMessage);
+            updateConsoleLog();
+            console.log(logMessage);
+        }
+
+        function updateConsoleLog() {
+            const logDiv = document.getElementById('console-log');
+            logDiv.innerHTML = logs.map(l => `<div class="log-line">${l}</div>`).join('');
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function updateStatus(message, type = 'loading') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = `status ${type}`;
+            statusDiv.innerHTML = type === 'loading' ?
+                `<div class="spinner"></div>${message}` :
+                message;
+        }
+
+        // Initialize Firebase
+        function initFirebase() {
+            log('Firebase initsializatsiya qilinmoqda...', 'info');
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyCgDZtXjpmO3hN2e6lEZKLMVYe9ZKBDyO4",
+                authDomain: "nbt-kpi.firebaseapp.com",
+                projectId: "nbt-kpi",
+                storageBucket: "nbt-kpi.firebasestorage.app",
+                messagingSenderId: "859763032556",
+                appId: "1:859763032556:web:38ec98599f45376cf2c0c9"
+            };
+
+            try {
+                firebase.initializeApp(firebaseConfig);
+                db = firebase.firestore();
+                log('Firebase muvaffaqiyatli ulandi!', 'success');
+                document.getElementById('firebase-status').innerHTML = '✅ Ulandi';
+                return true;
+            } catch (error) {
+                log(`Firebase xatosi: ${error.message}`, 'error');
+                document.getElementById('firebase-status').innerHTML = `❌ Xato: ${error.message}`;
+                return false;
+            }
+        }
+
+        async function startMigration() {
+            document.getElementById('start-btn').disabled = true;
+            updateStatus('Jarayon boshlandi...', 'loading');
+            log('Migration boshlandi', 'info');
+
+            // Step 1: Initialize Firebase
+            if (!db) {
+                const success = initFirebase();
+                if (!success) {
+                    updateStatus('❌ Firebase ulanmadi!', 'error');
+                    document.getElementById('start-btn').disabled = false;
+                    return;
+                }
+            }
+
+            // Step 2: Load data from Firebase
+            try {
+                updateStatus('Firebase\'dan ma\'lumotlar yuklanmoqda...', 'loading');
+                log('Firebase\'dan ma\'lumotlar o\'qilmoqda...', 'info');
+                document.getElementById('data-status').innerHTML = '⏳ Yuklanmoqda...';
+
+                const querySnapshot = await db.collection("companies").get();
+
+                migratedData = [];
+                querySnapshot.forEach((doc) => {
+                    migratedData.push(doc.data());
+                });
+
+                log(`${migratedData.length} ta korxona topildi`, 'success');
+                document.getElementById('data-status').innerHTML = `✅ ${migratedData.length} ta korxona yuklandi`;
+
+                // Show preview
+                const previewDiv = document.getElementById('data-preview');
+                previewDiv.style.display = 'block';
+                previewDiv.innerHTML = migratedData.map(c =>
+                    `<div class="company-item">
+                        <strong>${c.name}</strong> - 
+                        Xodimlar: ${c.employees} - 
+                        Ball: ${c.overallIndex?.toFixed(1) || 'N/A'}
+                    </div>`
+                ).join('');
+
+                // Step 3: Save to LocalStorage
+                updateStatus('LocalStorage\'ga saqlanmoqda...', 'loading');
+                log('LocalStorage\'ga yozilmoqda...', 'info');
+                document.getElementById('save-status').innerHTML = '⏳ Saqlanmoqda...';
+
+                localStorage.setItem('mm_companies', JSON.stringify(migratedData));
+
+                log('LocalStorage\'ga muvaffaqiyatli saqlandi!', 'success');
+                document.getElementById('save-status').innerHTML = `✅ ${migratedData.length} ta korxona saqlandi`;
+
+                // Success!
+                updateStatus(`✅ Muvaffaqiyat! ${migratedData.length} ta korxona ko'chirildi`, 'success');
+                log('Migration muvaffaqiyatli yakunlandi!', 'success');
+
+                // Show next steps
+                document.getElementById('verify-btn').style.display = 'inline-block';
+                document.getElementById('continue-btn').style.display = 'inline-block';
+
+            } catch (error) {
+                log(`Xato: ${error.message}`, 'error');
+                updateStatus(`❌ Xato: ${error.message}`, 'error');
+                document.getElementById('data-status').innerHTML = `❌ Xato: ${error.message}`;
+                document.getElementById('start-btn').disabled = false;
+            }
+        }
+
+        function verifyData() {
+            log('Ma\'lumotlar tekshirilmoqda...', 'info');
+
+            const stored = localStorage.getItem('mm_companies');
+            if (!stored) {
+                alert('❌ LocalStorage\'da ma\'lumot topilmadi!');
+                log('LocalStorage bo\'sh!', 'error');
+                return;
+            }
+
+            try {
+                const data = JSON.parse(stored);
+                log(`✅ LocalStorage\'da ${data.length} ta korxona bor`, 'success');
+                alert(`✅ Tekshiruv muvaffaqiyatli!\n\nLocalStorage'da ${data.length} ta korxona saqlangan.\n\nEndi "Tizimga O'tish" tugmasini bosing.`);
+            } catch (e) {
+                log('LocalStorage ma\'lumotlari buzilgan!', 'error');
+                alert('❌ LocalStorage ma\'lumotlari buzilgan!');
+            }
+        }
+
+        // Check on load
+        window.addEventListener('load', () => {
+            log('Sahifa yuklandi', 'info');
+
+            // Check if already migrated
+            const existing = localStorage.getItem('mm_companies');
+            if (existing) {
+                try {
+                    const data = JSON.parse(existing);
+                    log(`LocalStorage\'da ${data.length} ta korxona topildi`, 'info');
+                    updateStatus(`ℹ️ LocalStorage\'da ${data.length} ta korxona mavjud. Qayta yuklash uchun "Boshlash" ni bosing.`, 'pending');
+                } catch (e) {
+                    log('LocalStorage ma\'lumotlari buzilgan', 'warning');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

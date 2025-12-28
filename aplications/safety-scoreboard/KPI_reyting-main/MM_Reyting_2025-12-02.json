@@ -1,0 +1,3603 @@
+{
+  "companies": [
+    {
+      "profile": "electric",
+      "overallIndex": 90.28,
+      "employees": 314,
+      "name": "Qarshi signallashtirish va aloqa masofasi filiali",
+      "rawData": {
+        "mmBudget": "10.1",
+        "trainingPassed": "23",
+        "auditIssues": "2",
+        "totalBudget": "96.2",
+        "group": "0",
+        "reports": "121",
+        "ticketYellow": "6",
+        "inspectionDone": "162",
+        "ppeRequired": "292",
+        "totalHours": 571480,
+        "occupational": "0",
+        "assessed": "151",
+        "totalIssues": "6",
+        "emergencyPlanned": "3768",
+        "equipmentInspected": "1",
+        "emergencyParticipated": "5629",
+        "closedIssues": "6",
+        "ppeEquipped": "292",
+        "authorizedStaff": "15",
+        "light": "0",
+        "ticketRed": "0",
+        "noincident": "365",
+        "inspectionPlanned": "162",
+        "trainingRequired": "20",
+        "totalWorkplaces": "151",
+        "employees": 314,
+        "fatal": "0",
+        "ticketGreen": "16",
+        "totalStaffEquipment": "15",
+        "severe": "0",
+        "equipmentTotal": "1",
+        "microInjuries": "0",
+        "auditTotal": "12",
+        "name": "Qarshi signallashtirish va aloqa masofasi filiali"
+      },
+      "id": "comp_1764652258618_p0ist",
+      "dateAdded": "2025-12-02T05:10:58.618Z",
+      "zone": "green",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 100,
+          "score": 27
+        },
+        "training": {
+          "value": 114.99999999999999,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 38.53503184713376,
+          "score": 83
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 10.498960498960498,
+          "score": 35
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 83.33333333333334,
+          "score": 83
+        },
+        "emergency": {
+          "value": 149.3895966029724,
+          "score": 100
+        },
+        "violations": {
+          "value": 10.828025477707007,
+          "score": 14
+        }
+      },
+      "totalHours": 571480,
+      "rank": 1
+    },
+    {
+      "employees": 559,
+      "totalHours": 1017380,
+      "profile": "electric",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 97.26027397260275,
+          "score": 27
+        },
+        "training": {
+          "value": 99.24812030075188,
+          "score": 99
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 84.25760286225402,
+          "score": 100
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 20.11173184357542,
+          "score": 0
+        },
+        "ppe": {
+          "value": 5590,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 99.80453479280688,
+          "score": 100
+        },
+        "violations": {
+          "value": 11.985688729874775,
+          "score": 12
+        }
+      },
+      "name": "Buxoro elektr taminoti masofasi",
+      "overallIndex": 89.8,
+      "id": "comp_1764589475748_1igxf",
+      "zone": "green",
+      "rawData": {
+        "severe": "0",
+        "noincident": "355",
+        "inspectionPlanned": "42",
+        "reports": "471",
+        "equipmentTotal": "9",
+        "trainingPassed": "528",
+        "authorizedStaff": "9",
+        "emergencyParticipated": "2553",
+        "trainingRequired": "532",
+        "mmBudget": "180",
+        "emergencyPlanned": "2558",
+        "closedIssues": "1",
+        "ppeEquipped": "559",
+        "totalStaffEquipment": "9",
+        "light": "0",
+        "totalIssues": "1",
+        "inspectionDone": "42",
+        "equipmentInspected": "9",
+        "microInjuries": "0",
+        "totalBudget": "895",
+        "employees": 559,
+        "auditIssues": "0",
+        "totalHours": 1017380,
+        "group": "0",
+        "totalWorkplaces": "67",
+        "fatal": "0",
+        "assessed": "67",
+        "ppeRequired": "10",
+        "occupational": "0",
+        "ticketRed": "0",
+        "name": "Buxoro elektr taminoti masofasi",
+        "auditTotal": "11",
+        "ticketYellow": "15",
+        "ticketGreen": "22"
+      },
+      "dateAdded": "2025-12-01T11:44:35.748Z",
+      "rank": 2
+    },
+    {
+      "rawData": {
+        "trainingPassed": "425",
+        "closedIssues": "1",
+        "group": "0",
+        "inspectionPlanned": "90",
+        "light": "0",
+        "equipmentInspected": "1",
+        "totalBudget": "305000",
+        "authorizedStaff": "48",
+        "ticketGreen": "19",
+        "totalStaffEquipment": "27",
+        "mmBudget": "20000",
+        "ticketYellow": "3",
+        "auditIssues": "0",
+        "auditTotal": "5",
+        "reports": "0",
+        "severe": "0",
+        "noincident": "355",
+        "fatal": "0",
+        "microInjuries": "0",
+        "ppeRequired": "3",
+        "name": "Qorlito'g' temir yo'l masofasi filiali",
+        "trainingRequired": "425",
+        "equipmentTotal": "1",
+        "totalWorkplaces": "53",
+        "occupational": "0",
+        "totalHours": 782600,
+        "ppeEquipped": "430",
+        "inspectionDone": "90",
+        "assessed": "53",
+        "totalIssues": "1",
+        "employees": 430,
+        "ticketRed": "0",
+        "emergencyParticipated": "127",
+        "emergencyPlanned": "127"
+      },
+      "overallIndex": 89.42,
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 97.26027397260275,
+          "score": 27
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 6.557377049180328,
+          "score": 77
+        },
+        "ppe": {
+          "value": 14333.333333333334,
+          "score": 100
+        },
+        "equipment": {
+          "value": 131.11111111111111,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 6.511627906976744,
+          "score": 36
+        }
+      },
+      "id": "comp_1764575085888_vs2hc",
+      "employees": 430,
+      "name": "Qorlito'g' temir yo'l masofasi filiali",
+      "dateAdded": "2025-12-01T07:44:45.888Z",
+      "profile": "road",
+      "totalHours": 782600,
+      "zone": "green",
+      "rank": 3
+    },
+    {
+      "name": "214-Yo'l mashina stansiyasi",
+      "dateAdded": "2025-12-01T12:07:09.820Z",
+      "zone": "green",
+      "totalHours": 580580,
+      "profile": "road",
+      "id": "comp_1764590829820_taxvq",
+      "employees": 319,
+      "overallIndex": 89.12,
+      "rawData": {
+        "auditTotal": "12",
+        "inspectionPlanned": "54",
+        "trainingPassed": "53",
+        "emergencyParticipated": "3810",
+        "noincident": "365",
+        "emergencyPlanned": "3720",
+        "ppeEquipped": "250",
+        "totalStaffEquipment": "20",
+        "trainingRequired": "50",
+        "totalIssues": "21",
+        "ticketYellow": "3",
+        "ticketRed": "0",
+        "closedIssues": "21",
+        "occupational": "0",
+        "fatal": "0",
+        "group": "0",
+        "equipmentInspected": "4",
+        "equipmentTotal": "4",
+        "authorizedStaff": "20",
+        "totalHours": 580580,
+        "assessed": "46",
+        "totalBudget": "18",
+        "ppeRequired": "250",
+        "employees": 319,
+        "light": "0",
+        "mmBudget": "10",
+        "auditIssues": "3",
+        "microInjuries": "0",
+        "reports": "120",
+        "name": "214-Yo'l mashina stansiyasi",
+        "inspectionDone": "54",
+        "ticketGreen": "12",
+        "severe": "0",
+        "totalWorkplaces": "46"
+      },
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 100,
+          "score": 27
+        },
+        "training": {
+          "value": 106,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 37.61755485893417,
+          "score": 82
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 55.55555555555556,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 75,
+          "score": 75
+        },
+        "emergency": {
+          "value": 102.41935483870968,
+          "score": 100
+        },
+        "violations": {
+          "value": 6.583072100313479,
+          "score": 36
+        }
+      },
+      "rank": 4
+    },
+    {
+      "name": "Qashqadaryo temir yo'l masofasi filiali",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 100,
+          "score": 27
+        },
+        "training": {
+          "value": 120,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 24.744027303754265,
+          "score": 66
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 58.46153846153847,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 76.92307692307692,
+          "score": 77
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 6.313993174061433,
+          "score": 37
+        }
+      },
+      "profile": "road",
+      "dateAdded": "2025-12-02T05:07:39.531Z",
+      "rawData": {
+        "ppeRequired": "559",
+        "inspectionPlanned": "120",
+        "fatal": "0",
+        "trainingPassed": "24",
+        "ppeEquipped": "559",
+        "ticketYellow": "10",
+        "employees": 586,
+        "severe": "0",
+        "assessed": "110",
+        "totalStaffEquipment": "4",
+        "occupational": "0",
+        "totalBudget": "39",
+        "auditTotal": "13",
+        "auditIssues": "3",
+        "inspectionDone": "120",
+        "reports": "145",
+        "equipmentInspected": "2",
+        "trainingRequired": "20",
+        "emergencyPlanned": "1118",
+        "emergencyParticipated": "1118",
+        "group": "0",
+        "name": "Qashqadaryo temir yo'l masofasi filiali",
+        "equipmentTotal": "2",
+        "ticketRed": "0",
+        "ticketGreen": "7",
+        "light": "0",
+        "totalHours": 1066520,
+        "mmBudget": "22.8",
+        "authorizedStaff": "4",
+        "closedIssues": "5",
+        "microInjuries": "0",
+        "totalWorkplaces": "110",
+        "totalIssues": "5",
+        "noincident": "365"
+      },
+      "id": "comp_1764600323516_it24i",
+      "employees": 586,
+      "overallIndex": 88.54,
+      "zone": "green",
+      "totalHours": 1066520,
+      "rank": 5
+    },
+    {
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 100,
+          "score": 27
+        },
+        "training": {
+          "value": 133.33333333333331,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 37.36089030206677,
+          "score": 82
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 98.40310746655157,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 94.11764705882352,
+          "score": 94
+        },
+        "emergency": {
+          "value": 128,
+          "score": 100
+        },
+        "violations": {
+          "value": 2.2257551669316373,
+          "score": 73
+        }
+      },
+      "employees": 629,
+      "zone": "green",
+      "profile": "traffic",
+      "name": "Qarshi MTU stansiyalari",
+      "totalHours": 1144780,
+      "overallIndex": 88.42,
+      "id": "comp_1764586074709_mj9g8",
+      "dateAdded": "2025-12-01T10:47:54.709Z",
+      "rawData": {
+        "totalStaffEquipment": "8",
+        "noincident": "365",
+        "ppeEquipped": "292",
+        "equipmentInspected": "2",
+        "mmBudget": "228",
+        "name": "Qarshi MTU stansiyalari",
+        "auditIssues": "1",
+        "equipmentTotal": "2",
+        "employees": 629,
+        "ticketYellow": "3",
+        "fatal": "0",
+        "ticketRed": "0",
+        "emergencyPlanned": "7500",
+        "totalHours": 1144780,
+        "totalBudget": "231.7",
+        "emergencyParticipated": "9600",
+        "occupational": "0",
+        "totalWorkplaces": "132",
+        "trainingPassed": "100",
+        "trainingRequired": "75",
+        "inspectionPlanned": "180",
+        "group": "0",
+        "inspectionDone": "180",
+        "authorizedStaff": "8",
+        "closedIssues": "111",
+        "totalIssues": "111",
+        "auditTotal": "17",
+        "reports": "235",
+        "microInjuries": "0",
+        "severe": "0",
+        "light": "0",
+        "ppeRequired": "292",
+        "assessed": "132",
+        "ticketGreen": "5"
+      },
+      "rank": 6
+    },
+    {
+      "zone": "green",
+      "employees": 723,
+      "id": "comp_1764587241495_kbcwo",
+      "dateAdded": "2025-12-01T11:12:32.635Z",
+      "overallIndex": 88.1,
+      "rawData": {
+        "emergencyPlanned": "4950",
+        "ppeEquipped": "690",
+        "ticketRed": "0",
+        "auditTotal": "15",
+        "totalWorkplaces": "140",
+        "totalIssues": "7",
+        "severe": "0",
+        "totalStaffEquipment": "56",
+        "name": "Qarshi temir yo'l masofasi filiali",
+        "employees": 723,
+        "equipmentInspected": "19",
+        "trainingRequired": "88",
+        "noincident": "365",
+        "microInjuries": "0",
+        "trainingPassed": "90",
+        "emergencyParticipated": "6890",
+        "inspectionPlanned": "270",
+        "light": "0",
+        "group": "0",
+        "occupational": "0",
+        "authorizedStaff": "56",
+        "inspectionDone": "276",
+        "auditIssues": "3",
+        "totalBudget": "91.9",
+        "reports": "118",
+        "closedIssues": "7",
+        "equipmentTotal": "19",
+        "mmBudget": "40.2",
+        "ppeRequired": "689",
+        "assessed": "140",
+        "totalHours": 1315860,
+        "fatal": "0",
+        "ticketGreen": "18",
+        "ticketYellow": "9"
+      },
+      "totalHours": 1315860,
+      "name": "Qarshi temir yo'l masofasi filiali",
+      "profile": "road",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 100,
+          "score": 27
+        },
+        "training": {
+          "value": 102.27272727272727,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 16.32088520055325,
+          "score": 53
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 43.74319912948857,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100.14513788098694,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 102.22222222222221,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 80,
+          "score": 80
+        },
+        "emergency": {
+          "value": 139.1919191919192,
+          "score": 100
+        },
+        "violations": {
+          "value": 6.224066390041494,
+          "score": 38
+        }
+      },
+      "rank": 7
+    },
+    {
+      "dateAdded": "2025-12-01T10:58:59.249Z",
+      "name": "Buxoro signallashtirish va aloqa masofasi filiali",
+      "profile": "electric",
+      "overallIndex": 87.43,
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 97.26027397260275,
+          "score": 27
+        },
+        "training": {
+          "value": 87.22741433021807,
+          "score": 87
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 1.1698715814221408,
+          "score": 67
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 67.21311475409836,
+          "score": 67
+        },
+        "violations": {
+          "value": 4.956268221574344,
+          "score": 45
+        }
+      },
+      "zone": "green",
+      "id": "comp_1764586739249_ikn4v",
+      "totalHours": 624260,
+      "rawData": {
+        "totalWorkplaces": "35",
+        "trainingPassed": "280",
+        "reports": "0",
+        "emergencyParticipated": "82",
+        "authorizedStaff": "12",
+        "equipmentInspected": "2",
+        "ticketYellow": "0",
+        "employees": 343,
+        "mmBudget": "475177000",
+        "assessed": "35",
+        "emergencyPlanned": "122",
+        "trainingRequired": "321",
+        "totalIssues": "2",
+        "ppeRequired": "277",
+        "ticketRed": "0",
+        "auditIssues": "0",
+        "totalBudget": "40617877000",
+        "totalHours": 624260,
+        "inspectionDone": "5",
+        "totalStaffEquipment": "12",
+        "severe": "0",
+        "name": "Buxoro signallashtirish va aloqa masofasi filiali",
+        "inspectionPlanned": "5",
+        "occupational": "0",
+        "noincident": "355",
+        "ppeEquipped": "277",
+        "auditTotal": "15",
+        "microInjuries": "0",
+        "group": "0",
+        "equipmentTotal": "2",
+        "closedIssues": "2",
+        "ticketGreen": "17",
+        "fatal": "0",
+        "light": "0"
+      },
+      "employees": 343,
+      "rank": 8
+    },
+    {
+      "rawData": {
+        "emergencyPlanned": "9000",
+        "totalStaffEquipment": "54",
+        "ppeRequired": "720",
+        "totalWorkplaces": "104",
+        "totalIssues": "18",
+        "ppeEquipped": "720",
+        "inspectionPlanned": "66",
+        "trainingRequired": "20",
+        "closedIssues": "18",
+        "equipmentTotal": "06",
+        "trainingPassed": "25",
+        "auditIssues": "2",
+        "ticketRed": "0",
+        "authorizedStaff": "54",
+        "emergencyParticipated": "9000",
+        "ticketGreen": "53",
+        "name": "Qarshi lokomotiv deposi filiali",
+        "totalBudget": "81",
+        "totalHours": 1365000,
+        "mmBudget": "59.5",
+        "microInjuries": "0",
+        "occupational": "0",
+        "equipmentInspected": "6",
+        "inspectionDone": "66",
+        "light": "0",
+        "employees": 750,
+        "group": "0",
+        "auditTotal": "11",
+        "reports": "55",
+        "noincident": "365",
+        "ticketYellow": "3",
+        "fatal": "0",
+        "severe": "0",
+        "assessed": "104"
+      },
+      "dateAdded": "2025-12-01T12:42:42.053Z",
+      "overallIndex": 86.92,
+      "name": "Qarshi lokomotiv deposi filiali",
+      "id": "comp_1764592962052_fg9p4",
+      "totalHours": 1365000,
+      "employees": 750,
+      "zone": "green",
+      "profile": "locomotive",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 100,
+          "score": 27
+        },
+        "training": {
+          "value": 125,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 7.333333333333333,
+          "score": 29
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 73.4567901234568,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 81.81818181818181,
+          "score": 82
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 8.266666666666666,
+          "score": 25
+        }
+      },
+      "rank": 9
+    },
+    {
+      "profile": "electric",
+      "dateAdded": "2025-12-01T07:27:38.717Z",
+      "zone": "green",
+      "rawData": {
+        "totalHours": 336700,
+        "auditIssues": "0",
+        "totalBudget": "322",
+        "group": "0",
+        "light": "0",
+        "ticketYellow": "1",
+        "inspectionDone": "6",
+        "mmBudget": "69",
+        "ticketRed": "0",
+        "trainingPassed": "185",
+        "reports": "8",
+        "occupational": "0",
+        "inspectionPlanned": "6",
+        "closedIssues": "3",
+        "fatal": "0",
+        "auditTotal": "2",
+        "ppeEquipped": "185",
+        "equipmentInspected": "6",
+        "microInjuries": "0",
+        "assessed": "18",
+        "authorizedStaff": "8",
+        "equipmentTotal": "6",
+        "emergencyParticipated": "893",
+        "ppeRequired": "185",
+        "emergencyPlanned": "593",
+        "employees": 185,
+        "ticketGreen": "10",
+        "totalWorkplaces": "18",
+        "severe": "0",
+        "noincident": "334",
+        "totalIssues": "3",
+        "totalStaffEquipment": "8",
+        "name": "Qungirot elektr taminoti masofasi",
+        "trainingRequired": "185"
+      },
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 91.5068493150685,
+          "score": 25
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 4.324324324324325,
+          "score": 17
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 21.428571428571427,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 150.59021922428332,
+          "score": 100
+        },
+        "violations": {
+          "value": 7.027027027027027,
+          "score": 33
+        }
+      },
+      "totalHours": 336700,
+      "overallIndex": 86.84,
+      "employees": 185,
+      "id": "comp_1764574058716_uiybe",
+      "name": "Qungirot elektr taminoti masofasi",
+      "rank": 10
+    },
+    {
+      "zone": "green",
+      "profile": "factory",
+      "overallIndex": 86.68,
+      "rawData": {
+        "emergencyPlanned": "24",
+        "auditIssues": "0",
+        "totalWorkplaces": "72",
+        "closedIssues": "12",
+        "inspectionPlanned": "5",
+        "ticketRed": "0",
+        "employees": 914,
+        "trainingRequired": "10",
+        "totalIssues": "12",
+        "name": "Tinchlik lokomotiv deposi",
+        "light": "0",
+        "occupational": "0",
+        "group": "0",
+        "auditTotal": "40",
+        "microInjuries": "0",
+        "authorizedStaff": "5",
+        "ticketYellow": "0",
+        "assessed": "72",
+        "ppeRequired": "28",
+        "ticketGreen": "31",
+        "noincident": "355",
+        "fatal": "0",
+        "trainingPassed": "31",
+        "inspectionDone": "5",
+        "emergencyParticipated": "22",
+        "totalStaffEquipment": "2",
+        "totalBudget": "312.8",
+        "ppeEquipped": "412",
+        "severe": "0",
+        "totalHours": 1663480,
+        "mmBudget": "82",
+        "reports": "0",
+        "equipmentInspected": "11",
+        "equipmentTotal": "11"
+      },
+      "dateAdded": "2025-12-01T11:39:23.253Z",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 97.26027397260275,
+          "score": 27
+        },
+        "training": {
+          "value": 310,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 26.214833759590796,
+          "score": 0
+        },
+        "ppe": {
+          "value": 1471.4285714285713,
+          "score": 100
+        },
+        "equipment": {
+          "value": 160,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 91.66666666666666,
+          "score": 92
+        },
+        "violations": {
+          "value": 3.391684901531729,
+          "score": 61
+        }
+      },
+      "totalHours": 1663480,
+      "id": "comp_1764589163252_rwqhu",
+      "name": "Tinchlik lokomotiv deposi",
+      "employees": 914,
+      "rank": 11
+    },
+    {
+      "overallIndex": 85.24,
+      "dateAdded": "2025-12-02T05:33:45.130Z",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 100,
+          "score": 27
+        },
+        "training": {
+          "value": 120,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 102.38095238095238,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 10.498561840843719,
+          "score": 35
+        },
+        "ppe": {
+          "value": 100.73891625615762,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 111.53846153846155,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 8.333333333333337,
+          "score": 8
+        },
+        "emergency": {
+          "value": 247.22222222222223,
+          "score": 100
+        },
+        "violations": {
+          "value": 17.782909930715935,
+          "score": 3
+        }
+      },
+      "zone": "green",
+      "employees": 433,
+      "totalHours": 788060,
+      "id": "comp_1764653625130_1jk9e",
+      "rawData": {
+        "severe": "0",
+        "ppeEquipped": "409",
+        "mmBudget": "43.8",
+        "emergencyParticipated": "8900",
+        "totalBudget": "417.2",
+        "assessed": "129",
+        "trainingRequired": "65",
+        "auditIssues": "11",
+        "equipmentInspected": "2",
+        "totalWorkplaces": "126",
+        "inspectionDone": "29",
+        "microInjuries": "0",
+        "authorizedStaff": "56",
+        "employees": 433,
+        "reports": "0",
+        "totalStaffEquipment": "56",
+        "ticketGreen": "32",
+        "occupational": "0",
+        "noincident": "365",
+        "totalHours": 788060,
+        "inspectionPlanned": "26",
+        "closedIssues": "10",
+        "ticketRed": "0",
+        "emergencyPlanned": "3600",
+        "equipmentTotal": "2",
+        "totalIssues": "10",
+        "light": "0",
+        "fatal": "0",
+        "auditTotal": "12",
+        "group": "0",
+        "trainingPassed": "78",
+        "ppeRequired": "406",
+        "ticketYellow": "15",
+        "name": "Qarshi elektr ta'minot masofasi filiali"
+      },
+      "name": "Qarshi elektr ta'minot masofasi filiali",
+      "profile": "electric",
+      "rank": 12
+    },
+    {
+      "rawData": {
+        "auditIssues": "1",
+        "equipmentInspected": "8",
+        "group": "0",
+        "microInjuries": "0",
+        "authorizedStaff": "18",
+        "ticketGreen": "10",
+        "ppeEquipped": "440",
+        "closedIssues": "5",
+        "trainingPassed": "440",
+        "noincident": "334",
+        "emergencyParticipated": "20",
+        "ticketRed": "0",
+        "ppeRequired": "440",
+        "inspectionDone": "227",
+        "severe": "0",
+        "emergencyPlanned": "20",
+        "name": "Ургенч локомотив депоси",
+        "employees": 440,
+        "totalIssues": "5",
+        "totalWorkplaces": "40",
+        "fatal": "0",
+        "light": "0",
+        "trainingRequired": "440",
+        "totalHours": 800800,
+        "assessed": "40",
+        "totalStaffEquipment": "14",
+        "inspectionPlanned": "227",
+        "mmBudget": "78",
+        "ticketYellow": "0",
+        "totalBudget": "121350",
+        "equipmentTotal": "8",
+        "reports": "0",
+        "occupational": "0",
+        "auditTotal": "1"
+      },
+      "overallIndex": 85.1,
+      "totalHours": 800800,
+      "id": "comp_1764575807684_p182v",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 91.5068493150685,
+          "score": 25
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 0.06427688504326329,
+          "score": 4
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 111.42857142857144,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 0,
+          "score": 0
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 2.272727272727273,
+          "score": 72
+        }
+      },
+      "zone": "green",
+      "profile": "wagon",
+      "dateAdded": "2025-12-01T07:56:47.684Z",
+      "name": "Ургенч локомотив депоси",
+      "employees": 440,
+      "rank": 13
+    },
+    {
+      "rawData": {
+        "equipmentInspected": "0",
+        "microInjuries": "0",
+        "totalIssues": "10",
+        "occupational": "0",
+        "severe": "0",
+        "light": "0",
+        "ppeRequired": "170",
+        "auditIssues": "7",
+        "inspectionPlanned": "18",
+        "fatal": "0",
+        "totalHours": 376740,
+        "reports": "25",
+        "employees": 207,
+        "ticketYellow": "1",
+        "emergencyPlanned": "1200",
+        "totalBudget": "25.0",
+        "ppeEquipped": "170",
+        "trainingRequired": "5",
+        "authorizedStaff": "0",
+        "equipmentTotal": "0",
+        "totalWorkplaces": "50",
+        "ticketRed": "0",
+        "totalStaffEquipment": "0",
+        "auditTotal": "17",
+        "ticketGreen": "4",
+        "trainingPassed": "6",
+        "closedIssues": "10",
+        "emergencyParticipated": "1500",
+        "mmBudget": "2.0",
+        "name": "Qarshi stansiyasi",
+        "assessed": "50",
+        "group": "0",
+        "inspectionDone": "22",
+        "noincident": "365"
+      },
+      "zone": "green",
+      "id": "comp_1764654595997_p4zex",
+      "dateAdded": "2025-12-02T05:49:55.997Z",
+      "name": "Qarshi stansiyasi",
+      "employees": 207,
+      "overallIndex": 83.6,
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 100,
+          "score": 27
+        },
+        "training": {
+          "value": 120,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 12.077294685990339,
+          "score": 44
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 8,
+          "score": 60
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 0,
+          "score": 0
+        },
+        "inspection": {
+          "value": 122.22222222222223,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 58.82352941176471,
+          "score": 59
+        },
+        "emergency": {
+          "value": 125,
+          "score": 100
+        },
+        "violations": {
+          "value": 3.3816425120772946,
+          "score": 61
+        }
+      },
+      "profile": "traffic",
+      "totalHours": 376740,
+      "rank": 14
+    },
+    {
+      "name": "Қўнғирот минтақавий темир йўл узели филиали",
+      "overallIndex": 81.3,
+      "id": "comp_1764583873701_d6n8g",
+      "employees": 1461,
+      "totalHours": 2659020,
+      "profile": "traffic",
+      "dateAdded": "2025-12-01T10:11:13.701Z",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 91.5068493150685,
+          "score": 25
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 0.7383641446922764,
+          "score": 44
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 0,
+          "score": 0
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 1.8480492813141685,
+          "score": 77
+        }
+      },
+      "zone": "green",
+      "rawData": {
+        "emergencyParticipated": "1320",
+        "inspectionPlanned": "690",
+        "employees": 1461,
+        "trainingPassed": "1461",
+        "inspectionDone": "690",
+        "closedIssues": "2",
+        "occupational": "0",
+        "ticketGreen": "18",
+        "trainingRequired": "1461",
+        "noincident": "334",
+        "ticketRed": "0",
+        "totalHours": 2659020,
+        "authorizedStaff": "0",
+        "equipmentInspected": "0",
+        "assessed": "43",
+        "totalIssues": "2",
+        "mmBudget": "1199",
+        "group": "0",
+        "light": "0",
+        "reports": "0",
+        "ppeEquipped": "1461",
+        "totalStaffEquipment": "0",
+        "equipmentTotal": "0",
+        "severe": "0",
+        "auditTotal": "2",
+        "fatal": "0",
+        "emergencyPlanned": "1320",
+        "microInjuries": "0",
+        "ppeRequired": "1461",
+        "auditIssues": "0",
+        "totalBudget": "162386",
+        "name": "Қўнғирот минтақавий темир йўл узели филиали",
+        "ticketYellow": "3",
+        "totalWorkplaces": "43"
+      },
+      "rank": 15
+    },
+    {
+      "totalHours": 793520,
+      "employees": 436,
+      "rawData": {
+        "assessed": "34",
+        "group": "0",
+        "equipmentInspected": "0",
+        "employees": 436,
+        "equipmentTotal": "0",
+        "occupational": "0",
+        "reports": "0",
+        "auditTotal": "1",
+        "totalWorkplaces": "34",
+        "severe": "0",
+        "ticketRed": "0",
+        "ticketGreen": "17",
+        "emergencyPlanned": "30",
+        "name": "Қўнғирот алоқа ва сигналлаштириш масофаси",
+        "mmBudget": "10",
+        "totalBudget": "2111",
+        "microInjuries": "0",
+        "fatal": "0",
+        "trainingPassed": "436",
+        "trainingRequired": "436",
+        "inspectionDone": "202",
+        "totalHours": 793520,
+        "authorizedStaff": "0",
+        "noincident": "334",
+        "emergencyParticipated": "30",
+        "totalStaffEquipment": "0",
+        "ticketYellow": "1",
+        "ppeRequired": "436",
+        "light": "0",
+        "auditIssues": "1",
+        "closedIssues": "1",
+        "inspectionPlanned": "202",
+        "totalIssues": "1",
+        "ppeEquipped": "436"
+      },
+      "name": "Қўнғирот алоқа ва сигналлаштириш масофаси",
+      "dateAdded": "2025-12-01T09:36:03.082Z",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 91.5068493150685,
+          "score": 25
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 0.47370914258645197,
+          "score": 28
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 0,
+          "score": 0
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 0,
+          "score": 0
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 4.587155963302752,
+          "score": 49
+        }
+      },
+      "profile": "electric",
+      "zone": "green",
+      "id": "comp_1764581763082_wdext",
+      "overallIndex": 80.6,
+      "rank": 16
+    },
+    {
+      "overallIndex": 79.5,
+      "employees": 265,
+      "profile": "traffic",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 85,
+          "score": 85
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 100,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 95.71428571428572,
+          "score": 96
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 98,
+          "score": 98
+        },
+        "violations": {
+          "value": 7.547169811320755,
+          "score": 30
+        }
+      },
+      "zone": "yellow",
+      "name": "Qo'qon lokomotiv deposi Andijon filiali",
+      "rawData": {
+        "trainingPassed": "25",
+        "group": "0",
+        "totalHours": 482300,
+        "noincident": "0",
+        "ppeRequired": "100",
+        "equipmentInspected": "13",
+        "authorizedStaff": "22",
+        "equipmentTotal": "13",
+        "light": "0",
+        "ticketGreen": "20",
+        "trainingRequired": "25",
+        "fatal": "0",
+        "emergencyParticipated": "49",
+        "auditIssues": "0",
+        "employees": 265,
+        "emergencyPlanned": "50",
+        "auditTotal": "1",
+        "mmBudget": "47",
+        "closedIssues": "3",
+        "occupational": "0",
+        "inspectionDone": "67",
+        "assessed": "34",
+        "totalBudget": "47",
+        "totalIssues": "3",
+        "reports": "0",
+        "totalStaffEquipment": "22",
+        "microInjuries": "0",
+        "inspectionPlanned": "70",
+        "ppeEquipped": "100",
+        "ticketYellow": "0",
+        "ticketRed": "0",
+        "totalWorkplaces": "40",
+        "severe": "0",
+        "name": "Qo'qon lokomotiv deposi Andijon filiali"
+      },
+      "dateAdded": "2025-12-01T08:13:35.175Z",
+      "totalHours": 482300,
+      "id": "comp_1764576815175_7racq",
+      "rank": 17
+    },
+    {
+      "totalHours": 755300,
+      "overallIndex": 79.38,
+      "dateAdded": "2025-12-01T10:25:20.796Z",
+      "zone": "yellow",
+      "id": "comp_1764584720795_ans99",
+      "rawData": {
+        "auditTotal": "4",
+        "trainingRequired": "0",
+        "noincident": "0",
+        "authorizedStaff": "27",
+        "ticketYellow": "0",
+        "name": "Qoʻqon VEU ",
+        "light": "0",
+        "inspectionDone": "9",
+        "equipmentInspected": "8",
+        "ticketRed": "0",
+        "totalIssues": "2",
+        "totalHours": 755300,
+        "occupational": "0",
+        "totalWorkplaces": "356",
+        "microInjuries": "0",
+        "ppeRequired": "1",
+        "assessed": "356",
+        "mmBudget": "1",
+        "auditIssues": "0",
+        "closedIssues": "2",
+        "employees": 415,
+        "totalBudget": "1",
+        "severe": "0",
+        "trainingPassed": "0",
+        "inspectionPlanned": "14",
+        "totalStaffEquipment": "27",
+        "ppeEquipped": "100",
+        "equipmentTotal": "8",
+        "group": "0",
+        "emergencyPlanned": "5",
+        "ticketGreen": "1",
+        "emergencyParticipated": "4",
+        "fatal": "0",
+        "reports": "0"
+      },
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 0,
+          "score": 0
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 100,
+          "score": 0
+        },
+        "ppe": {
+          "value": 10000,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 64.28571428571429,
+          "score": 64
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 80,
+          "score": 80
+        },
+        "violations": {
+          "value": 0.24096385542168677,
+          "score": 93
+        }
+      },
+      "employees": 415,
+      "name": "Qoʻqon VEU ",
+      "profile": "wagon",
+      "rank": 18
+    },
+    {
+      "dateAdded": "2025-12-01T11:37:14.643Z",
+      "profile": "electric",
+      "id": "comp_1764589034643_bdp1l",
+      "name": "0 Samarqand signallashtirish va aloqa masofasi filiali» SHCH-5",
+      "rawData": {
+        "ppeEquipped": "263",
+        "occupational": "0",
+        "auditIssues": "1",
+        "group": "0",
+        "light": "0",
+        "mmBudget": "45.4",
+        "totalHours": 478660,
+        "inspectionDone": "5",
+        "closedIssues": "1",
+        "totalStaffEquipment": "1",
+        "auditTotal": "12",
+        "noincident": "355",
+        "reports": "146",
+        "ppeRequired": "1",
+        "assessed": "42",
+        "employees": 263,
+        "microInjuries": "0",
+        "authorizedStaff": "1",
+        "totalBudget": "96.4",
+        "emergencyPlanned": "263",
+        "equipmentTotal": "1",
+        "trainingPassed": "9",
+        "trainingRequired": "17",
+        "name": "0 Samarqand signallashtirish va aloqa masofasi filiali» SHCH-5",
+        "ticketYellow": "1",
+        "fatal": "0",
+        "totalIssues": "1",
+        "inspectionPlanned": "5",
+        "equipmentInspected": "1",
+        "ticketRed": "0",
+        "totalWorkplaces": "42",
+        "ticketGreen": "5",
+        "emergencyParticipated": "252",
+        "severe": "0"
+      },
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 97.26027397260275,
+          "score": 27
+        },
+        "training": {
+          "value": 52.94117647058824,
+          "score": 53
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 55.51330798479087,
+          "score": 97
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 47.0954356846473,
+          "score": 0
+        },
+        "ppe": {
+          "value": 26300,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 91.66666666666666,
+          "score": 92
+        },
+        "emergency": {
+          "value": 95.81749049429658,
+          "score": 96
+        },
+        "violations": {
+          "value": 3.041825095057034,
+          "score": 65
+        }
+      },
+      "overallIndex": 72.7,
+      "zone": "yellow",
+      "totalHours": 478660,
+      "employees": 263,
+      "rank": 19
+    },
+    {
+      "profile": "electric",
+      "zone": "yellow",
+      "dateAdded": "2025-12-01T06:46:03.650Z",
+      "overallIndex": 70.71,
+      "id": "comp_1764571563650_foeeb",
+      "name": "Кукон сигналлаштириш ва алока масофаси филиали",
+      "totalHours": 808080,
+      "employees": 444,
+      "rawData": {
+        "ppeRequired": "1",
+        "employees": 444,
+        "auditIssues": "17",
+        "ppeEquipped": "100",
+        "ticketRed": "0",
+        "microInjuries": "0",
+        "light": "0",
+        "auditTotal": "172",
+        "inspectionDone": "172",
+        "totalBudget": "25",
+        "ticketGreen": "11",
+        "severe": "0",
+        "assessed": "37",
+        "emergencyParticipated": "582",
+        "totalIssues": "1",
+        "equipmentTotal": "8",
+        "mmBudget": "25",
+        "inspectionPlanned": "172",
+        "trainingPassed": "11",
+        "group": "0",
+        "name": "Кукон сигналлаштириш ва алока масофаси филиали",
+        "equipmentInspected": "8",
+        "closedIssues": "1",
+        "totalWorkplaces": "55",
+        "fatal": "0",
+        "occupational": "0",
+        "reports": "0",
+        "ticketYellow": "8",
+        "totalHours": 808080,
+        "noincident": "0",
+        "authorizedStaff": "8",
+        "trainingRequired": "11",
+        "emergencyPlanned": "582",
+        "totalStaffEquipment": "8"
+      },
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 67.27272727272727,
+          "score": 67
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 100,
+          "score": 0
+        },
+        "ppe": {
+          "value": 10000,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 90.11627906976744,
+          "score": 90
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 7.882882882882883,
+          "score": 28
+        }
+      },
+      "rank": 20
+    },
+    {
+      "employees": 887,
+      "zone": "yellow",
+      "overallIndex": 69.98,
+      "rawData": {
+        "group": "0",
+        "trainingPassed": "3",
+        "totalIssues": "5",
+        "inspectionDone": "10",
+        "equipmentInspected": "17",
+        "auditTotal": "256",
+        "microInjuries": "0",
+        "mmBudget": "859000000",
+        "noincident": "0",
+        "authorizedStaff": "15",
+        "ppeRequired": "745",
+        "severe": "0",
+        "ticketYellow": "1",
+        "assessed": "127",
+        "equipmentTotal": "17",
+        "ppeEquipped": "745",
+        "occupational": "0",
+        "emergencyParticipated": "30",
+        "ticketGreen": "32",
+        "totalBudget": "824000000",
+        "light": "0",
+        "inspectionPlanned": "10",
+        "auditIssues": "0",
+        "trainingRequired": "3",
+        "totalWorkplaces": "928",
+        "reports": "295",
+        "employees": 887,
+        "name": "\"Andijon yuk vagonlarini qurish va ta`mirlash\" AJ",
+        "fatal": "0",
+        "totalStaffEquipment": "20",
+        "closedIssues": "5",
+        "totalHours": 1614340,
+        "ticketRed": "0",
+        "emergencyPlanned": "88"
+      },
+      "profile": "factory",
+      "dateAdded": "2025-12-01T12:16:48.193Z",
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 13.685344827586206,
+          "score": 14
+        },
+        "nearMiss": {
+          "value": 33.25817361894025,
+          "score": 77
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 104.24757281553399,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 90,
+          "score": 90
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 34.090909090909086,
+          "score": 34
+        },
+        "violations": {
+          "value": 3.9458850056369785,
+          "score": 56
+        }
+      },
+      "totalHours": 1614340,
+      "id": "comp_1764591408192_6nzvb",
+      "name": "\"Andijon yuk vagonlarini qurish va ta`mirlash\" AJ",
+      "rank": 21
+    },
+    {
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 91.66666666666666,
+          "score": 92
+        },
+        "raCoverage": {
+          "value": 96.96969696969697,
+          "score": 97
+        },
+        "nearMiss": {
+          "value": 8.064516129032258,
+          "score": 32
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 100,
+          "score": 0
+        },
+        "ppe": {
+          "value": 1000,
+          "score": 100
+        },
+        "equipment": {
+          "value": 260,
+          "score": 100
+        },
+        "inspection": {
+          "value": 89.28571428571429,
+          "score": 89
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 12.903225806451612,
+          "score": 11
+        }
+      },
+      "name": "Олтиариқ вагонларни буғлаб ювиш корхонаси",
+      "employees": 124,
+      "profile": "wagon",
+      "id": "comp_1764582825914_q382p",
+      "dateAdded": "2025-12-01T09:53:45.914Z",
+      "rawData": {
+        "trainingPassed": "11",
+        "name": "Олтиариқ вагонларни буғлаб ювиш корхонаси",
+        "equipmentTotal": "8",
+        "ticketGreen": "16",
+        "closedIssues": "10",
+        "light": "0",
+        "reports": "10",
+        "ticketRed": "0",
+        "auditIssues": "0",
+        "assessed": "32",
+        "auditTotal": "2",
+        "totalIssues": "10",
+        "emergencyParticipated": "1",
+        "employees": 124,
+        "emergencyPlanned": "1",
+        "fatal": "0",
+        "totalWorkplaces": "33",
+        "occupational": "0",
+        "ppeRequired": "10",
+        "authorizedStaff": "10",
+        "group": "0",
+        "totalHours": 225680,
+        "microInjuries": "0",
+        "inspectionPlanned": "56",
+        "totalBudget": "34.4",
+        "ppeEquipped": "100",
+        "equipmentInspected": "8",
+        "trainingRequired": "12",
+        "noincident": "0",
+        "ticketYellow": "0",
+        "totalStaffEquipment": "2",
+        "severe": "0",
+        "mmBudget": "34.4",
+        "inspectionDone": "50"
+      },
+      "overallIndex": 69.62,
+      "zone": "yellow",
+      "totalHours": 225680,
+      "rank": 22
+    },
+    {
+      "dateAdded": "2025-12-01T11:07:36.528Z",
+      "profile": "electric",
+      "name": "Samarqand elektr ta'minoti masofasi filiali",
+      "overallIndex": 68.72,
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 97.26027397260275,
+          "score": 27
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0.24937655860349126,
+          "score": 1
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 3165.80310880829,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 60,
+          "score": 60
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 89.47368421052632,
+          "score": 89
+        },
+        "emergency": {
+          "value": 1014.2857142857142,
+          "score": 100
+        },
+        "violations": {
+          "value": 10.972568578553615,
+          "score": 14
+        }
+      },
+      "zone": "yellow",
+      "id": "comp_1764587256527_b2n59",
+      "totalHours": 729820,
+      "rawData": {
+        "ticketYellow": "7",
+        "inspectionDone": "5",
+        "trainingPassed": "380",
+        "totalBudget": "19.3",
+        "inspectionPlanned": "5",
+        "employees": 401,
+        "emergencyPlanned": "35",
+        "totalStaffEquipment": "0",
+        "occupational": "0",
+        "name": "Samarqand elektr ta'minoti masofasi filiali",
+        "equipmentTotal": "3",
+        "auditIssues": "2",
+        "microInjuries": "0",
+        "equipmentInspected": "3",
+        "severe": "0",
+        "assessed": "37",
+        "closedIssues": "1",
+        "ticketRed": "0",
+        "reports": "1",
+        "ticketGreen": "23",
+        "light": "0",
+        "totalIssues": "1",
+        "auditTotal": "19",
+        "noincident": "355",
+        "fatal": "0",
+        "authorizedStaff": "0",
+        "emergencyParticipated": "355",
+        "mmBudget": "611",
+        "trainingRequired": "380",
+        "totalHours": 729820,
+        "ppeRequired": "397",
+        "group": "0",
+        "ppeEquipped": "397",
+        "totalWorkplaces": "37"
+      },
+      "employees": 401,
+      "rank": 23
+    },
+    {
+      "rawData": {
+        "emergencyParticipated": "12",
+        "mmBudget": "43000000",
+        "inspectionPlanned": "24",
+        "employees": 383,
+        "totalHours": 697060,
+        "ticketRed": "0",
+        "equipmentInspected": "38",
+        "totalWorkplaces": "70",
+        "inspectionDone": "45",
+        "ticketGreen": "10",
+        "group": "0",
+        "trainingPassed": "30",
+        "emergencyPlanned": "12",
+        "noincident": "0",
+        "occupational": "0",
+        "ppeRequired": "25",
+        "totalStaffEquipment": "43",
+        "auditTotal": "34",
+        "fatal": "0",
+        "authorizedStaff": "43",
+        "assessed": "26",
+        "light": "0",
+        "trainingRequired": "4",
+        "closedIssues": "0",
+        "totalIssues": "1",
+        "microInjuries": "0",
+        "reports": "0",
+        "ticketYellow": "6",
+        "equipmentTotal": "38",
+        "totalBudget": "43000000",
+        "severe": "0",
+        "name": "Qamchiq temir yo`l masofasi",
+        "ppeEquipped": "75",
+        "auditIssues": "0"
+      },
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 750,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 37.142857142857146,
+          "score": 37
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 0,
+          "score": 0
+        },
+        "prevention": {
+          "value": 100,
+          "score": 0
+        },
+        "ppe": {
+          "value": 300,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 187.5,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 7.310704960835509,
+          "score": 31
+        }
+      },
+      "dateAdded": "2025-12-01T06:15:07.381Z",
+      "totalHours": 697060,
+      "profile": "road",
+      "zone": "yellow",
+      "employees": 383,
+      "id": "comp_1764569707381_r205e",
+      "overallIndex": 65.47,
+      "name": "Qamchiq temir yo`l masofasi",
+      "rank": 24
+    },
+    {
+      "id": "comp_1764588695068_oc2k1",
+      "rawData": {
+        "trainingPassed": "0",
+        "closedIssues": "15",
+        "assessed": "20",
+        "inspectionPlanned": "15",
+        "auditIssues": "2",
+        "ticketGreen": "46",
+        "employees": 554,
+        "ppeRequired": "554",
+        "ppeEquipped": "554",
+        "trainingRequired": "1",
+        "emergencyPlanned": "165",
+        "equipmentInspected": "0",
+        "totalBudget": "140734.8",
+        "group": "0",
+        "ticketRed": "0",
+        "authorizedStaff": "0",
+        "noincident": "0",
+        "reports": "18",
+        "light": "0",
+        "auditTotal": "906",
+        "severe": "0",
+        "ticketYellow": "6",
+        "name": "\"1-son Energomontaj poyezdi\" MChJ",
+        "microInjuries": "0",
+        "emergencyParticipated": "177",
+        "totalIssues": "18",
+        "inspectionDone": "22",
+        "totalHours": 1008280,
+        "totalWorkplaces": "86",
+        "occupational": "0",
+        "fatal": "0",
+        "equipmentTotal": "0",
+        "totalStaffEquipment": "0",
+        "mmBudget": "113500.0"
+      },
+      "profile": "electric",
+      "totalHours": 1008280,
+      "overallIndex": 57.25,
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 0,
+          "score": 0
+        },
+        "raCoverage": {
+          "value": 23.25581395348837,
+          "score": 23
+        },
+        "nearMiss": {
+          "value": 3.2490974729241873,
+          "score": 13
+        },
+        "responseTime": {
+          "value": 83.33333333333334,
+          "score": 83
+        },
+        "prevention": {
+          "value": 80.64814104258507,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 0,
+          "score": 0
+        },
+        "inspection": {
+          "value": 146.66666666666666,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 99.77924944812362,
+          "score": 100
+        },
+        "emergency": {
+          "value": 107.27272727272728,
+          "score": 100
+        },
+        "violations": {
+          "value": 11.552346570397113,
+          "score": 13
+        }
+      },
+      "dateAdded": "2025-12-01T11:31:35.068Z",
+      "employees": 554,
+      "zone": "yellow",
+      "name": "\"1-son Energomontaj poyezdi\" MChJ",
+      "rank": 25
+    },
+    {
+      "totalHours": 1086540,
+      "kpis": {
+        "ltifr": {
+          "value": 0,
+          "score": 100
+        },
+        "trir": {
+          "value": 0,
+          "score": 100
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 51.78571428571429,
+          "score": 52
+        },
+        "nearMiss": {
+          "value": 0.6700167504187605,
+          "score": 3
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 16.666666666666664,
+          "score": 0
+        },
+        "ppe": {
+          "value": 1428.5714285714287,
+          "score": 100
+        },
+        "equipment": {
+          "value": 88,
+          "score": 88
+        },
+        "inspection": {
+          "value": 337.5,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 167.4418604651163,
+          "score": 100
+        },
+        "violations": {
+          "value": 3.5175879396984926,
+          "score": 60
+        }
+      },
+      "profile": "road",
+      "zone": "yellow",
+      "dateAdded": "2025-12-01T08:47:23.373Z",
+      "rawData": {
+        "equipmentInspected": "4",
+        "ticketGreen": "12",
+        "reports": "4",
+        "group": "0",
+        "employees": 597,
+        "light": "0",
+        "ppeEquipped": "100",
+        "ticketYellow": "3",
+        "microInjuries": "0",
+        "totalStaffEquipment": "97",
+        "inspectionDone": "108",
+        "emergencyParticipated": "72",
+        "emergencyPlanned": "43",
+        "auditIssues": "0",
+        "auditTotal": "7",
+        "severe": "0",
+        "totalWorkplaces": "56",
+        "fatal": "0",
+        "totalBudget": "9000000",
+        "authorizedStaff": "97",
+        "occupational": "0",
+        "ppeRequired": "7",
+        "totalIssues": "4",
+        "assessed": "29",
+        "trainingPassed": "14",
+        "equipmentTotal": "5",
+        "mmBudget": "1500000",
+        "inspectionPlanned": "32",
+        "trainingRequired": "14",
+        "closedIssues": "4",
+        "name": "Qoʻqon temir yoʻl masofasi filiali ",
+        "noincident": "0",
+        "totalHours": 1086540,
+        "ticketRed": "0"
+      },
+      "employees": 597,
+      "name": "Qoʻqon temir yoʻl masofasi filiali ",
+      "overallIndex": 55.2,
+      "id": "comp_1764578843372_wq0hs",
+      "rank": 26
+    },
+    {
+      "kpis": {
+        "ltifr": {
+          "value": 10,
+          "score": 50
+        },
+        "trir": {
+          "value": 0.15015015015015015,
+          "score": 92
+        },
+        "noincident": {
+          "value": 96.98630136986301,
+          "score": 27
+        },
+        "training": {
+          "value": 83.33333333333334,
+          "score": 83
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 1.959992158971328,
+          "score": 98
+        },
+        "ppe": {
+          "value": 5450,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 94.73684210526316,
+          "score": 95
+        },
+        "emergency": {
+          "value": 96.55172413793103,
+          "score": 97
+        },
+        "violations": {
+          "value": 2.5525525525525525,
+          "score": 69
+        }
+      },
+      "overallIndex": 54.11,
+      "profile": "road",
+      "id": "comp_1764653953541_l98jv",
+      "dateAdded": "2025-12-02T05:39:13.542Z",
+      "totalHours": 1212120,
+      "name": "Uchquduq temir yo'l masofasi filiali",
+      "zone": "yellow",
+      "employees": 666,
+      "rawData": {
+        "reports": "0",
+        "noincident": "354",
+        "equipmentTotal": "3",
+        "trainingRequired": "12",
+        "totalStaffEquipment": "44",
+        "authorizedStaff": "44",
+        "ppeRequired": "12",
+        "ticketYellow": "0",
+        "ticketGreen": "17",
+        "fatal": "0",
+        "ppeEquipped": "654",
+        "inspectionDone": "5",
+        "microInjuries": "1",
+        "employees": 666,
+        "auditTotal": "19",
+        "emergencyParticipated": "56",
+        "totalWorkplaces": "77",
+        "occupational": "0",
+        "inspectionPlanned": "5",
+        "light": "1",
+        "totalHours": 1212120,
+        "auditIssues": "1",
+        "ticketRed": "0",
+        "trainingPassed": "10",
+        "name": "Uchquduq temir yo'l masofasi filiali",
+        "emergencyPlanned": "58",
+        "mmBudget": "266254000",
+        "group": "0",
+        "totalIssues": "1",
+        "assessed": "77",
+        "closedIssues": "1",
+        "equipmentInspected": "3",
+        "totalBudget": "13584442100",
+        "severe": "0"
+      },
+      "rank": 27
+    },
+    {
+      "profile": "factory",
+      "employees": 1153,
+      "rawData": {
+        "inspectionPlanned": "453",
+        "noincident": "364",
+        "totalBudget": "1310",
+        "ticketGreen": "54",
+        "inspectionDone": "453",
+        "auditTotal": "11",
+        "totalStaffEquipment": "324",
+        "trainingRequired": "13",
+        "totalIssues": "242",
+        "ppeRequired": "1150",
+        "ticketYellow": "25",
+        "mmBudget": "667.5",
+        "occupational": "0",
+        "authorizedStaff": "324",
+        "emergencyParticipated": "22",
+        "equipmentTotal": "112",
+        "name": "\"Quyuv mexanika zavodi\" AJ",
+        "equipmentInspected": "112",
+        "severe": "1",
+        "closedIssues": "242",
+        "trainingPassed": "13",
+        "emergencyPlanned": "22",
+        "ppeEquipped": "1150",
+        "assessed": "372",
+        "group": "0",
+        "reports": "506",
+        "ticketRed": "0",
+        "light": "0",
+        "employees": 1153,
+        "totalWorkplaces": "372",
+        "microInjuries": "1",
+        "fatal": "0",
+        "auditIssues": "0",
+        "totalHours": 2098460
+      },
+      "name": "\"Quyuv mexanika zavodi\" AJ",
+      "overallIndex": 53,
+      "kpis": {
+        "ltifr": {
+          "value": 50,
+          "score": 10
+        },
+        "trir": {
+          "value": 0.08673026886383348,
+          "score": 96
+        },
+        "noincident": {
+          "value": 99.72602739726028,
+          "score": 27
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 43.885516045099735,
+          "score": 88
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 50.95419847328244,
+          "score": 0
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 100,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 11.188204683434519,
+          "score": 13
+        }
+      },
+      "dateAdded": "2025-12-01T06:39:17.205Z",
+      "zone": "yellow",
+      "id": "comp_1764571157204_dhm6j",
+      "totalHours": 2098460,
+      "rank": 28
+    },
+    {
+      "zone": "red",
+      "kpis": {
+        "ltifr": {
+          "value": 100,
+          "score": 0
+        },
+        "trir": {
+          "value": 0.6756756756756757,
+          "score": 78
+        },
+        "noincident": {
+          "value": 73.97260273972603,
+          "score": 20
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 100,
+          "score": 100
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 0.33735407615950297,
+          "score": 20
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 112.5,
+          "score": 100
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 0,
+          "score": 0
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 8.108108108108109,
+          "score": 26
+        }
+      },
+      "dateAdded": "2025-12-01T11:48:20.634Z",
+      "profile": "road",
+      "employees": 296,
+      "overallIndex": 42.32,
+      "totalHours": 538720,
+      "rawData": {
+        "auditIssues": "1",
+        "ppeRequired": "296",
+        "totalStaffEquipment": "16",
+        "equipmentTotal": "8",
+        "name": "279-сонли йўл машина станцияси",
+        "occupational": "0",
+        "fatal": "0",
+        "noincident": "270",
+        "severe": "2",
+        "emergencyPlanned": "79",
+        "group": "0",
+        "totalBudget": "41203",
+        "ppeEquipped": "296",
+        "inspectionDone": "37",
+        "inspectionPlanned": "37",
+        "ticketGreen": "12",
+        "trainingPassed": "296",
+        "totalWorkplaces": "28",
+        "authorizedStaff": "21",
+        "closedIssues": "2",
+        "trainingRequired": "296",
+        "equipmentInspected": "8",
+        "ticketRed": "0",
+        "ticketYellow": "4",
+        "totalHours": 538720,
+        "microInjuries": "2",
+        "reports": "0",
+        "totalIssues": "2",
+        "mmBudget": "139",
+        "auditTotal": "1",
+        "employees": 296,
+        "light": "0",
+        "emergencyParticipated": "79",
+        "assessed": "28"
+      },
+      "name": "279-сонли йўл машина станцияси",
+      "id": "comp_1764589700634_sc0y0",
+      "rank": 29
+    },
+    {
+      "name": "Qoqon MTUN stansiyalar",
+      "profile": "traffic",
+      "employees": 1120,
+      "id": "comp_1764590222224_ag8sx",
+      "overallIndex": 27.8,
+      "totalHours": 2038400,
+      "dateAdded": "2025-12-01T11:57:02.224Z",
+      "kpis": {
+        "ltifr": {
+          "value": 50,
+          "score": 10
+        },
+        "trir": {
+          "value": 0.08928571428571429,
+          "score": 96
+        },
+        "noincident": {
+          "value": 0,
+          "score": 0
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 46.34146341463415,
+          "score": 46
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 100,
+          "score": 0
+        },
+        "ppe": {
+          "value": 2430,
+          "score": 100
+        },
+        "equipment": {
+          "value": 0,
+          "score": 0
+        },
+        "inspection": {
+          "value": 98.48484848484848,
+          "score": 98
+        },
+        "occupational": {
+          "value": 16,
+          "score": 0
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 97.88359788359789,
+          "score": 98
+        },
+        "violations": {
+          "value": 4.642857142857143,
+          "score": 49
+        }
+      },
+      "zone": "red",
+      "rawData": {
+        "light": "0",
+        "auditTotal": "023",
+        "noincident": "0",
+        "mmBudget": "8000000",
+        "closedIssues": "1",
+        "totalBudget": "8000000",
+        "totalIssues": "1",
+        "severe": "1",
+        "auditIssues": "0",
+        "totalHours": 2038400,
+        "totalWorkplaces": "41",
+        "emergencyParticipated": "185",
+        "ticketGreen": "22",
+        "equipmentInspected": "0",
+        "authorizedStaff": "0",
+        "inspectionDone": "195",
+        "reports": "0",
+        "equipmentTotal": "0",
+        "totalStaffEquipment": "0",
+        "ticketRed": "0",
+        "employees": 1120,
+        "inspectionPlanned": "198",
+        "ticketYellow": "10",
+        "emergencyPlanned": "189",
+        "ppeEquipped": "486",
+        "trainingRequired": "90",
+        "ppeRequired": "20",
+        "occupational": "16",
+        "fatal": "0",
+        "assessed": "19",
+        "microInjuries": "1",
+        "name": "Qoqon MTUN stansiyalar",
+        "trainingPassed": "90",
+        "group": "0"
+      },
+      "rank": 30
+    },
+    {
+      "name": "Toshkent MTU",
+      "overallIndex": 12.56,
+      "id": "comp_1764582596569_zokh8",
+      "employees": 7878,
+      "totalHours": 14337960,
+      "profile": "traffic",
+      "kpis": {
+        "ltifr": {
+          "value": 150,
+          "score": 0
+        },
+        "trir": {
+          "value": 0.03808073115003808,
+          "score": 98
+        },
+        "noincident": {
+          "value": 24.65753424657534,
+          "score": 7
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 60,
+          "score": 60
+        },
+        "nearMiss": {
+          "value": 0.02538715410002539,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 8.66783013379872,
+          "score": 53
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 60,
+          "score": 60
+        },
+        "inspection": {
+          "value": 75,
+          "score": 75
+        },
+        "occupational": {
+          "value": 49,
+          "score": 0
+        },
+        "compliance": {
+          "value": -100,
+          "score": 0
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 4.315816197004316,
+          "score": 52
+        }
+      },
+      "dateAdded": "2025-12-01T09:49:56.569Z",
+      "rawData": {
+        "name": "Toshkent MTU",
+        "auditTotal": "150",
+        "inspectionDone": "3",
+        "fatal": "0",
+        "closedIssues": "5121",
+        "ppeRequired": "5700",
+        "ticketGreen": "171",
+        "totalStaffEquipment": "0",
+        "light": "0",
+        "assessed": "150",
+        "trainingRequired": "5700",
+        "equipmentTotal": "150",
+        "group": "0",
+        "totalBudget": "343.8",
+        "ticketYellow": "53",
+        "reports": "2",
+        "ticketRed": "1",
+        "ppeEquipped": "5700",
+        "trainingPassed": "5700",
+        "totalIssues": "5121",
+        "severe": "3",
+        "equipmentInspected": "150",
+        "emergencyPlanned": "7500",
+        "noincident": "90",
+        "totalHours": 14337960,
+        "mmBudget": "29.8",
+        "occupational": "49",
+        "totalWorkplaces": "250",
+        "employees": 7878,
+        "emergencyParticipated": "7500",
+        "inspectionPlanned": "4",
+        "auditIssues": "300",
+        "authorizedStaff": "0",
+        "microInjuries": "3"
+      },
+      "zone": "red",
+      "rank": 31
+    },
+    {
+      "employees": 585,
+      "totalHours": 1064700,
+      "zone": "red",
+      "rawData": {
+        "totalWorkplaces": "34",
+        "ppeEquipped": "585",
+        "name": "Urganch temir yo'l masofasi filiali",
+        "ticketYellow": "5",
+        "mmBudget": "1200",
+        "trainingPassed": "585",
+        "ppeRequired": "585",
+        "severe": "1",
+        "employees": 585,
+        "auditIssues": "0",
+        "inspectionPlanned": "21",
+        "occupational": "2",
+        "closedIssues": "2",
+        "auditTotal": "2",
+        "ticketRed": "0",
+        "totalStaffEquipment": "34",
+        "totalHours": 1064700,
+        "light": "1",
+        "reports": "0",
+        "ticketGreen": "17",
+        "assessed": "25",
+        "inspectionDone": "116",
+        "noincident": "42",
+        "microInjuries": "2",
+        "emergencyParticipated": "136",
+        "totalIssues": "2",
+        "group": "0",
+        "trainingRequired": "585",
+        "fatal": "0",
+        "equipmentInspected": "4",
+        "emergencyPlanned": "95",
+        "totalBudget": "165380",
+        "equipmentTotal": "5",
+        "authorizedStaff": "37"
+      },
+      "id": "comp_1764581040223_j4630",
+      "profile": "road",
+      "kpis": {
+        "ltifr": {
+          "value": 60,
+          "score": 8
+        },
+        "trir": {
+          "value": 0.3418803418803419,
+          "score": 84
+        },
+        "noincident": {
+          "value": 11.506849315068493,
+          "score": 3
+        },
+        "training": {
+          "value": 100,
+          "score": 100
+        },
+        "raCoverage": {
+          "value": 73.52941176470588,
+          "score": 74
+        },
+        "nearMiss": {
+          "value": 0,
+          "score": 0
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 0.7256016446970613,
+          "score": 44
+        },
+        "ppe": {
+          "value": 100,
+          "score": 100
+        },
+        "equipment": {
+          "value": 91.52941176470588,
+          "score": 92
+        },
+        "inspection": {
+          "value": 552.3809523809524,
+          "score": 100
+        },
+        "occupational": {
+          "value": 2,
+          "score": 30
+        },
+        "compliance": {
+          "value": 100,
+          "score": 100
+        },
+        "emergency": {
+          "value": 143.1578947368421,
+          "score": 100
+        },
+        "violations": {
+          "value": 5.47008547008547,
+          "score": 42
+        }
+      },
+      "name": "Urganch temir yo'l masofasi filiali",
+      "dateAdded": "2025-12-01T09:24:00.223Z",
+      "overallIndex": 8.2,
+      "rank": 32
+    },
+    {
+      "rawData": {
+        "severe": "1",
+        "emergencyPlanned": "150",
+        "closedIssues": "4",
+        "employees": 686,
+        "totalIssues": "4",
+        "group": "0",
+        "equipmentTotal": "36",
+        "ticketYellow": "16",
+        "inspectionPlanned": "165",
+        "authorizedStaff": "77",
+        "emergencyParticipated": "150",
+        "ppeRequired": "30",
+        "mmBudget": "20400000",
+        "trainingPassed": "37",
+        "trainingRequired": "38",
+        "assessed": "34",
+        "totalBudget": "20400000",
+        "ticketRed": "0",
+        "noincident": "47",
+        "auditTotal": "165",
+        "ticketGreen": "62",
+        "occupational": "0",
+        "ppeEquipped": "591",
+        "name": "Qoʻqon lokomotiv deposi filiali ",
+        "equipmentInspected": "25",
+        "microInjuries": "1",
+        "totalHours": 1248520,
+        "auditIssues": "1",
+        "light": "0",
+        "totalWorkplaces": "150",
+        "totalStaffEquipment": "77",
+        "inspectionDone": "165",
+        "fatal": "0",
+        "reports": "4"
+      },
+      "profile": "locomotive",
+      "dateAdded": "2025-12-01T14:39:33.476Z",
+      "employees": 686,
+      "zone": "red",
+      "name": "Qoʻqon lokomotiv deposi filiali ",
+      "id": "comp_1764599973475_ciu9m",
+      "overallIndex": 0,
+      "totalHours": 1248520,
+      "kpis": {
+        "ltifr": {
+          "value": 50,
+          "score": 10
+        },
+        "trir": {
+          "value": 0.1457725947521866,
+          "score": 93
+        },
+        "noincident": {
+          "value": 12.876712328767123,
+          "score": 4
+        },
+        "training": {
+          "value": 97.36842105263158,
+          "score": 97
+        },
+        "raCoverage": {
+          "value": 22.666666666666664,
+          "score": 23
+        },
+        "nearMiss": {
+          "value": 0.5830903790087464,
+          "score": 2
+        },
+        "responseTime": {
+          "value": 100,
+          "score": 100
+        },
+        "prevention": {
+          "value": 100,
+          "score": 0
+        },
+        "ppe": {
+          "value": 1970,
+          "score": 100
+        },
+        "equipment": {
+          "value": 81.66666666666666,
+          "score": 82
+        },
+        "inspection": {
+          "value": 100,
+          "score": 100
+        },
+        "occupational": {
+          "value": 0,
+          "score": 100
+        },
+        "compliance": {
+          "value": 99.39393939393939,
+          "score": 99
+        },
+        "emergency": {
+          "value": 100,
+          "score": 100
+        },
+        "violations": {
+          "value": 16.034985422740526,
+          "score": 6
+        }
+      },
+      "rank": 33
+    }
+  ],
+  "exportDate": "2025-12-02T08:11:16.878Z",
+  "version": "2.0"
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+    <script src="data.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Testing data.js variables:');
+            console.log('KPI_WEIGHTS:', typeof KPI_WEIGHTS);
+            console.log('DEPARTMENT_PROFILES:', typeof DEPARTMENT_PROFILES);
+            console.log('UZ_RAILWAY_DATA:', typeof UZ_RAILWAY_DATA);
+
+            if (typeof DEPARTMENT_PROFILES !== 'undefined') {
+                console.log('DEPARTMENT_PROFILES content:', DEPARTMENT_PROFILES);
+            } else {
+                console.error('DEPARTMENT_PROFILES is undefined!');
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Check Console (F12)</h1>
+</body>
+
+</html>

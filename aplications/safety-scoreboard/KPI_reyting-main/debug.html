@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Test</title>
+</head>
+<body>
+    <h1>Debug Test</h1>
+    <div id="results"></div>
+    
+    <script src="data.js"></script>
+    <script>
+        const results = document.getElementById('results');
+        let html = '<h2>Checking Variables:</h2>';
+        
+        html += '<p>window.KPI_WEIGHTS: ' + (typeof window.KPI_WEIGHTS) + '</p>';
+        html += '<p>window.DEPARTMENT_PROFILES: ' + (typeof window.DEPARTMENT_PROFILES) + '</p>';
+        
+        if (window.DEPARTMENT_PROFILES) {
+            html += '<h3>DEPARTMENT_PROFILES Content:</h3><ul>';
+            window.DEPARTMENT_PROFILES.forEach(p => {
+                html += '<li>' + p.id + ': ' + p.name + '</li>';
+            });
+            html += '</ul>';
+        } else {
+            html += '<p style="color:red">ERROR: DEPARTMENT_PROFILES is undefined!</p>';
+        }
+        
+        results.innerHTML = html;
+    </script>
+</body>
+</html>

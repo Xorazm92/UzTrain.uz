@@ -1,0 +1,4350 @@
+{
+  "message": "success (cache)",
+  "statusCode": 200,
+  "data": {
+    "xId": "1574",
+    "type": "ao",
+    "name": "\"O'zbekiston temir yo'llari\" AJ",
+    "shortName": "UTY",
+    "exodimOrgId": "1",
+    "exodimCompanyType": "organization",
+    "children": [
+      {
+        "xId": "1532",
+        "companyToCompanyId": 3423,
+        "relationType": "vertical",
+        "type": "management",
+        "name": "Temiryo'lyonilg'ita'min boshqarmasi",
+        "shortName": "ТЭР",
+        "exodimOrgId": "200",
+        "exodimCompanyType": "organization"
+      },
+      {
+        "xId": "1511",
+        "companyToCompanyId": 3421,
+        "relationType": "vertical",
+        "type": "management",
+        "name": "Toshkent yo'lovchi vagonlarini qurish va ta'mirlash zavodi AJ",
+        "shortName": "ТВСРЗ",
+        "exodimOrgId": "208",
+        "exodimCompanyType": "organization"
+      },
+      {
+        "xId": "1540",
+        "companyToCompanyId": 3420,
+        "relationType": "vertical",
+        "type": "management",
+        "name": "1-son qurilish montaj poezdi MChJ",
+        "shortName": "КВП-1",
+        "exodimOrgId": "192",
+        "exodimCompanyType": "organization"
+      },
+      {
+        "xId": "1515",
+        "companyToCompanyId": 3419,
+        "relationType": "vertical",
+        "type": "management",
+        "name": "Andijon mekhanika zavodi AJ",
+        "shortName": "АМЗ",
+        "exodimOrgId": "186",
+        "exodimCompanyType": "organization"
+      },
+      {
+        "xId": "2314",
+        "companyToCompanyId": 3418,
+        "relationType": "vertical",
+        "type": "ao",
+        "name": "Temiryo‘lekspress AJ",
+        "shortName": "LEX",
+        "exodimOrgId": "198",
+        "exodimCompanyType": "organization"
+      },
+      {
+        "xId": "2313",
+        "companyToCompanyId": 3417,
+        "relationType": "vertical",
+        "type": "ao",
+        "name": "Uztemiryo‘lmashta’mir AJ",
+        "shortName": "TRZ",
+        "exodimOrgId": "193",
+        "exodimCompanyType": "organization"
+      },
+      {
+        "xId": "2311",
+        "companyToCompanyId": 3416,
+        "relationType": "vertical",
+        "type": "ao",
+        "name": "\"O'zvagonta'mir\" AJ",
+        "shortName": "O'zvagonta'mir",
+        "exodimOrgId": "136",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "2319",
+            "companyToCompanyId": 3424,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Andijon vagon deposi",
+            "shortName": "VCHD-5",
+            "exodimOrgId": "138",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "1324",
+            "companyToCompanyId": 3415,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Xovos vagon deposi",
+            "shortName": " ",
+            "exodimOrgId": "137",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "474",
+            "companyToCompanyId": 3413,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Termiz vagon deposi",
+            "shortName": "ВЧД-16",
+            "exodimOrgId": "63",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "473",
+            "companyToCompanyId": 3412,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Qo‘ng‘irot vagon deposi",
+            "shortName": "ВЧД-14",
+            "exodimOrgId": "61",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "467",
+            "companyToCompanyId": 3411,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Samarqand vagon deposi",
+            "shortName": " ВЧД-6 ",
+            "exodimOrgId": "139",
+            "exodimCompanyType": "organization"
+          }
+        ]
+      },
+      {
+        "xId": "1541",
+        "companyToCompanyId": 3406,
+        "relationType": "vertical",
+        "type": "management",
+        "name": "1-son energomontaj poezdi MChJ",
+        "shortName": "ЭП-1",
+        "exodimOrgId": "190",
+        "exodimCompanyType": "organization"
+      },
+      {
+        "xId": "2312",
+        "companyToCompanyId": 3405,
+        "relationType": "vertical",
+        "type": "ao",
+        "name": "Quyuv mexanika zavodi AJ",
+        "shortName": "LMZ",
+        "exodimOrgId": "194",
+        "exodimCompanyType": "organization"
+      },
+      {
+        "xId": "1555",
+        "companyToCompanyId": 3394,
+        "relationType": "vertical",
+        "type": "management",
+        "name": "Texnik va texnologik nazorat departamenti",
+        "shortName": "РБ",
+        "exodimOrgId": "50",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "2309",
+            "companyToCompanyId": 3393,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Nbt",
+            "shortName": "NBT",
+            "exodimOrgId": "3716",
+            "exodimCompanyType": "department"
+          }
+        ]
+      },
+      {
+        "xId": "2229",
+        "companyToCompanyId": 2839,
+        "relationType": "vertical",
+        "type": "management",
+        "name": "Markaziy apparat",
+        "code": "****",
+        "exodimOrgId": "2",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "2231",
+            "companyToCompanyId": 2841,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Personalni boshqarish va kadrlarni tayyorlash departamenti",
+            "code": "PTM",
+            "shortName": "PTM",
+            "exodimOrgId": "4,27",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2232",
+            "companyToCompanyId": 2842,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Iqtisodiy tahlil va prognozlash departamenti",
+            "code": "****",
+            "exodimOrgId": "5",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2233",
+            "companyToCompanyId": 2843,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Yuridik deparatmenti",
+            "code": "SYU",
+            "shortName": "SYU",
+            "exodimOrgId": "7,28",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2234",
+            "companyToCompanyId": 2844,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Aksiyadorlar bilan korporativ munosabatlar departameti",
+            "code": "****",
+            "exodimOrgId": "8",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2235",
+            "companyToCompanyId": 2845,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Investitsiyalarni jalb qilish va investitsiya loyihalarini amalga oshirishni departameti",
+            "code": "****",
+            "exodimOrgId": "9",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2236",
+            "companyToCompanyId": 2846,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Xalqaro hamkorlik va tashqi iqtisodiy aloqalar departameti",
+            "code": "****",
+            "exodimOrgId": "10",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2237",
+            "companyToCompanyId": 2847,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Korrupsiyaga qarshi kurashish boshqarmasi",
+            "code": "****",
+            "exodimOrgId": "11",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2238",
+            "companyToCompanyId": 2848,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Transfomatsiya ofisi",
+            "code": "****",
+            "exodimOrgId": "12",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2239",
+            "companyToCompanyId": 2849,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Logistik jarayonlar marketing tahlili markazi",
+            "code": "****",
+            "exodimOrgId": "13",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2241",
+            "companyToCompanyId": 2851,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Kiberxavfsizlik boshqarmasi",
+            "code": "****",
+            "exodimOrgId": "15",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2242",
+            "companyToCompanyId": 2852,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Temiryo‘ltaʼmin boshqarmasi",
+            "code": "****",
+            "exodimOrgId": "17",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2243",
+            "companyToCompanyId": 2853,
+            "relationType": "vertical",
+            "type": "management",
+            "name": "Jamiyatning Moskva shahridagi vakolatxonasi",
+            "code": "****",
+            "exodimOrgId": "18",
+            "exodimCompanyType": "organization"
+          }
+        ]
+      },
+      {
+        "xId": "2197",
+        "companyToCompanyId": 2807,
+        "relationType": "vertical",
+        "type": "ao",
+        "name": "\"Toshkent mexanika zavodi\" AJ",
+        "code": "",
+        "shortName": "TMZ",
+        "exodimOrgId": "151",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "2198",
+            "companyToCompanyId": 2808,
+            "relationType": "vertical",
+            "type": "mchj",
+            "name": "\"Andijon mexanika korxonasi\" MCHJ",
+            "code": "****",
+            "exodimOrgId": "152",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2199",
+            "companyToCompanyId": 2809,
+            "relationType": "vertical",
+            "type": "mchj",
+            "name": "\"Farg'ona mexanika korxonasi\" MCHJ",
+            "code": "****",
+            "exodimOrgId": "153",
+            "exodimCompanyType": "organization"
+          }
+        ]
+      },
+      {
+        "xId": "2200",
+        "companyToCompanyId": 2810,
+        "relationType": "vertical",
+        "type": "default",
+        "name": "\"Temir yo‘l ijtimoiy xizmatlar\" muassasasi",
+        "code": "****",
+        "exodimOrgId": "154",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "2201",
+            "companyToCompanyId": 2811,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Markaziy klinik kasalxonasi",
+            "code": "****",
+            "exodimOrgId": "155",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2202",
+            "companyToCompanyId": 2812,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Markaziy poliklinika",
+            "code": "****",
+            "exodimOrgId": "156",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2203",
+            "companyToCompanyId": 2813,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Yo'l bolalar kasalxonasi",
+            "code": "****",
+            "exodimOrgId": "157",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2205",
+            "companyToCompanyId": 2815,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Qo'qon temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "159",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2206",
+            "companyToCompanyId": 2816,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Andijon temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "160",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2207",
+            "companyToCompanyId": 2817,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Samarqand temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "161",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2208",
+            "companyToCompanyId": 2818,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Buxoro temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "162",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2209",
+            "companyToCompanyId": 2819,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Qarshi temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "163",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2210",
+            "companyToCompanyId": 2820,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Termiz temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "164",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2211",
+            "companyToCompanyId": 2821,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Urganch temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "165",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2212",
+            "companyToCompanyId": 2822,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Xo'jayli temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "166",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2213",
+            "companyToCompanyId": 2823,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Qo'ng'irot temir yo'l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "167",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2214",
+            "companyToCompanyId": 2824,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Qo'ng'irot sanatoriy profilaktoriysi",
+            "code": "****",
+            "exodimOrgId": "168",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2215",
+            "companyToCompanyId": 2825,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Markaziy sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "169",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2216",
+            "companyToCompanyId": 2826,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Xovos tarmoq sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "170",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2217",
+            "companyToCompanyId": 2827,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Qo'qon tarmoq sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "171",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2218",
+            "companyToCompanyId": 2828,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Andijon tarmoq sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "172",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2219",
+            "companyToCompanyId": 2829,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Samarqand tarmoq sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "173",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2220",
+            "companyToCompanyId": 2830,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Buxoro tarmoq sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "174",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2221",
+            "companyToCompanyId": 2831,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Qarshi tarmoq sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "175",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2222",
+            "companyToCompanyId": 2832,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Termiz tarmoq sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "176",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2223",
+            "companyToCompanyId": 2833,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Qo'ng'irot tarmoq sanitariya epidemiologiya stansiyasi",
+            "code": "****",
+            "exodimOrgId": "177",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2224",
+            "companyToCompanyId": 2834,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Xovos temir yo‘l shifoxonasi",
+            "code": "****",
+            "exodimOrgId": "178",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2226",
+            "companyToCompanyId": 2836,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Temiryo‘lchilar madaniyat saroyi",
+            "code": "****",
+            "exodimOrgId": "180",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2227",
+            "companyToCompanyId": 2837,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Temiryo‘lchi bolalar dam olish oromgohi",
+            "code": "****",
+            "exodimOrgId": "181",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2228",
+            "companyToCompanyId": 2838,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Qibray bolalar dam olish oromgohi",
+            "code": "****",
+            "exodimOrgId": "182",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2204",
+            "companyToCompanyId": 2814,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Salomatlik tibbiy-sanitar yordam poyezdi",
+            "code": "****",
+            "exodimOrgId": "158",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2225",
+            "companyToCompanyId": 2835,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Sihatgoh sanatoriy-profilaktoriy",
+            "code": "****",
+            "exodimOrgId": "179",
+            "exodimCompanyType": "organization"
+          }
+        ]
+      },
+      {
+        "xId": "2188",
+        "companyToCompanyId": 2798,
+        "relationType": "vertical",
+        "type": "ao",
+        "name": "\"O‘ztemiryo‘lyo‘lovchi\" AJ",
+        "code": "",
+        "shortName": "Passtrans",
+        "exodimOrgId": "140",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "2189",
+            "companyToCompanyId": 2799,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Xalqaro yo‘nalishlarda yo‘lovchilarga xizmat ko‘rsatish filiali",
+            "code": "****",
+            "exodimOrgId": "141",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2190",
+            "companyToCompanyId": 2800,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Yo'lovchi vagonlarni texnik va texnologik tayyorlash, ta'mirlash filiali",
+            "code": "****",
+            "exodimOrgId": "142",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2191",
+            "companyToCompanyId": 2801,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Tezyurar yo‘nalishlarda yo‘lovchilarga xizmat ko‘rsatish filiali",
+            "code": "****",
+            "exodimOrgId": "143",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2192",
+            "companyToCompanyId": 2802,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Orolbo'yi filiali",
+            "code": "****",
+            "exodimOrgId": "144",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2193",
+            "companyToCompanyId": 2803,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Mahalliy yo‘nalishlarda yo‘lovchilarga xizmat ko‘rsatish filiali",
+            "code": "****",
+            "exodimOrgId": "145",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2194",
+            "companyToCompanyId": 2804,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Andijon filiali",
+            "code": "****",
+            "exodimOrgId": "146",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2195",
+            "companyToCompanyId": 2805,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "\"Shahar atrofida yo‘lovchi tashish\" MCHJ",
+            "code": "****",
+            "exodimOrgId": "147",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2196",
+            "companyToCompanyId": 2806,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "\"Temiyo‘lvokzallari\" MCHJ",
+            "code": "****",
+            "exodimOrgId": "148",
+            "exodimCompanyType": "organization"
+          }
+        ]
+      },
+      {
+        "xId": "2170",
+        "companyToCompanyId": 2780,
+        "relationType": "vertical",
+        "type": "default",
+        "name": "Boshqa tuzilmalar",
+        "code": "****",
+        "exodimOrgId": "64",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "2171",
+            "companyToCompanyId": 2781,
+            "relationType": "vertical",
+            "type": "mchj",
+            "name": "\"O‘ztemiryo‘lekspeditsiya\" MCHJ",
+            "code": "****",
+            "exodimOrgId": "65",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2173",
+            "companyToCompanyId": 2783,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Axborot tahlil media markazi",
+            "code": "****",
+            "exodimOrgId": "67",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2174",
+            "companyToCompanyId": 2784,
+            "relationType": "vertical",
+            "type": "mchj",
+            "name": "\"Sagdiana trans\" MCHJ",
+            "code": "****",
+            "exodimOrgId": "68",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2176",
+            "companyToCompanyId": 2786,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "\"O‘zbekiston\" lokomotiv deposi",
+            "code": "****",
+            "exodimOrgId": "70",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2177",
+            "companyToCompanyId": 2787,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Maxsus direksiya",
+            "code": "****",
+            "exodimOrgId": "71",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2178",
+            "companyToCompanyId": 2788,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "O‘ztemiryo‘lhisob boshqarmasi",
+            "code": "****",
+            "exodimOrgId": "72",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2179",
+            "companyToCompanyId": 2789,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Kapital qurilish direksiyasi",
+            "code": "****",
+            "exodimOrgId": "73",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2180",
+            "companyToCompanyId": 2790,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Xarbiylashtirilgan qo'riqlash boshqarmasi",
+            "code": "****",
+            "exodimOrgId": "74",
+            "exodimCompanyType": "organization",
+            "children": [
+              {
+                "xId": "2181",
+                "companyToCompanyId": 2791,
+                "relationType": "vertical",
+                "type": "default",
+                "name": "Toshkent xarbiylashtirilgan qo'riqlash otryadi",
+                "code": "****",
+                "exodimOrgId": "75",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "2182",
+                "companyToCompanyId": 2792,
+                "relationType": "vertical",
+                "type": "default",
+                "name": "Qo'qon xarbiylashtirilgan qo'riqlash otryadi",
+                "code": "****",
+                "exodimOrgId": "76",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "2183",
+                "companyToCompanyId": 2793,
+                "relationType": "vertical",
+                "type": "default",
+                "name": "Buxoro xarbiylashtirilgan qo'riqlash otryadi",
+                "code": "****",
+                "exodimOrgId": "77",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "2184",
+                "companyToCompanyId": 2794,
+                "relationType": "vertical",
+                "type": "default",
+                "name": "Qo'ng'irot xarbiylashtirilgan qo'riqlash otryadi",
+                "code": "****",
+                "exodimOrgId": "78",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "2185",
+                "companyToCompanyId": 2795,
+                "relationType": "vertical",
+                "type": "default",
+                "name": "Qarshi xarbiylashtirilgan qo'riqlash otryadi",
+                "code": "****",
+                "exodimOrgId": "79",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "2186",
+                "companyToCompanyId": 2796,
+                "relationType": "vertical",
+                "type": "default",
+                "name": "Qamchiq xarbiylashtirilgan qo'riqlash otryadi",
+                "code": "****",
+                "exodimOrgId": "80",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "2187",
+                "companyToCompanyId": 2797,
+                "relationType": "vertical",
+                "type": "default",
+                "name": "Termiz xarbiylashtirilgan qo'riqlash otryadi",
+                "code": "****",
+                "exodimOrgId": "81",
+                "exodimCompanyType": "organization"
+              }
+            ]
+          },
+          {
+            "xId": "2175",
+            "companyToCompanyId": 2785,
+            "relationType": "vertical",
+            "type": "default",
+            "name": "Ugam-Chotkol davlat biosfera rezervati",
+            "code": "****",
+            "exodimOrgId": "69",
+            "exodimCompanyType": "organization"
+          }
+        ]
+      },
+      {
+        "xId": "1774",
+        "companyToCompanyId": 2091,
+        "relationType": "vertical",
+        "type": "ao",
+        "name": "\"Temiryo'lkargo\" AJ",
+        "shortName": "Kargo",
+        "exodimOrgId": "149",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "471",
+            "companyToCompanyId": 3410,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Buxoro vagon deposi",
+            "shortName": "ВЧД-7",
+            "exodimOrgId": "60",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "472",
+            "companyToCompanyId": 3409,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Qo‘qon vagon deposi",
+            "shortName": "ВЧД-4",
+            "exodimOrgId": "59",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "470",
+            "companyToCompanyId": 3408,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Qarshi vagon deposi",
+            "shortName": "ВЧД-8",
+            "exodimOrgId": "62",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "475",
+            "companyToCompanyId": 3407,
+            "relationType": "vertical",
+            "type": "vchd",
+            "name": "Toshkent vagon deposi",
+            "shortName": "ВЧД-1",
+            "exodimOrgId": "150",
+            "exodimCompanyType": "organization"
+          }
+        ]
+      },
+      {
+        "xId": "1575",
+        "companyToCompanyId": 1601,
+        "relationType": "vertical",
+        "type": "ao",
+        "name": "\"Temiryo'linfratuzilma\" AJ",
+        "shortName": "JDS",
+        "exodimOrgId": "19",
+        "exodimCompanyType": "organization",
+        "children": [
+          {
+            "xId": "1387",
+            "companyToCompanyId": 3253,
+            "relationType": "vertical",
+            "type": "smd",
+            "name": "Temir yo‘l monitoringi va diagnostika markazi",
+            "shortName": "ЦМД",
+            "exodimOrgId": "20",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "2261",
+            "companyToCompanyId": 2951,
+            "relationType": "vertical",
+            "type": "mchj",
+            "name": "DAS UTY MCHJ",
+            "code": "****",
+            "exodimOrgId": "199",
+            "exodimCompanyType": "organization"
+          },
+          {
+            "xId": "16",
+            "companyToCompanyId": 2124,
+            "relationType": "vertical",
+            "type": "mtu",
+            "name": "Buxoro mintaqaviy temir yo'l uzeli",
+            "code": "3",
+            "exodimOrgId": "94",
+            "exodimCompanyType": "organization",
+            "children": [
+              {
+                "xId": "2259",
+                "companyToCompanyId": 2886,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Tashkura",
+                "code": "887788",
+                "exodimOrgId": "1502",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1409",
+                "companyToCompanyId": 2760,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Ziyovuddin temir yo‘l masofasi",
+                "shortName": "ПЧ-11",
+                "exodimOrgId": "98",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1780",
+                "companyToCompanyId": 2758,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Qorlitog' temir yo'l masofasi",
+                "shortName": "ПЧ-16",
+                "exodimOrgId": "109",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1110",
+                "companyToCompanyId": 1969,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Turon",
+                "code": "744522",
+                "exodimOrgId": "1546",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1029",
+                "companyToCompanyId": 1970,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jayxun",
+                "code": "101",
+                "exodimOrgId": "1890",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1302",
+                "companyToCompanyId": 1968,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Dautepa",
+                "code": "744503",
+                "exodimOrgId": "1545",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1410",
+                "companyToCompanyId": 1959,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Navoiy signalizatsiya va aloqa distansiyasi",
+                "shortName": "ШЧ-6",
+                "exodimOrgId": "102",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1404",
+                "companyToCompanyId": 1953,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Samarqand elektr taʼminot distansiyasi",
+                "shortName": "ЭЧ-8",
+                "exodimOrgId": "105",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1408",
+                "companyToCompanyId": 1910,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Uchquduq temir yo‘l masofasi",
+                "shortName": "ПЧ-9",
+                "exodimOrgId": "96",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1406",
+                "companyToCompanyId": 1908,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Samarqand temir yo‘l masofasi",
+                "shortName": "ПЧ-8",
+                "exodimOrgId": "95",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1405",
+                "companyToCompanyId": 1907,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Samarqand signalizatsiya va aloqa distansiyasi",
+                "shortName": "ШЧ-5",
+                "exodimOrgId": "101",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1401",
+                "companyToCompanyId": 1906,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Buxoro signalizatsiya va aloqa distansiyasi",
+                "shortName": "ШЧ-7",
+                "exodimOrgId": "103",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1400",
+                "companyToCompanyId": 1905,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Buxoro temir yo‘l masofasi",
+                "shortName": "ПЧ-10",
+                "exodimOrgId": "97",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1399",
+                "companyToCompanyId": 1904,
+                "relationType": "vertical",
+                "type": "tch",
+                "name": "Buxoro lokomotiv deposi",
+                "shortName": "ТЧ-6",
+                "exodimOrgId": "100",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1402",
+                "companyToCompanyId": 1480,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Buxoro elektr taʼminot distansiyasi",
+                "shortName": "ЭЧ-4",
+                "exodimOrgId": "104",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1044",
+                "companyToCompanyId": 1392,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sangzor",
+                "code": "727226",
+                "exodimOrgId": "1462",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1163",
+                "companyToCompanyId": 1394,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "G’allaorol",
+                "code": "727207",
+                "exodimOrgId": "1509",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1164",
+                "companyToCompanyId": 1393,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nurlidon",
+                "code": "727300",
+                "exodimOrgId": "1442",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1165",
+                "companyToCompanyId": 1395,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Marjonbuloq",
+                "code": "727404",
+                "exodimOrgId": "1499",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1309",
+                "companyToCompanyId": 1367,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yakkatut",
+                "code": "730500",
+                "exodimOrgId": "1526",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1270",
+                "companyToCompanyId": 1332,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kogon",
+                "code": "740606",
+                "exodimOrgId": "663",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1209",
+                "companyToCompanyId": 1271,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ajibugut",
+                "code": "732402",
+                "exodimOrgId": "1501",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1208",
+                "companyToCompanyId": 1270,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Maylisoy",
+                "code": "732309",
+                "exodimOrgId": "1495",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1207",
+                "companyToCompanyId": 1269,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Uchquduq-2",
+                "code": "732205",
+                "exodimOrgId": "1518",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1206",
+                "companyToCompanyId": 1268,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Uchquduq-1",
+                "code": "732101",
+                "exodimOrgId": "1525",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1205",
+                "companyToCompanyId": 1267,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qizilquduq",
+                "code": "731804",
+                "exodimOrgId": "1523",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1204",
+                "companyToCompanyId": 1266,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Karakatta",
+                "code": "731700",
+                "exodimOrgId": "1519",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1203",
+                "companyToCompanyId": 1265,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Zafarobod",
+                "code": "731607",
+                "exodimOrgId": "1524",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1202",
+                "companyToCompanyId": 1264,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Konimex",
+                "code": "731503",
+                "exodimOrgId": "1521",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1201",
+                "companyToCompanyId": 1263,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Tinchlik",
+                "code": "731407",
+                "exodimOrgId": "1531",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1200",
+                "companyToCompanyId": 1262,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Navoiy",
+                "code": "731306",
+                "exodimOrgId": "1529",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1199",
+                "companyToCompanyId": 1261,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Binokor",
+                "code": "731202",
+                "exodimOrgId": "1535",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1198",
+                "companyToCompanyId": 1260,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Navbahor",
+                "code": "731109",
+                "exodimOrgId": "1498",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1197",
+                "companyToCompanyId": 1259,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qiziltepa",
+                "code": "731005",
+                "exodimOrgId": "1522",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1196",
+                "companyToCompanyId": 1258,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Karmana",
+                "code": "730905",
+                "exodimOrgId": "1520",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1195",
+                "companyToCompanyId": 1257,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Olot",
+                "code": "730708",
+                "exodimOrgId": "1512",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1194",
+                "companyToCompanyId": 1256,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qorako’l",
+                "code": "730604",
+                "exodimOrgId": "1527",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1193",
+                "companyToCompanyId": 1255,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Murg’ak",
+                "code": "730407",
+                "exodimOrgId": "1465",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1192",
+                "companyToCompanyId": 1254,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qorovulbozor",
+                "code": "730303",
+                "exodimOrgId": "106",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1191",
+                "companyToCompanyId": 1253,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Mustaqillik",
+                "code": "730201",
+                "exodimOrgId": "1517",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1190",
+                "companyToCompanyId": 1252,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Buxoro-2",
+                "code": "730106",
+                "exodimOrgId": "1528",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1189",
+                "companyToCompanyId": 1251,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Buxoro-1",
+                "code": "730002",
+                "exodimOrgId": "1536",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1188",
+                "companyToCompanyId": 1250,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yangiobod",
+                "code": "729908",
+                "exodimOrgId": "1533",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1187",
+                "companyToCompanyId": 1249,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yaxshilik",
+                "code": "729804",
+                "exodimOrgId": "1515",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1186",
+                "companyToCompanyId": 1248,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qorlitog’",
+                "code": "729700",
+                "exodimOrgId": "1514",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1185",
+                "companyToCompanyId": 1247,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xizirbobo",
+                "code": "729607",
+                "exodimOrgId": "1478",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1177",
+                "companyToCompanyId": 1239,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ziyovuddin",
+                "code": "728708",
+                "exodimOrgId": "1510",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1176",
+                "companyToCompanyId": 1238,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Zirabuloq",
+                "code": "728604",
+                "exodimOrgId": "1507",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1174",
+                "companyToCompanyId": 1236,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kattaqo’rg’on",
+                "code": "728407",
+                "exodimOrgId": "1513",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1173",
+                "companyToCompanyId": 1235,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nurbuloq",
+                "code": "728204",
+                "exodimOrgId": "1506",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1172",
+                "companyToCompanyId": 1234,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Juma",
+                "code": "728106",
+                "exodimOrgId": "1505",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1171",
+                "companyToCompanyId": 1233,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Maroqand",
+                "code": "728002",
+                "exodimOrgId": "1534",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1170",
+                "companyToCompanyId": 1232,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ulug’bek",
+                "code": "727902",
+                "exodimOrgId": "1508",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1169",
+                "companyToCompanyId": 1231,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Samarqand",
+                "code": "727809",
+                "exodimOrgId": "1530",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1168",
+                "companyToCompanyId": 1230,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Zarafshon",
+                "code": "727705",
+                "exodimOrgId": "1503",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1167",
+                "companyToCompanyId": 1229,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jomboy",
+                "code": "727601",
+                "exodimOrgId": "1504",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1166",
+                "companyToCompanyId": 1228,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Bulung’ur",
+                "code": "727508",
+                "exodimOrgId": "1516",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1102",
+                "companyToCompanyId": 1164,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sho’rbuloq",
+                "code": "739844",
+                "exodimOrgId": "1494",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1076",
+                "companyToCompanyId": 1138,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qizilqum",
+                "code": "731819",
+                "exodimOrgId": "1463",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1075",
+                "companyToCompanyId": 1137,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xuzurchul",
+                "code": "731786",
+                "exodimOrgId": "1490",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1074",
+                "companyToCompanyId": 1136,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Tomdi",
+                "code": "731767",
+                "exodimOrgId": "1491",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1073",
+                "companyToCompanyId": 1135,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Toshrabot",
+                "code": "731749",
+                "exodimOrgId": "1484",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1072",
+                "companyToCompanyId": 1134,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yuksalish",
+                "code": "731734",
+                "exodimOrgId": "1483",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1071",
+                "companyToCompanyId": 1133,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Taraqqiyot",
+                "code": "731630",
+                "exodimOrgId": "1464",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1070",
+                "companyToCompanyId": 1132,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Gulobod",
+                "code": "731611",
+                "exodimOrgId": "1485",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1069",
+                "companyToCompanyId": 1131,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Malik",
+                "code": "731221",
+                "exodimOrgId": "1486",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1068",
+                "companyToCompanyId": 1130,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Malikobod",
+                "code": "731113",
+                "exodimOrgId": "1481",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1067",
+                "companyToCompanyId": 1129,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Elobod",
+                "code": "731011",
+                "exodimOrgId": "1471",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1066",
+                "companyToCompanyId": 1128,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xo’jadavlat",
+                "code": "730712",
+                "exodimOrgId": "1511",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1065",
+                "companyToCompanyId": 1127,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Poykent",
+                "code": "730454",
+                "exodimOrgId": "1468",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1064",
+                "companyToCompanyId": 1126,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Azizobod",
+                "code": "730445",
+                "exodimOrgId": "1475",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1063",
+                "companyToCompanyId": 1125,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Tudako'l",
+                "code": "730430",
+                "exodimOrgId": "1470",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1062",
+                "companyToCompanyId": 1124,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Farovon",
+                "code": "730411",
+                "exodimOrgId": "1496",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1061",
+                "companyToCompanyId": 1123,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yoshlik",
+                "code": "730318",
+                "exodimOrgId": "1489",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1059",
+                "companyToCompanyId": 1121,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Parvoz",
+                "code": "729819",
+                "exodimOrgId": "1479",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1058",
+                "companyToCompanyId": 1120,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kiyikli",
+                "code": "729715",
+                "exodimOrgId": "1477",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1050",
+                "companyToCompanyId": 1112,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Narpay",
+                "code": "728727",
+                "exodimOrgId": "1441",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1049",
+                "companyToCompanyId": 1111,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nurota",
+                "code": "728303",
+                "exodimOrgId": "1500",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1048",
+                "companyToCompanyId": 1110,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Do'stobod",
+                "code": "728125",
+                "exodimOrgId": "1482",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1030",
+                "companyToCompanyId": 1092,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kattaqo’rg’on yo’lovchi",
+                "code": "102",
+                "exodimOrgId": "1513",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "440",
+                "companyToCompanyId": 490,
+                "relationType": "vertical",
+                "type": "pmc",
+                "name": "17-son Buxoro temir yo‘l mashina bekati",
+                "shortName": "ПМС-17",
+                "exodimOrgId": "108",
+                "exodimCompanyType": "organization"
+              }
+            ]
+          },
+          {
+            "xId": "17",
+            "companyToCompanyId": 2125,
+            "relationType": "vertical",
+            "type": "mtu",
+            "name": "Qo'ng'irot mintaqaviy temir yo'l uzeli",
+            "code": "4",
+            "exodimOrgId": "110",
+            "exodimCompanyType": "organization",
+            "children": [
+              {
+                "xId": "2315",
+                "companyToCompanyId": 3422,
+                "relationType": "vertical",
+                "type": "default",
+                "name": "Qo'ng'irot MTU Xorazm hududi MM",
+                "shortName": "",
+                "exodimOrgId": "120",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "2249",
+                "companyToCompanyId": 2877,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qipshaq",
+                "code": "739563",
+                "exodimOrgId": "1894",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "2250",
+                "companyToCompanyId": 2878,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Blok post 80",
+                "code": "80",
+                "exodimOrgId": "1896",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "2247",
+                "companyToCompanyId": 2875,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Mang'it",
+                "code": "739524",
+                "exodimOrgId": "3672",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "2248",
+                "companyToCompanyId": 2876,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Gurlen",
+                "code": "739562",
+                "exodimOrgId": "3756",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1422",
+                "companyToCompanyId": 1961,
+                "relationType": "vertical",
+                "type": "pmc",
+                "name": "279-son Qo‘ng‘irot temir yo‘l mashina bekati",
+                "shortName": "ПМС-279",
+                "exodimOrgId": "119",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1416",
+                "companyToCompanyId": 1960,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Qo‘ng‘irot elektr taʼminot distansiyasi",
+                "shortName": "ЭЧ-10",
+                "exodimOrgId": "118",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1617",
+                "companyToCompanyId": 1954,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Blok post 2",
+                "code": "222222",
+                "exodimOrgId": "1889",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1414",
+                "companyToCompanyId": 1918,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Qo‘ng‘irot temir yo‘l masofasi",
+                "shortName": "ПЧ-25",
+                "exodimOrgId": "112",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1417",
+                "companyToCompanyId": 1917,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Qoraqalpog‘iston temir yo‘l masofasi",
+                "shortName": "ПЧ-26",
+                "exodimOrgId": "113",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1413",
+                "companyToCompanyId": 1916,
+                "relationType": "vertical",
+                "type": "tch",
+                "name": "Qo‘ng‘irot lokomotiv deposi",
+                "shortName": "ТЧ-7",
+                "exodimOrgId": "114",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1418",
+                "companyToCompanyId": 1915,
+                "relationType": "vertical",
+                "type": "tch",
+                "name": "Urgench lokomotiv deposi",
+                "shortName": "ТЧ-10",
+                "exodimOrgId": "115",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1419",
+                "companyToCompanyId": 1914,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Urganch temir yo‘l masofasi",
+                "shortName": "ПЧ-18",
+                "exodimOrgId": "111",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1420",
+                "companyToCompanyId": 1913,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Urgench signalizatsiya va aloqa distansiyasi",
+                "shortName": "ШЧ-10",
+                "exodimOrgId": "209",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1421",
+                "companyToCompanyId": 1499,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Miskin elektr taʼminot distansiyasi",
+                "shortName": "ЭЧ-9",
+                "exodimOrgId": "117",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1415",
+                "companyToCompanyId": 1493,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Qo‘ng‘irot signalizatsiya va aloqa distansiyasi",
+                "shortName": "ШЧ-11",
+                "exodimOrgId": "116",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1332",
+                "companyToCompanyId": 1391,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qo'ng'irot",
+                "code": "737209",
+                "exodimOrgId": "1865",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1304",
+                "companyToCompanyId": 1366,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Baday",
+                "code": "744700",
+                "exodimOrgId": "1881",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1303",
+                "companyToCompanyId": 1365,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Borsakelmas",
+                "code": "744607",
+                "exodimOrgId": "1861",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1266",
+                "companyToCompanyId": 1328,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Istiqlol",
+                "code": "739900",
+                "exodimOrgId": "2102",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1265",
+                "companyToCompanyId": 1327,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Miskin",
+                "code": "739806",
+                "exodimOrgId": "1885",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1264",
+                "companyToCompanyId": 1326,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kunxo’ja",
+                "code": "739702",
+                "exodimOrgId": "1863",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1263",
+                "companyToCompanyId": 1325,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "To’rtko’l",
+                "code": "739609",
+                "exodimOrgId": "1884",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1262",
+                "companyToCompanyId": 1324,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nazarxon",
+                "code": "739505",
+                "exodimOrgId": "1877",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1260",
+                "companyToCompanyId": 1322,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chimboy",
+                "code": "739308",
+                "exodimOrgId": "1876",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1259",
+                "companyToCompanyId": 1321,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kumshungul",
+                "code": "739204",
+                "exodimOrgId": "1875",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1258",
+                "companyToCompanyId": 1320,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nukus",
+                "code": "739007",
+                "exodimOrgId": "1873",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1257",
+                "companyToCompanyId": 1319,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Taxiatosh-pristan",
+                "code": "738907",
+                "exodimOrgId": "1872",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1256",
+                "companyToCompanyId": 1318,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Pitnak",
+                "code": "738705",
+                "exodimOrgId": "2101",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1255",
+                "companyToCompanyId": 1317,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Hazorasp",
+                "code": "738606",
+                "exodimOrgId": "2100",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1254",
+                "companyToCompanyId": 1316,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Bog’ot",
+                "code": "738502",
+                "exodimOrgId": "2103",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1253",
+                "companyToCompanyId": 1315,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xonqa",
+                "code": "738409",
+                "exodimOrgId": "2098",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1252",
+                "companyToCompanyId": 1314,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Urganch",
+                "code": "738305",
+                "exodimOrgId": "3812",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1251",
+                "companyToCompanyId": 1313,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Shovot",
+                "code": "738108",
+                "exodimOrgId": "2099",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1250",
+                "companyToCompanyId": 1312,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jumurtov",
+                "code": "737904",
+                "exodimOrgId": "1879",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1249",
+                "companyToCompanyId": 1311,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Naymanko’l",
+                "code": "737707",
+                "exodimOrgId": "1871",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1248",
+                "companyToCompanyId": 1310,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xo’jayli",
+                "code": "737603",
+                "exodimOrgId": "3816",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1247",
+                "companyToCompanyId": 1309,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xatep",
+                "code": "737500",
+                "exodimOrgId": "1869",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1245",
+                "companyToCompanyId": 1307,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qonlikol",
+                "code": "737302",
+                "exodimOrgId": "1866",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1243",
+                "companyToCompanyId": 1305,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qirqqiz",
+                "code": "737105",
+                "exodimOrgId": "1862",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1242",
+                "companyToCompanyId": 1304,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jasliq",
+                "code": "737001",
+                "exodimOrgId": "1859",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1241",
+                "companyToCompanyId": 1303,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qoraqalpog’iston",
+                "code": "736901",
+                "exodimOrgId": "1851",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1225",
+                "companyToCompanyId": 1287,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ellikqal’a",
+                "code": "734501",
+                "exodimOrgId": "1883",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1210",
+                "companyToCompanyId": 1272,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qaraozek",
+                "code": "732506",
+                "exodimOrgId": "1880",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1112",
+                "companyToCompanyId": 1174,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Bo’ston",
+                "code": "744908",
+                "exodimOrgId": "1856",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1111",
+                "companyToCompanyId": 1173,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Abadan",
+                "code": "744804",
+                "exodimOrgId": "1853",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1098",
+                "companyToCompanyId": 1160,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qo’yboqli",
+                "code": "739647",
+                "exodimOrgId": "1878",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1097",
+                "companyToCompanyId": 1159,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Taxirko’l",
+                "code": "739100",
+                "exodimOrgId": "1874",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1096",
+                "companyToCompanyId": 1158,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xiva",
+                "code": "738339",
+                "exodimOrgId": "2107",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1095",
+                "companyToCompanyId": 1157,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Obod",
+                "code": "738112",
+                "exodimOrgId": "2104",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1094",
+                "companyToCompanyId": 1156,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Bolg'ali",
+                "code": "737425",
+                "exodimOrgId": "1867",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1093",
+                "companyToCompanyId": 1155,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Raushan",
+                "code": "737213",
+                "exodimOrgId": "1864",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1092",
+                "companyToCompanyId": 1154,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Quanish",
+                "code": "737143",
+                "exodimOrgId": "1852",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1091",
+                "companyToCompanyId": 1153,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ajiniyaz",
+                "code": "737124",
+                "exodimOrgId": "1860",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1090",
+                "companyToCompanyId": 1152,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ayapbergan",
+                "code": "737069",
+                "exodimOrgId": "1858",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1089",
+                "companyToCompanyId": 1151,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kiyiksoy",
+                "code": "737054",
+                "exodimOrgId": "1854",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1088",
+                "companyToCompanyId": 1150,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Akto’be",
+                "code": "737048",
+                "exodimOrgId": "1855",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1083",
+                "companyToCompanyId": 1145,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Beruniy",
+                "code": "734605",
+                "exodimOrgId": "1882",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1028",
+                "companyToCompanyId": 1090,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Berdaq",
+                "code": "737020",
+                "exodimOrgId": "1857",
+                "exodimCompanyType": "department"
+              }
+            ]
+          },
+          {
+            "xId": "19",
+            "companyToCompanyId": 2127,
+            "relationType": "vertical",
+            "type": "mtu",
+            "name": "Termiz mintaqaviy temir yo'l uzeli",
+            "code": "6",
+            "exodimOrgId": "129",
+            "exodimCompanyType": "organization",
+            "children": [
+              {
+                "xId": "1431",
+                "companyToCompanyId": 1948,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Termiz signalizatsiya va aloqa distansiyasi",
+                "shortName": "ШЧ-9",
+                "exodimOrgId": "133",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1434",
+                "companyToCompanyId": 1947,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Darband temir yo‘l masofasi",
+                "shortName": "ПЧ-15",
+                "exodimOrgId": "131",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1432",
+                "companyToCompanyId": 1946,
+                "relationType": "vertical",
+                "type": "tch",
+                "name": "Termiz lokomotiv deposi",
+                "shortName": "ТЧ-9",
+                "exodimOrgId": "132",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1433",
+                "companyToCompanyId": 1945,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Termiz temir yo‘l masofasi",
+                "shortName": "ПЧ-13",
+                "exodimOrgId": "130",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1261",
+                "companyToCompanyId": 1323,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Boldir",
+                "code": "734709",
+                "exodimOrgId": "2372",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1239",
+                "companyToCompanyId": 1301,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "G’alaba",
+                "code": "736304",
+                "exodimOrgId": "2340",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1238",
+                "companyToCompanyId": 1300,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sariosiyo",
+                "code": "736102",
+                "exodimOrgId": "2341",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1237",
+                "companyToCompanyId": 1299,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Denov",
+                "code": "736009",
+                "exodimOrgId": "2357",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1236",
+                "companyToCompanyId": 1298,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xayrobod",
+                "code": "735909",
+                "exodimOrgId": "2358",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1235",
+                "companyToCompanyId": 1297,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sho’rchi",
+                "code": "735805",
+                "exodimOrgId": "2359",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1234",
+                "companyToCompanyId": 1296,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Elbayon",
+                "code": "735701",
+                "exodimOrgId": "2367",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1233",
+                "companyToCompanyId": 1295,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qumqo’rg’on",
+                "code": "735608",
+                "exodimOrgId": "2353",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1232",
+                "companyToCompanyId": 1294,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Surxon",
+                "code": "735504",
+                "exodimOrgId": "2368",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1231",
+                "companyToCompanyId": 1293,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jarqo’rg’on",
+                "code": "735400",
+                "exodimOrgId": "2354",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1230",
+                "companyToCompanyId": 1292,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Baqtriya",
+                "code": "735307",
+                "exodimOrgId": "2371",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1229",
+                "companyToCompanyId": 1291,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Termiz",
+                "code": "735109",
+                "exodimOrgId": "2333",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1228",
+                "companyToCompanyId": 1290,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Uchqizil",
+                "code": "735006",
+                "exodimOrgId": "2364",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1227",
+                "companyToCompanyId": 1289,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Navshahar",
+                "code": "734906",
+                "exodimOrgId": "2370",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1226",
+                "companyToCompanyId": 1288,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sherobod",
+                "code": "734802",
+                "exodimOrgId": "2365",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1184",
+                "companyToCompanyId": 1246,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Oqjar",
+                "code": "729400",
+                "exodimOrgId": "2369",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1183",
+                "companyToCompanyId": 1245,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Tangimush",
+                "code": "729306",
+                "exodimOrgId": "2366",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1182",
+                "companyToCompanyId": 1244,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Boysun",
+                "code": "729202",
+                "exodimOrgId": "2356",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1181",
+                "companyToCompanyId": 1243,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Darband",
+                "code": "729109",
+                "exodimOrgId": "2349",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1087",
+                "companyToCompanyId": 1149,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Amuzang",
+                "code": "736507",
+                "exodimOrgId": "2345",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1086",
+                "companyToCompanyId": 1148,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Quduqli",
+                "code": "736206",
+                "exodimOrgId": "2346",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1085",
+                "companyToCompanyId": 1147,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Zartepa",
+                "code": "735415",
+                "exodimOrgId": "2360",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1084",
+                "companyToCompanyId": 1146,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Surxonobod",
+                "code": "739401",
+                "exodimOrgId": "2373",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1057",
+                "companyToCompanyId": 1119,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Pulhokim",
+                "code": "729217",
+                "exodimOrgId": "2363",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1056",
+                "companyToCompanyId": 1118,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sho’rob",
+                "code": "729024",
+                "exodimOrgId": "2362",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1055",
+                "companyToCompanyId": 1117,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Oqnazar",
+                "code": "729014",
+                "exodimOrgId": "2361",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "462",
+                "companyToCompanyId": 512,
+                "relationType": "vertical",
+                "type": "pmc",
+                "name": "Xayrobod temir yo‘l mashina bekati",
+                "shortName": "ПМС-166",
+                "exodimOrgId": "135",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "461",
+                "companyToCompanyId": 511,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Termiz elektr taʼminot distansiyasi",
+                "shortName": "ЭЧ-7",
+                "exodimOrgId": "134",
+                "exodimCompanyType": "organization"
+              }
+            ]
+          },
+          {
+            "xId": "18",
+            "companyToCompanyId": 2126,
+            "relationType": "vertical",
+            "type": "mtu",
+            "name": "Qarshi mintaqaviy temir yo'l uzeli",
+            "code": "5",
+            "exodimOrgId": "121",
+            "exodimCompanyType": "organization",
+            "children": [
+              {
+                "xId": "1425",
+                "companyToCompanyId": 2771,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Qarshi temir yo‘l masofasi",
+                "shortName": "ПЧ-12",
+                "exodimOrgId": "122",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1428",
+                "companyToCompanyId": 2761,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Qashqadaryo temir yo‘l masofasi",
+                "shortName": "ПЧ-14",
+                "exodimOrgId": "123",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1424",
+                "companyToCompanyId": 1942,
+                "relationType": "vertical",
+                "type": "tch",
+                "name": "Qarshi lokomotiv deposi",
+                "shortName": "ТЧ-8",
+                "exodimOrgId": "124",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1427",
+                "companyToCompanyId": 1939,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Qarshi elektr taʼminot distansiyasi",
+                "shortName": "ЭЧ-5",
+                "exodimOrgId": "126",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1333",
+                "companyToCompanyId": 1390,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qayirma",
+                "code": "728816",
+                "exodimOrgId": "2158",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1045",
+                "companyToCompanyId": 1386,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Gumbaz",
+                "code": "728017",
+                "exodimOrgId": "2130",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1082",
+                "companyToCompanyId": 1388,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qamashi",
+                "code": "733808",
+                "exodimOrgId": "2149",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1047",
+                "companyToCompanyId": 1387,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jom",
+                "code": "728036",
+                "exodimOrgId": "2132",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1046",
+                "companyToCompanyId": 1385,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ulus",
+                "code": "728021",
+                "exodimOrgId": "2131",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1224",
+                "companyToCompanyId": 1286,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jayron",
+                "code": "734304",
+                "exodimOrgId": "2143",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1223",
+                "companyToCompanyId": 1285,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nishon",
+                "code": "734200",
+                "exodimOrgId": "2142",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1222",
+                "companyToCompanyId": 1284,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kitob",
+                "code": "734107",
+                "exodimOrgId": "2152",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1221",
+                "companyToCompanyId": 1283,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Tanxoz",
+                "code": "734003",
+                "exodimOrgId": "2151",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1220",
+                "companyToCompanyId": 1282,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yakkabog'",
+                "code": "733903",
+                "exodimOrgId": "2150",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1219",
+                "companyToCompanyId": 1281,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sho’rtan",
+                "code": "733602",
+                "exodimOrgId": "2147",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1218",
+                "companyToCompanyId": 1280,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ayritom",
+                "code": "733405",
+                "exodimOrgId": "2133",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1217",
+                "companyToCompanyId": 1279,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Olato’n",
+                "code": "733301",
+                "exodimOrgId": "2134",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1216",
+                "companyToCompanyId": 1278,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qashqadaryo",
+                "code": "733208",
+                "exodimOrgId": "2136",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1215",
+                "companyToCompanyId": 1277,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qarshi",
+                "code": "733104",
+                "exodimOrgId": "128",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1214",
+                "companyToCompanyId": 1276,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Koson",
+                "code": "733000",
+                "exodimOrgId": "2138",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1213",
+                "companyToCompanyId": 1275,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Mash'al",
+                "code": "732807",
+                "exodimOrgId": "2140",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1212",
+                "companyToCompanyId": 1274,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Muborak",
+                "code": "732703",
+                "exodimOrgId": "2139",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1211",
+                "companyToCompanyId": 1273,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kengsoy",
+                "code": "732602",
+                "exodimOrgId": "2146",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1180",
+                "companyToCompanyId": 1242,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Oqrabot",
+                "code": "729005",
+                "exodimOrgId": "2154",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1179",
+                "companyToCompanyId": 1241,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Dehqonobod",
+                "code": "728905",
+                "exodimOrgId": "2160",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1178",
+                "companyToCompanyId": 1240,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Toshg’uzor",
+                "code": "728801",
+                "exodimOrgId": "2159",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1081",
+                "companyToCompanyId": 1143,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "G’uzor",
+                "code": "733706",
+                "exodimOrgId": "2148",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1080",
+                "companyToCompanyId": 1142,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Dasht",
+                "code": "733509",
+                "exodimOrgId": "2325",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1079",
+                "companyToCompanyId": 1141,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nekuz",
+                "code": "733316",
+                "exodimOrgId": "2135",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1078",
+                "companyToCompanyId": 1140,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sug'diyona",
+                "code": "733212",
+                "exodimOrgId": "2137",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1077",
+                "companyToCompanyId": 1139,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Tumorchi",
+                "code": "733123",
+                "exodimOrgId": "2141",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1054",
+                "companyToCompanyId": 1116,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chashma",
+                "code": "728924",
+                "exodimOrgId": "2153",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1053",
+                "companyToCompanyId": 1115,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qoradahna",
+                "code": "728919",
+                "exodimOrgId": "2155",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1052",
+                "companyToCompanyId": 1114,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jarquduq",
+                "code": "728835",
+                "exodimOrgId": "2156",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1051",
+                "companyToCompanyId": 1113,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Bo’zaxo’r",
+                "code": "728820",
+                "exodimOrgId": "2157",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "453",
+                "companyToCompanyId": 503,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Qarshi signalizatsiya va aloqa distansiyasi",
+                "shortName": "ШЧ-8",
+                "exodimOrgId": "125",
+                "exodimCompanyType": "organization"
+              }
+            ]
+          },
+          {
+            "xId": "15",
+            "companyToCompanyId": 2123,
+            "relationType": "vertical",
+            "type": "mtu",
+            "name": "Qo'qon mintaqaviy temir yo'l uzeli",
+            "code": "2",
+            "exodimOrgId": "83",
+            "exodimCompanyType": "organization",
+            "children": [
+              {
+                "xId": "421",
+                "companyToCompanyId": 2025,
+                "relationType": "vertical",
+                "type": "tch",
+                "name": "Qo‘qon lokomotiv deposi",
+                "shortName": "ТЧ-2",
+                "exodimOrgId": "88",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "425",
+                "companyToCompanyId": 2023,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Andijon temir yo‘l masofasi",
+                "shortName": "ПЧ-7",
+                "exodimOrgId": "87",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1389",
+                "companyToCompanyId": 2021,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Qo‘qon temir yo‘l masofasi",
+                "shortName": "ПЧ-6",
+                "exodimOrgId": "86",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1391",
+                "companyToCompanyId": 2020,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Qo‘qon signalizatsiya va aloqa distansiyasi",
+                "shortName": "ШЧ-4",
+                "exodimOrgId": "90",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1392",
+                "companyToCompanyId": 2019,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Qo‘qon elektr taʼminot distansiyasi",
+                "shortName": "ЭЧ-3",
+                "exodimOrgId": "91",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1393",
+                "companyToCompanyId": 2018,
+                "relationType": "vertical",
+                "type": "vchn",
+                "name": "Oltiariq vagonlarni bug‘lab yuvish korxonasi",
+                "shortName": "ВЧН",
+                "exodimOrgId": "84",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1396",
+                "companyToCompanyId": 2016,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Qamchiq temir yo‘l masofasi",
+                "shortName": "ПЧ-3",
+                "exodimOrgId": "85",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1397",
+                "companyToCompanyId": 2015,
+                "relationType": "vertical",
+                "type": "pmc",
+                "name": "164-son Qo‘qon temir yo‘l mashina bekati",
+                "shortName": "ПМС-164",
+                "exodimOrgId": "92",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1281",
+                "companyToCompanyId": 1973,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xaqqulobod",
+                "code": "741806",
+                "exodimOrgId": "1153,1154",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1625",
+                "companyToCompanyId": 1967,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Block post-331",
+                "code": "331",
+                "exodimOrgId": "1134",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1626",
+                "companyToCompanyId": 1966,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Block post-44",
+                "code": "44",
+                "exodimOrgId": "3746",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1285",
+                "companyToCompanyId": 1396,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qaqir",
+                "code": "742207",
+                "exodimOrgId": "1098,1099",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1301",
+                "companyToCompanyId": 1363,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yaypan",
+                "code": "744306",
+                "exodimOrgId": "1089,1088",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1300",
+                "companyToCompanyId": 1362,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xonobod",
+                "code": "744109",
+                "exodimOrgId": "1145,1144",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1299",
+                "companyToCompanyId": 1361,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Savay",
+                "code": "743905",
+                "exodimOrgId": "1142,1143,1141",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1298",
+                "companyToCompanyId": 1360,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jalaquduq",
+                "code": "743801",
+                "exodimOrgId": "1140,1139",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1297",
+                "companyToCompanyId": 1359,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Axtachi",
+                "code": "743708",
+                "exodimOrgId": "1136,1138,1135,1137",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1296",
+                "companyToCompanyId": 1358,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Andijon-1",
+                "code": "743604",
+                "exodimOrgId": "1130,1131,1132,1133,1134,1129",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1295",
+                "companyToCompanyId": 1357,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Shahrixon",
+                "code": "743500",
+                "exodimOrgId": "1128,1127",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1294",
+                "companyToCompanyId": 1356,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Asaka",
+                "code": "743407",
+                "exodimOrgId": "1264",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1293",
+                "companyToCompanyId": 1355,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Quva",
+                "code": "743303",
+                "exodimOrgId": "1122,1123",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1292",
+                "companyToCompanyId": 1354,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Oxunboboyeva",
+                "code": "743209",
+                "exodimOrgId": "1111,1109,1110,1112,1113",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1291",
+                "companyToCompanyId": 1353,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Quvasoy",
+                "code": "742902",
+                "exodimOrgId": "1119,1120,1121",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1290",
+                "companyToCompanyId": 1352,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Farg’ona-2",
+                "code": "742809",
+                "exodimOrgId": "1117,1118",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1289",
+                "companyToCompanyId": 1351,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kirgili",
+                "code": "742705",
+                "exodimOrgId": "1115,1116,1114",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1288",
+                "companyToCompanyId": 1350,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Marg’ilon",
+                "code": "742508",
+                "exodimOrgId": "1106,1105,1107,1108",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1287",
+                "companyToCompanyId": 1349,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Oltiariq",
+                "code": "742404",
+                "exodimOrgId": "1102,1104,1103",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1286",
+                "companyToCompanyId": 1348,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Furqat",
+                "code": "742300",
+                "exodimOrgId": "1101,1100",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1284",
+                "companyToCompanyId": 1346,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Paxtaobod",
+                "code": "742103",
+                "exodimOrgId": "187",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1283",
+                "companyToCompanyId": 1345,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Andijon-2",
+                "code": "742003",
+                "exodimOrgId": "1150,1146,1149,1147,1148",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1282",
+                "companyToCompanyId": 1344,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Paytug’",
+                "code": "741908",
+                "exodimOrgId": "1152,1151",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1280",
+                "companyToCompanyId": 1342,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Temiryo’lobod",
+                "code": "741702",
+                "exodimOrgId": "1179,1180",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1278",
+                "companyToCompanyId": 1340,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Uchqo’rg’on",
+                "code": "741401",
+                "exodimOrgId": "1158,1155,1156,1157",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1277",
+                "companyToCompanyId": 1339,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Uychi",
+                "code": "741308",
+                "exodimOrgId": "1159,1160",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1276",
+                "companyToCompanyId": 1338,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chortoq",
+                "code": "741204",
+                "exodimOrgId": "1161,1162",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1275",
+                "companyToCompanyId": 1337,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Namangan",
+                "code": "741100",
+                "exodimOrgId": "1164,1165,1163",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1274",
+                "companyToCompanyId": 1336,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Rouston",
+                "code": "741007",
+                "exodimOrgId": "1166,1167",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1273",
+                "companyToCompanyId": 1335,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "To’raqo’rg’on",
+                "code": "740907",
+                "exodimOrgId": "1244",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1272",
+                "companyToCompanyId": 1334,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chust",
+                "code": "740803",
+                "exodimOrgId": "1170,1171",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1271",
+                "companyToCompanyId": 1333,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Pop",
+                "code": "740702",
+                "exodimOrgId": "1173,1174,1172",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1269",
+                "companyToCompanyId": 1331,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Buvayda",
+                "code": "740502",
+                "exodimOrgId": "1188,1187",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1268",
+                "companyToCompanyId": 1330,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Rapqon",
+                "code": "740305",
+                "exodimOrgId": "1087,1086",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1267",
+                "companyToCompanyId": 1329,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qo’qon",
+                "code": "740004",
+                "exodimOrgId": "1097,1090,1091,1092,1093,1094,1095,1096",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1109",
+                "companyToCompanyId": 1171,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yangi Andijon",
+                "code": "743623",
+                "exodimOrgId": "1267",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1108",
+                "companyToCompanyId": 1170,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qoradaryo",
+                "code": "741914",
+                "exodimOrgId": "1148",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1107",
+                "companyToCompanyId": 1169,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chodak",
+                "code": "741740",
+                "exodimOrgId": "1182,1183",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1106",
+                "companyToCompanyId": 1168,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qo’shminor",
+                "code": "741736",
+                "exodimOrgId": "1178",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1105",
+                "companyToCompanyId": 1167,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kon",
+                "code": "741721",
+                "exodimOrgId": "1181",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1104",
+                "companyToCompanyId": 1166,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Mehnatobod",
+                "code": "741435",
+                "exodimOrgId": "1158",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1103",
+                "companyToCompanyId": 1165,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Suvonobod",
+                "code": "740112",
+                "exodimOrgId": "1085,1084",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1037",
+                "companyToCompanyId": 1099,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Orzu",
+                "code": "722650",
+                "exodimOrgId": "1184,1185",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1036",
+                "companyToCompanyId": 1098,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ko’l",
+                "code": "722646",
+                "exodimOrgId": "1186",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1034",
+                "companyToCompanyId": 1096,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Farg'ona-1",
+                "code": "106",
+                "exodimOrgId": "1263",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1032",
+                "companyToCompanyId": 1094,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Pop-2",
+                "code": "104",
+                "exodimOrgId": "1176,1175,1177",
+                "exodimCompanyType": "department"
+              }
+            ]
+          },
+          {
+            "xId": "14",
+            "companyToCompanyId": 2122,
+            "relationType": "vertical",
+            "type": "mtu",
+            "name": "Toshkent mintaqaviy temir yo'l uzeli",
+            "code": "1",
+            "exodimOrgId": "29",
+            "exodimCompanyType": "organization",
+            "children": [
+              {
+                "xId": "1779",
+                "companyToCompanyId": 2759,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Xovos temir yo'l masofasi",
+                "shortName": " ПЧ-4",
+                "exodimOrgId": "32",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1627",
+                "companyToCompanyId": 1994,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jizzax-2*",
+                "code": "726904",
+                "exodimOrgId": "600",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1386",
+                "companyToCompanyId": 1957,
+                "relationType": "vertical",
+                "type": "pmc",
+                "name": "203-son Chuqursoy temir yo‘l mashina bekati",
+                "shortName": "ПМС-203",
+                "exodimOrgId": "38",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1380",
+                "companyToCompanyId": 1956,
+                "relationType": "vertical",
+                "type": "shch",
+                "name": "Toshkent signalizasiyasi va aloqa distansiyasi",
+                "shortName": "ШЧ-1",
+                "exodimOrgId": "34",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1385",
+                "companyToCompanyId": 1936,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Jizzax temir yo‘l masofasi",
+                "shortName": "ПЧ-5",
+                "exodimOrgId": "33",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1439",
+                "companyToCompanyId": 1935,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Toshkent elektr ta'minot distansiyasi",
+                "shortName": "ЭЧ-1",
+                "exodimOrgId": "36",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1377",
+                "companyToCompanyId": 1895,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Salar temir yo'l masofasi",
+                "shortName": "ПЧ-1",
+                "exodimOrgId": "30",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1438",
+                "companyToCompanyId": 1894,
+                "relationType": "vertical",
+                "type": "pch",
+                "name": "Toshkent temir yo'l masofasi",
+                "shortName": "ПЧ-2",
+                "exodimOrgId": "31",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1382",
+                "companyToCompanyId": 1460,
+                "relationType": "vertical",
+                "type": "ech",
+                "name": "Xovos elektr ta'minot distansiyasi",
+                "shortName": "ЭЧ-2",
+                "exodimOrgId": "37",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1162",
+                "companyToCompanyId": 1224,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jizzax",
+                "code": "726903",
+                "exodimOrgId": "241",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1161",
+                "companyToCompanyId": 1223,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Boytog’",
+                "code": "726806",
+                "exodimOrgId": "184",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1160",
+                "companyToCompanyId": 1222,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Zarbdor",
+                "code": "726702",
+                "exodimOrgId": "183",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1159",
+                "companyToCompanyId": 1221,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Dashtobod",
+                "code": "726609",
+                "exodimOrgId": "211",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1158",
+                "companyToCompanyId": 1220,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Rabot",
+                "code": "726505",
+                "exodimOrgId": "228",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1157",
+                "companyToCompanyId": 1219,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chimqo’rg’on",
+                "code": "726401",
+                "exodimOrgId": "185",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1156",
+                "companyToCompanyId": 1218,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chamanzor",
+                "code": "726308",
+                "exodimOrgId": "405",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1155",
+                "companyToCompanyId": 1217,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Bekobod",
+                "code": "726100",
+                "exodimOrgId": "494",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1154",
+                "companyToCompanyId": 1216,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Farhod",
+                "code": "726007",
+                "exodimOrgId": "200",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1153",
+                "companyToCompanyId": 1215,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xovos",
+                "code": "725803",
+                "exodimOrgId": "43",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1152",
+                "companyToCompanyId": 1214,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Paxtakor",
+                "code": "725708",
+                "exodimOrgId": "215",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1151",
+                "companyToCompanyId": 1213,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Do’stlik",
+                "code": "725606",
+                "exodimOrgId": "214",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1150",
+                "companyToCompanyId": 1212,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Irjar",
+                "code": "725502",
+                "exodimOrgId": "205",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1149",
+                "companyToCompanyId": 1211,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yangiyer",
+                "code": "725201",
+                "exodimOrgId": "236",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1148",
+                "companyToCompanyId": 1210,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Boyovut",
+                "code": "725108",
+                "exodimOrgId": "216",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1147",
+                "companyToCompanyId": 1209,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Guliston",
+                "code": "725004",
+                "exodimOrgId": "209",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1146",
+                "companyToCompanyId": 1208,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Oqoltin",
+                "code": "724904",
+                "exodimOrgId": "213",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1145",
+                "companyToCompanyId": 1207,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Baxt",
+                "code": "724800",
+                "exodimOrgId": "212",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1144",
+                "companyToCompanyId": 1206,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sirdaryo",
+                "code": "724707",
+                "exodimOrgId": "198",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1143",
+                "companyToCompanyId": 1205,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yangi Chinoz",
+                "code": "724502",
+                "exodimOrgId": "218",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1142",
+                "companyToCompanyId": 1204,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chinoz",
+                "code": "724406",
+                "exodimOrgId": "217",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1141",
+                "companyToCompanyId": 1203,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Olmazor",
+                "code": "724302",
+                "exodimOrgId": "226",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1140",
+                "companyToCompanyId": 1202,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Paxta",
+                "code": "724209",
+                "exodimOrgId": "221",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1139",
+                "companyToCompanyId": 1201,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yangiyo’l",
+                "code": "724001",
+                "exodimOrgId": "208",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1138",
+                "companyToCompanyId": 1200,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "O’rtaovul",
+                "code": "723808",
+                "exodimOrgId": "373",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1137",
+                "companyToCompanyId": 1199,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Rahimova",
+                "code": "723704",
+                "exodimOrgId": "224",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1136",
+                "companyToCompanyId": 1198,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "To’qimachi",
+                "code": "723600",
+                "exodimOrgId": "195",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1135",
+                "companyToCompanyId": 1197,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sirg’ali",
+                "code": "723507",
+                "exodimOrgId": "196",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1134",
+                "companyToCompanyId": 1196,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Jaloyir",
+                "code": "723403",
+                "exodimOrgId": "186",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1133",
+                "companyToCompanyId": 1195,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Kuchluk",
+                "code": "723307",
+                "exodimOrgId": "202",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1132",
+                "companyToCompanyId": 1194,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "To’ytepa",
+                "code": "723206",
+                "exodimOrgId": "203",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1131",
+                "companyToCompanyId": 1193,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ozodlik",
+                "code": "723102",
+                "exodimOrgId": "193",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1130",
+                "companyToCompanyId": 1192,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Ohangaron",
+                "code": "723009",
+                "exodimOrgId": "194",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1129",
+                "companyToCompanyId": 1191,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Obliq",
+                "code": "722701",
+                "exodimOrgId": "206",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1128",
+                "companyToCompanyId": 1190,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Angren",
+                "code": "722608",
+                "exodimOrgId": "199",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1127",
+                "companyToCompanyId": 1189,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Hamza",
+                "code": "722504",
+                "exodimOrgId": "210",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1126",
+                "companyToCompanyId": 1188,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Toshkent",
+                "code": "722400",
+                "exodimOrgId": "187",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1125",
+                "companyToCompanyId": 1187,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Dalaguzar",
+                "code": "722307",
+                "exodimOrgId": "222",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1124",
+                "companyToCompanyId": 1186,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nazarbek",
+                "code": "722203",
+                "exodimOrgId": "192",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1123",
+                "companyToCompanyId": 1185,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Xojikent",
+                "code": "722006",
+                "exodimOrgId": "220",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1122",
+                "companyToCompanyId": 1184,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Barraj",
+                "code": "721802",
+                "exodimOrgId": "188",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1121",
+                "companyToCompanyId": 1183,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Aranchi",
+                "code": "721605",
+                "exodimOrgId": "225",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1120",
+                "companyToCompanyId": 1182,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chirchiq",
+                "code": "721501",
+                "exodimOrgId": "219",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1119",
+                "companyToCompanyId": 1181,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Bo’zsuv",
+                "code": "721408",
+                "exodimOrgId": "207",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1118",
+                "companyToCompanyId": 1180,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Baytqo'rg'on",
+                "code": "721304",
+                "exodimOrgId": "239",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1117",
+                "companyToCompanyId": 1179,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Qodiriya",
+                "code": "721200",
+                "exodimOrgId": "223",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1116",
+                "companyToCompanyId": 1178,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Nurhayot",
+                "code": "721107",
+                "exodimOrgId": "191",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1115",
+                "companyToCompanyId": 1177,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Salar",
+                "code": "720903",
+                "exodimOrgId": "190",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1114",
+                "companyToCompanyId": 1176,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Keles",
+                "code": "720104",
+                "exodimOrgId": "189",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1113",
+                "companyToCompanyId": 1175,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Chuqursoy",
+                "code": "720000",
+                "exodimOrgId": "47",
+                "exodimCompanyType": "organization"
+              },
+              {
+                "xId": "1043",
+                "companyToCompanyId": 1105,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Sayxun",
+                "code": "726810",
+                "exodimOrgId": "235",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1042",
+                "companyToCompanyId": 1104,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Zomin",
+                "code": "726613",
+                "exodimOrgId": "229",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1041",
+                "companyToCompanyId": 1103,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Yangi Yangiyer",
+                "code": "725409",
+                "exodimOrgId": "237",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1040",
+                "companyToCompanyId": 1102,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "O'zbekiston",
+                "code": "723827",
+                "exodimOrgId": "201",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1039",
+                "companyToCompanyId": 1101,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Janubiy vokzal",
+                "code": "723615",
+                "exodimOrgId": "2640",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1038",
+                "companyToCompanyId": 1100,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Akcha",
+                "code": "722805",
+                "exodimOrgId": "197",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1035",
+                "companyToCompanyId": 1097,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Toshkent markaziy vokzali",
+                "code": "720918",
+                "exodimOrgId": "3810",
+                "exodimCompanyType": "department"
+              },
+              {
+                "xId": "1031",
+                "companyToCompanyId": 1093,
+                "relationType": "vertical",
+                "type": "station",
+                "name": "Oqko'prik",
+                "code": "103",
+                "exodimOrgId": "233",
+                "exodimCompanyType": "department"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

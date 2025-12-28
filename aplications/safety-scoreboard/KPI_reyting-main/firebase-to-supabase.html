@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔄 Firebase → Supabase Migration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .status {
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .status.success {
+            background: #d1e7dd;
+            color: #0f5132;
+            border: 2px solid #badbcc;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #842029;
+            border: 2px solid #f5c2c7;
+        }
+
+        .status.loading {
+            background: #cfe2ff;
+            color: #084298;
+            border: 2px solid #b6d4fe;
+        }
+
+        .step {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .step-status {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 10px 5px;
+        }
+
+        .btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .log {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+
+        .log-line {
+            margin-bottom: 5px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔄 Firebase → Supabase</h1>
+        <p class="subtitle">Ma'lumotlarni ko'chirish</p>
+
+        <div id="status" class="status loading">
+            ⏳ Tayyor. "Boshlash" tugmasini bosing.
+        </div>
+
+        <div class="step">
+            <h3>1️⃣ LocalStorage'dan O'qish</h3>
+            <div id="step1-status" class="step-status">Kutilmoqda...</div>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ Supabase'ga Ulanish</h3>
+            <div id="step2-status" class="step-status">Kutilmoqda...</div>
+        </div>
+
+        <div class="step">
+            <h3>3️⃣ Ma'lumotlarni Ko'chirish</h3>
+            <div id="step3-status" class="step-status">Kutilmoqda...</div>
+        </div>
+
+        <div class="step">
+            <h3>4️⃣ Tekshirish</h3>
+            <div id="step4-status" class="step-status">Kutilmoqda...</div>
+        </div>
+
+        <div class="actions">
+            <button id="start-btn" class="btn btn-success" onclick="startMigration()">
+                🚀 Boshlash
+            </button>
+            <a href="index.html" class="btn" id="continue-btn" style="display: none; text-decoration: none;">
+                ➡️ Tizimga O'tish
+            </a>
+        </div>
+
+        <div class="log" id="console-log"></div>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        const SUPABASE_URL = 'https://uqxtzlmdvmseirolfwgq.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVxeHR6bG1kdm1zZWlyb2xmd2dxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ0NzQ1ODUsImV4cCI6MjA4MDA1MDU4NX0.Hzol82Uz0gxOX1lsgFB-zLmt3uuoRB8Dsrkx6vE9C5k';
+
+        const logs = [];
+        let supabase;
+        let companies = [];
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const emoji = type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️';
+            const logMessage = `[${timestamp}] ${emoji} ${message}`;
+            logs.push(logMessage);
+            updateConsoleLog();
+            console.log(logMessage);
+        }
+
+        function updateConsoleLog() {
+            const logDiv = document.getElementById('console-log');
+            logDiv.innerHTML = logs.map(l => `<div class="log-line">${l}</div>`).join('');
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function updateStatus(message, type = 'loading') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = `status ${type}`;
+            statusDiv.innerHTML = type === 'loading' ?
+                `<div class="spinner"></div>${message}` :
+                message;
+        }
+
+        async function startMigration() {
+            document.getElementById('start-btn').disabled = true;
+            log('Migration boshlandi', 'info');
+
+            // Step 1: Read from LocalStorage
+            updateStatus('LocalStorage\'dan o\'qilmoqda...', 'loading');
+            document.getElementById('step1-status').innerHTML = '⏳ O\'qilmoqda...';
+
+            const stored = localStorage.getItem('mm_companies');
+            if (!stored) {
+                log('LocalStorage\'da ma\'lumot yo\'q!', 'error');
+                document.getElementById('step1-status').innerHTML = '❌ Ma\'lumot yo\'q';
+                updateStatus('❌ LocalStorage\'da ma\'lumot topilmadi!', 'error');
+                document.getElementById('start-btn').disabled = false;
+                return;
+            }
+
+            try {
+                companies = JSON.parse(stored);
+                log(`${companies.length} ta korxona topildi`, 'success');
+                document.getElementById('step1-status').innerHTML = `✅ ${companies.length} ta korxona`;
+            } catch (e) {
+                log('LocalStorage ma\'lumotlari buzilgan!', 'error');
+                document.getElementById('step1-status').innerHTML = '❌ Ma\'lumot buzilgan';
+                updateStatus('❌ Ma\'lumotlar buzilgan!', 'error');
+                document.getElementById('start-btn').disabled = false;
+                return;
+            }
+
+            // Step 2: Connect to Supabase
+            updateStatus('Supabase\'ga ulanmoqda...', 'loading');
+            document.getElementById('step2-status').innerHTML = '⏳ Ulanmoqda...';
+
+            try {
+                supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                log('Supabase\'ga ulandi', 'success');
+                document.getElementById('step2-status').innerHTML = '✅ Ulandi';
+            } catch (error) {
+                log(`Supabase xatosi: ${error.message}`, 'error');
+                document.getElementById('step2-status').innerHTML = '❌ Ulanmadi';
+                updateStatus('❌ Supabase\'ga ulanmadi!', 'error');
+                document.getElementById('start-btn').disabled = false;
+                return;
+            }
+
+            // Step 3: Migrate data
+            updateStatus('Ma\'lumotlar ko\'chirilmoqda...', 'loading');
+            document.getElementById('step3-status').innerHTML = '⏳ Ko\'chirilmoqda...';
+
+            let successCount = 0;
+            let errorCount = 0;
+
+            for (const company of companies) {
+                try {
+                    // Prepare data for Supabase
+                    const supabaseData = {
+                        id: company.id,
+                        name: company.name,
+                        level: company.level || null,
+                        parent: company.parent || null,
+                        profile: company.profile || null,
+                        employees: company.employees || 0,
+                        total_hours: company.totalHours || company.total_hours || 0,
+                        overall_index: company.overallIndex || company.overall_index || 0,
+                        zone: company.zone || null,
+                        date_added: company.dateAdded || company.date_added || new Date().toISOString(),
+                        raw_data: company.rawData || company.raw_data || {},
+                        kpis: company.kpis || {}
+                    };
+
+                    const { data, error } = await supabase
+                        .from('companies')
+                        .upsert(supabaseData, { onConflict: 'id' });
+
+                    if (error) throw error;
+
+                    successCount++;
+                    log(`✅ ${company.name} - ko'chirildi`, 'success');
+                } catch (error) {
+                    errorCount++;
+                    log(`❌ ${company.name} - xato: ${error.message}`, 'error');
+                }
+            }
+
+            document.getElementById('step3-status').innerHTML =
+                `✅ ${successCount} ta muvaffaqiyatli, ${errorCount} ta xato`;
+
+            // Step 4: Verify
+            updateStatus('Tekshirilmoqda...', 'loading');
+            document.getElementById('step4-status').innerHTML = '⏳ Tekshirilmoqda...';
+
+            try {
+                const { data, error } = await supabase
+                    .from('companies')
+                    .select('*');
+
+                if (error) throw error;
+
+                log(`Supabase'da ${data.length} ta korxona`, 'success');
+                document.getElementById('step4-status').innerHTML = `✅ ${data.length} ta korxona tasdiqlandi`;
+
+                // Success!
+                updateStatus(`✅ Migration tugadi! ${successCount} ta korxona ko'chirildi`, 'success');
+                document.getElementById('continue-btn').style.display = 'inline-block';
+
+            } catch (error) {
+                log(`Tekshirish xatosi: ${error.message}`, 'error');
+                document.getElementById('step4-status').innerHTML = '⚠️ Tekshirishda xato';
+                updateStatus(`⚠️ Ko'chirildi, lekin tekshirishda xato`, 'error');
+            }
+        }
+
+        window.addEventListener('load', () => {
+            log('Sahifa yuklandi', 'info');
+            updateStatus('⏳ Tayyor. "Boshlash" tugmasini bosing.', 'loading');
+        });
+    </script>
+</body>
+
+</html>

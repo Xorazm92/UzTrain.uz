@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM Ko'p Korxonali Reyting Tizimi</title>
+    <meta name="description"
+        content="Korxonalar mehnat muhofazasi samaradorligini baholash, reyting va taqqoslash tizimi">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="hierarchy.js"></script>
+    <script src="roles.js"></script>
+    <script src="data.js"></script>
+    <script src="data-loader.js"></script>
+    <script src="filter.js"></script>
+    <script src="auth.js"></script>
+</head>
+
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-container">
+            <div class="login-card">
+                <h1 class="login-title">🛡️ Mehnat Muhofazasi Reyting Tizimi</h1>
+                <p class="login-subtitle">Xavfsizlik tizimiga kirish</p>
+
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="login-username">Login</label>
+                        <input type="text" id="login-username" placeholder="Loginni kiriting" autocomplete="off"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Parol</label>
+                        <input type="password" id="login-password" placeholder="Parolni kiriting" autocomplete="off"
+                            required>
+                    </div>
+
+                    <button type="submit" class="login-btn">Kirish</button>
+                </form>
+
+                <div class="login-info">
+                    <p><strong>Test hisoblari:</strong></p>
+                    <ul>
+                        <li>admin / admin123</li>
+                        <li>manager / manager123</li>
+                        <li>supervisor / super123</li>
+                        <li>user / user123</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🛡️ Mehnat Muhofazasi Reyting Tizimi</h1>
+                <p class="subtitle">Korxonalar xavfsizlik samaradorligini baholash va taqqoslash platformasi</p>
+            </div>
+            <div id="role-switcher" class="role-switcher">
+                <!-- Role button will be injected here by roles.js -->
+            </div>
+            <div class="user-info">
+                <span id="current-user">Foydalanuvchi</span>
+                <button class="logout-btn" onclick="handleLogout()">Chiqish</button>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="dashboard">
+                <span class="tab-icon">📊</span>
+                <span>Reyting Jadvali</span>
+            </button>
+            <button class="tab-btn" data-tab="risks">
+                <span class="tab-icon">🎯</span>
+                <span>Xavflilik</span>
+            </button>
+            <button class="tab-btn" data-tab="add-company" data-permission="addCompany">
+                <span class="tab-icon">➕</span>
+                <span>Korxona Qo'shish</span>
+            </button>
+            <button class="tab-btn" data-tab="comparison">
+                <span class="tab-icon">⚖️</span>
+                <span>Taqqoslash</span>
+            </button>
+            <button class="tab-btn" data-tab="statistics">
+                <span class="tab-icon">📈</span>
+                <span>Statistika</span>
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Role Selector Modal Container -->
+            <div id="role-selector" style="display: none;"></div>
+
+            <!-- Dashboard Tab -->
+            <section class="tab-content active" id="dashboard-tab">
+                <div class="section-header">
+                    <h2 id="ranking-title">🏆 Korxonalar Reytingi</h2>
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" id="export-all-btn">💾 Eksport</button>
+                        <button class="btn btn-secondary" id="import-btn">📥 Import</button>
+                        <button class="btn btn-secondary" onclick="resetData()"
+                            style="background-color: #e74c3c; color: white;">🔄 Reset</button>
+                    </div>
+                </div>
+
+                <!-- Organization Filter -->
+                <div id="organization-filter-container" class="filter-container">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+
+                <div id="ranking-context" class="ranking-context">
+                    <!-- Context information will be shown here -->
+                </div>
+
+                <!-- Overall Statistics -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🏭</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="total-companies">0</div>
+                            <div class="stat-label">Jami korxonalar</div>
+                        </div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-icon">🟢</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="green-zone-count">0</div>
+                            <div class="stat-label">Yashil zona</div>
+                        </div>
+                    </div>
+                    <div class="stat-card yellow">
+                        <div class="stat-icon">🟡</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="yellow-zone-count">0</div>
+                            <div class="stat-label">Sariq zona</div>
+                        </div>
+                    </div>
+                    <div class="stat-card red">
+                        <div class="stat-icon">🔴</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="red-zone-count">0</div>
+                            <div class="stat-label">Qizil zona</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Podium (Top 3) -->
+                <div class="podium-section" id="podium-section">
+                    <!-- JavaScript tomonidan to'ldiriladi -->
+                </div>
+
+                <!-- Companies Ranking Table -->
+                <div class="ranking-table-container">
+                    <table class="ranking-table" id="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Reyting</th>
+                                <th>Korxona</th>
+                                <th>Xodimlar</th>
+                                <th>MM Indeksi</th>
+                                <th>Zona</th>
+                                <th>Amallar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ranking-tbody">
+                            <!-- JavaScript tomonidan to'ldiriladi -->
+                        </tbody>
+                    </table>
+                    <div class="empty-state" id="empty-state">
+                        <div class="empty-icon">📭</div>
+                        <h3>Hali korxonalar qo'shilmagan</h3>
+                        <p>Yangi korxona qo'shish uchun yuqoridagi "Korxona Qo'shish" tugmasini bosing</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add Company Tab -->
+            <section class="tab-content" id="add-company-tab">
+                <div class="section-header">
+                    <h2 id="form-title">➕ Yangi Korxona Qo'shish</h2>
+                </div>
+
+                <form id="company-form">
+                    <!-- Company Basic Info -->
+                    <div class="card">
+                        <h3>📋 Asosiy Ma'lumotlar</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="company-name">Korxona nomi *</label>
+                                <input type="text" id="company-name" placeholder="Masalan: Xorazm Metall LLC" value="0"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-level">Ierarxiya Darajasi *</label>
+                                <select id="company-level" onchange="updateParentSelect()" required>
+                                    <option value="subsidiary">Korxona (Subsidiary)</option>
+                                    <option value="supervisor">Nazoratchi (Supervisor)</option>
+                                    <option value="management">Boshqaruv (Management)</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="parent-select-group">
+                                <label for="company-parent">Yuqori Tashkilot *</label>
+                                <select id="company-parent">
+                                    <option value="">Tanlang...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-profile">Xo'jalik Profili (Vaznlar uchun) *</label>
+                                <select id="company-profile" required>
+                                    <option value="">Tanlang...</option>
+                                    <!-- Options will be populated by JS -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-employees">Xodimlar soni *</label>
+                                <input type="number" id="company-employees" placeholder="190" value="0" min="1"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KPI Inputs (Compact Grid) -->
+                    <div class="card">
+                        <h3>📊 Ko'rsatkichlar Ma'lumotlari</h3>
+                        <p class="form-hint">Barcha maydonlar ixtiyoriy. Bo'sh qoldirgan maydonlar 0 sifatida
+                            hisoblanadi.</p>
+                        <div class="kpi-compact-grid">
+                            <!-- KPI Section 1: Hodisalar va Jarohatlar -->
+                            <div class="kpi-section-header">
+                                <span class="section-number">1-3</span>
+                                <span class="section-title">Hodisalar va Jarohatlar</span>
+                            </div>
+
+                            <!-- KPI 1: Accidents Severity -->
+                            <div class="kpi-row">
+                                <div class="kpi-compact full-width">
+                                    <label>1. Baxtsiz hodisalar (Og'irlik darajasi)</label>
+                                    <div class="sub-inputs-labeled severity-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-fatal">
+                                                <i class="icon-skull"></i> O'lim (×100)
+                                            </span>
+                                            <input type="number" id="input-fatal" min="0" value="0" class="input-fatal">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-severe">
+                                                <i class="icon-warning"></i> Og'ir-o'rta Og'ir (×50)
+                                            </span>
+                                            <input type="number" id="input-severe" min="0" value="0"
+                                                class="input-severe">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-group">
+                                                <i class="icon-users"></i> Guruh (×40)
+                                            </span>
+                                            <input type="number" id="input-group" min="0" value="0" class="input-group">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-light">
+                                                <i class="icon-info"></i> Og'ir bo'lmagan (Yengil) (×10)
+                                            </span>
+                                            <input type="number" id="input-light" min="0" value="0" class="input-light">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KPI 2: Micro Injuries -->
+                            <div class="kpi-row">
+                                <div class="kpi-compact">
+                                    <label>2. Jarohatlanishlar</label>
+                                    <input type="number" id="input-micro-injuries" min="0" step="1" placeholder="7"
+                                        value="0">
+                                </div>
+                                <div class="kpi-compact">
+                                    <label>3. Noincident kunlar</label>
+                                    <input type="number" id="input-noincident" min="0" max="365" placeholder="353"
+                                        value="0">
+                                </div>
+                            </div>
+
+                            <!-- KPI Section 2: O'qish va Mehnat Sharoitlari -->
+                            <div class="kpi-section-header">
+                                <span class="section-number">4-5</span>
+                                <span class="section-title">O'qish va Mehnat Sharoitlari</span>
+                            </div>
+
+                            <div class="kpi-row">
+                                <!-- KPI 4: Training -->
+                                <div class="kpi-compact full-width">
+                                    <label>4. Majburiy MM o'quvlari</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-check-circle"></i> O'tganlar</span>
+                                            <input type="number" id="input-training-passed" min="0" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-list-ol"></i> Reja (Shart)</span>
+                                            <input type="number" id="input-training-required" min="0" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- KPI 5: Workplaces -->
+                                <div class="kpi-compact full-width">
+                                    <label>5. Ish o'rinlarini baholash</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-clipboard-check"></i>
+                                                Baholangan</span>
+                                            <input type="number" id="input-assessed" min="0" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-chair"></i> Jami o'rinlar</span>
+                                            <input type="number" id="input-total-workplaces" min="1" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KPI Section 3: Proaktivlik va Reaksiya -->
+                            <div class="kpi-section-header">
+                                <span class="section-number">6-7</span>
+                                <span class="section-title">Proaktivlik va Reaksiya</span>
+                            </div>
+
+                            <div class="kpi-row">
+                                <!-- KPI 6: Near Miss & Proposals -->
+                                <div class="kpi-compact">
+                                    <label>6. Xavfsizlikga javob bermaydigan xolatlar (Near Miss + Takliflar)</label>
+                                    <div class="input-with-hint">
+                                        <input type="number" id="input-reports" min="0" value="0">
+                                        <span class="input-hint">Jami xabarlar soni</span>
+                                    </div>
+                                    <p class="field-description">Xodimlar tomonidan berilgan takliflar va "Near
+                                        Miss" xabarlari.</p>
+                                </div>
+
+                                <!-- KPI 7: Response Rate -->
+                                <div class="kpi-compact">
+                                    <label>7. Murojaatlarga Reaksiya (Ijro)</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-success">Yopilgan</span>
+                                            <input type="number" id="input-closed-issues" min="0" value="0"
+                                                class="input-success">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-total">Jami</span>
+                                            <input type="number" id="input-total-issues" min="1" value="0"
+                                                class="input-total">
+                                        </div>
+                                    </div>
+                                    <p class="field-description">O'z vaqtida yopilgan nomuvofiqliklar ulushi.</p>
+                                </div>
+                            </div>
+
+                            <!-- KPI Section 4: Moliya va Ta'minot -->
+                            <div class="kpi-section-header">
+                                <span class="section-number">8-9</span>
+                                <span class="section-title">Moliya va Ta'minot</span>
+                            </div>
+
+                            <div class="kpi-row">
+                                <!-- KPI 8: Budget -->
+                                <div class="kpi-compact full-width">
+                                    <label>8. Moliyalashtirish (mln so'm)</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-coins"></i> MM Xarajatlari</span>
+                                            <input type="number" id="input-mm-budget" min="0" step="0.1" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-wallet"></i> Jami Xarajatlar</span>
+                                            <input type="number" id="input-total-budget" min="1" step="0.1" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- KPI 9: PPE -->
+                                <div class="kpi-compact full-width">
+                                    <label>9. SHHV bilan ta'minlanganlik</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-hard-hat"></i> Ta'minlangan</span>
+                                            <input type="number" id="input-ppe-equipped" min="0" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-users"></i> Kerak</span>
+                                            <input type="number" id="input-ppe-required" min="1" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KPI Section 5: Uskunalar va Xodimlar -->
+                            <div class="kpi-section-header">
+                                <span class="section-number">10</span>
+                                <span class="section-title">Uskunalar va Xodimlar Nazorati</span>
+                            </div>
+
+                            <div class="kpi-row">
+                                <!-- KPI 10a: Equipment -->
+                                <div class="kpi-compact full-width">
+                                    <label>10a. Uskunalar Nazorati</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-search"></i> Ko'rikdan
+                                                o'tgan XICHOlar</span>
+                                            <input type="number" id="input-equipment-inspected" min="0" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-cogs"></i> Jami XICHOlar</span>
+                                            <input type="number" id="input-total-equipment" min="0" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- KPI 10b: Personnel -->
+                                <div class="kpi-compact full-width">
+                                    <label>10b. Xodimlar Ruxsatnomasi</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-id-card"></i> XICHOga Ruxsati
+                                                bor</span>
+                                            <input type="number" id="input-authorized-personnel" min="0" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-user-lock"></i> XICHOda ishlashi
+                                                kerak</span>
+                                            <input type="number" id="input-required-personnel" min="0" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KPI Section 6: Nazorat va Audit -->
+                            <div class="kpi-section-header">
+                                <span class="section-number">11-13</span>
+                                <span class="section-title">Nazorat va Audit</span>
+                            </div>
+
+                            <div class="kpi-row">
+                                <!-- KPI 11: Inspections -->
+                                <div class="kpi-compact full-width">
+                                    <label>11. Ichki Nazorat</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-clipboard-list"></i>
+                                                O'tkazilgan</span>
+                                            <input type="number" id="input-inspections-conducted" min="0" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-calendar-alt"></i> Reja</span>
+                                            <input type="number" id="input-inspections-planned" min="1" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- KPI 13: Audit -->
+                                <div class="kpi-compact full-width">
+                                    <label>13. Ichki Audit Samaradorligi</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-exclamation-triangle"></i>
+                                                Nomuvofiqlik</span>
+                                            <input type="number" id="input-audit-noncompliance" min="0" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-check-double"></i>
+                                                Tekshirilgan</span>
+                                            <input type="number" id="input-audit-points" min="1" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KPI Section 7: Salomatlik va Favqulodda Holatlar -->
+                            <div class="kpi-section-header">
+                                <span class="section-number">12-14</span>
+                                <span class="section-title">Salomatlik va Favqulodda Holatlar</span>
+                            </div>
+
+                            <div class="kpi-row">
+                                <!-- KPI 12: Diseases -->
+                                <div class="kpi-compact">
+                                    <label>12. Kasbiy Kasalliklar</label>
+                                    <div class="input-with-hint">
+                                        <input type="number" id="input-occupational-diseases" min="0" value="0"
+                                            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ced4da;">
+                                        <span class="input-hint" style="right: 15px;"><i class="fas fa-procedures"></i>
+                                            Jami holatlar</span>
+                                    </div>
+                                </div>
+
+                                <!-- KPI 14: Emergency Drills -->
+                                <div class="kpi-compact full-width">
+                                    <label>14. Targ'ibot Tashviqot Mashg'ulotlari</label>
+                                    <div class="sub-inputs-labeled response-group">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-running"></i> O'tkazilgan
+                                                (Fact)</span>
+                                            <input type="number" id="input-drills-conducted" min="0" value="0">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label"><i class="fas fa-calendar-check"></i> Reja</span>
+                                            <input type="number" id="input-drills-planned" min="1" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KPI Section 8: Intizom -->
+                            <div class="kpi-section-header">
+                                <span class="section-number">15</span>
+                                <span class="section-title">Intizomiy Choralar</span>
+                            </div>
+
+                            <!-- KPI 15: Violations (Tickets) -->
+                            <div class="kpi-row">
+                                <div class="kpi-compact full-width">
+                                    <label>15. Intizomiy buzilishlar (Talon tizimi)</label>
+                                    <div class="sub-inputs-labeled severity-group"
+                                        style="grid-template-columns: repeat(3, 1fr);">
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-severe"><i class="fas fa-ticket-alt"></i> Qizil
+                                                (x10)</span>
+                                            <input type="number" id="input-ticket-red" min="0" value="0"
+                                                class="input-severe">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-light"><i class="fas fa-ticket-alt"></i> Sariq
+                                                (x3)</span>
+                                            <input type="number" id="input-ticket-yellow" min="0" value="0"
+                                                class="input-light">
+                                        </div>
+                                        <div class="sub-input-item">
+                                            <span class="sub-label label-success"><i class="fas fa-ticket-alt"></i>
+                                                Yashil (x1)</span>
+                                            <input type="number" id="input-ticket-green" min="0" value="0"
+                                                class="input-success">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="save-company-btn">💾 Saqlash</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-btn">❌ Bekor qilish</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Rankings Tab -->
+            <section class="tab-content" id="rankings-tab">
+                <div class="section-header">
+                    <h2>🏆 Reyting Jadvali</h2>
+                    <button class="btn btn-secondary" onclick="exportTableToExcel('ranking-table')">
+                        <i class="fas fa-file-excel"></i> Excelga Yuklash
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="table-responsive">
+                        <table class="ranking-table" id="ranking-table">
+                            <thead>
+                                <tr>
+                                    <th>O'rin</th>
+                                    <th>Korxona</th>
+                                    <th>Xodimlar</th>
+                                    <th>MM Indeksi</th>
+                                    <th>Holati</th>
+                                    <th>Amallar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ranking-table-body">
+                                <!-- JS orqali to'ldiriladi -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparison Tab -->
+            <section class="tab-content" id="comparison-tab">
+                <div class="section-header">
+                    <h2>⚖️ Korxonalarni Taqqoslash</h2>
+                </div>
+
+                <!-- Company Selection -->
+                <div class="card">
+                    <h3>Taqqoslash uchun korxonalarni tanlang</h3>
+                    <div id="comparison-selection">
+                        <!-- JavaScript tomonidan to'ldiriladi -->
+                    </div>
+                    <button class="btn btn-primary" id="compare-btn">🔍 Taqqoslash</button>
+                </div>
+
+                <!-- Comparison Results -->
+                <div id="comparison-results" style="display: none;">
+                    <!-- Comparison Table -->
+                    <div class="card">
+                        <h3>📊 Taqqoslash Jadvali</h3>
+                        <div class="comparison-table-container">
+                            <table class="comparison-table" id="comparison-table">
+                                <!-- JavaScript tomonidan to'ldiriladi -->
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Charts -->
+                    <div class="card">
+                        <h3>📈 Grafik Taqqoslash</h3>
+                        <div class="chart-container">
+                            <canvas id="comparison-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Radar Chart -->
+                    <div class="card">
+                        <h3>🎯 Radar Tahlil</h3>
+                        <div class="chart-container">
+                            <canvas id="radar-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="empty-state" id="comparison-empty">
+                    <div class="empty-icon">⚖️</div>
+                    <h3>Taqqoslash uchun kamida 2 ta korxona kerak</h3>
+                    <p>Avval korxonalar qo'shing</p>
+                </div>
+            </section>
+
+            <!-- Risk Groups Tab -->
+            <section class="tab-content" id="risks-tab">
+                <div class="section-header">
+                    <h2>Xavflilik Guruhlari Tahlili</h2>
+                </div>
+                <div id="risk-analysis-container" class="risk-analysis-view">
+                    <!-- Risk analysis will be rendered here -->
+                </div>
+            </section>
+
+            <!-- Company Details Modal -->
+            <div id="company-details-modal" class="modal" style="display: none;">
+                <div class="modal-content modal-large">
+                    <div class="modal-header">
+                        <h2 id="detail-company-name">Korxona Tafsiloti</h2>
+                        <button class="modal-close" onclick="closeDetailModal()">✕</button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Company Header -->
+                        <div class="detail-header">
+                            <div class="detail-stat">
+                                <span class="detail-label">Xo'jalik Profili:</span>
+                                <span id="detail-profile" class="detail-value">--</span>
+                            </div>
+                            <div class="detail-stat">
+                                <span class="detail-label">Xavfsizlik Darajasi:</span>
+                                <span id="detail-risk-level" class="detail-value">--</span>
+                            </div>
+                            <div class="detail-stat">
+                                <span class="detail-label">MM Indeksi:</span>
+                                <span id="detail-overall-score" class="detail-value">--</span>
+                            </div>
+                            <div class="detail-stat">
+                                <span class="detail-label">Zona:</span>
+                                <span id="detail-zone" class="detail-value">--</span>
+                            </div>
+                        </div>
+
+                        <!-- 15 KPI Breakdown -->
+                        <h3>📊 15 Bandlik KPI Baholash</h3>
+                        <div id="detail-kpi-breakdown" class="kpi-breakdown-grid">
+                            <!-- Will be populated by JS -->
+                        </div>
+
+                        <!-- Minimum Requirements Check -->
+                        <h3>⚠️ Minimum Talablar Tekshiruvi</h3>
+                        <div id="detail-requirements" class="requirements-list">
+                            <!-- Will be populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Tab -->
+            <section class="tab-content" id="statistics-tab">
+                <div class="section-header">
+                    <h2>📈 Umumiy Statistika</h2>
+                </div>
+
+                <div class="stats-charts-grid">
+                    <!-- Overall Index Distribution -->
+                    <div class="card">
+                        <h3>MM Indeksi Taqsimoti</h3>
+                        <div class="chart-container">
+                            <canvas id="index-distribution-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Zone Distribution -->
+                    <div class="card">
+                        <h3>Zonalar bo'yicha taqsimot</h3>
+                        <div class="chart-container">
+                            <canvas id="zone-pie-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Average KPI Scores -->
+                    <div class="card">
+                        <h3>O'rtacha KPI Ballari</h3>
+                        <div class="chart-container">
+                            <canvas id="avg-kpi-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 Mehnat Muhofazasi Reyting Tizimi | ISO 45001, OSHA, ILO standartlariga asoslangan</p>
+        </footer>
+    </div>
+
+    <!-- Hidden file input for import -->
+    <input type="file" id="file-input" accept=".json" style="display: none;">
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- App Logic -->
+    <script src="app.js?v=2"></script>
+
+    <!-- FORCE POPULATE PROFILES AND PARENTS (Backup Script) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('FORCE POPULATE: Executing backup script');
+
+            // ==========================================
+            // 1. POPULATE PROFILES
+            // ==========================================
+            const profileSelect = document.getElementById('company-profile');
+            const PROFILES = [
+                { id: 'road', name: 'Йўл хўжалиги (Физик хавф юқори)' },
+                { id: 'wagon', name: 'Вагон хўжалиги (Технологик хавф)' },
+                { id: 'locomotive', name: 'Lokomotiv xo\'jaligi (Yuqori xavf)' },
+                { id: 'electric', name: 'Электр ва Алоқа (Электрохавфсизлик)' },
+                { id: 'traffic', name: 'Ҳаракатни Бошқариш (Инсон омили хавфи)' },
+                { id: 'factory', name: 'Заводлар (Саноат хавфсизлиги)' }
+            ];
+
+            if (profileSelect && profileSelect.options.length <= 1) {
+                console.log('FORCE POPULATE: Profiles empty, populating...');
+                while (profileSelect.options.length > 1) profileSelect.remove(1);
+
+                PROFILES.forEach(profile => {
+                    const option = document.createElement('option');
+                    option.value = profile.id;
+                    option.textContent = profile.name;
+                    profileSelect.appendChild(option);
+                });
+            }
+
+
+            // ==========================================
+            // 2. POPULATE PARENT ORGANIZATIONS
+            // ==========================================
+            const parentSelect = document.getElementById('company-parent');
+            const levelSelect = document.getElementById('company-level');
+            const parentGroup = document.getElementById('parent-select-group');
+
+            // USE SAME DATA AS data.js (UZ_RAILWAY_DATA)
+            // This ensures consistency between filter dropdown and parent dropdown
+            function forceUpdateParent() {
+                if (!levelSelect || !parentSelect) return;
+
+                const level = levelSelect.value;
+                console.log('FORCE PARENT: Updating for level', level);
+
+                // Reset
+                parentSelect.innerHTML = '<option value="">Tanlang...</option>';
+
+                if (level === 'management') {
+                    if (parentGroup) parentGroup.style.display = 'none';
+                    return;
+                }
+
+                if (parentGroup) parentGroup.style.display = 'block';
+
+                // Get data from window.UZ_RAILWAY_DATA (loaded from data.js)
+                const structureData = window.UZ_RAILWAY_DATA || [];
+                let options = [];
+
+                if (level === 'supervisor') {
+                    // Supervisors can report to Management
+                    options = structureData.filter(c => c.level === 'management');
+                } else if (level === 'subsidiary') {
+                    // Subsidiaries report to Supervisors
+                    options = structureData.filter(c => c.level === 'supervisor');
+                }
+
+                options.sort((a, b) => a.name.localeCompare(b.name));
+
+                options.forEach(p => {
+                    const option = document.createElement('option');
+                    option.value = p.id;
+                    option.textContent = p.name;
+                    parentSelect.appendChild(option);
+                });
+                console.log('FORCE PARENT: Populated ' + options.length + ' options from UZ_RAILWAY_DATA');
+            }
+
+            // Attach listener
+            if (levelSelect) {
+                levelSelect.addEventListener('change', forceUpdateParent);
+
+                // Initial call with delay to override any other scripts
+                setTimeout(forceUpdateParent, 500);
+            }
+        });
+    </script>
+</body>
+
+</html>

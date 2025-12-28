@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 Tizim Tekshiruvi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .test-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .test-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .test-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #ddd;
+        }
+
+        .test-item.success {
+            border-left-color: #28a745;
+        }
+
+        .test-item.error {
+            border-left-color: #dc3545;
+        }
+
+        .test-item.warning {
+            border-left-color: #ffc107;
+        }
+
+        .icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+
+        .test-content {
+            flex: 1;
+        }
+
+        .test-label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .test-detail {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 10px 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .log {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+
+        .log-line {
+            margin-bottom: 5px;
+        }
+
+        .summary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .summary h2 {
+            margin-bottom: 10px;
+        }
+
+        .summary-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔍 Tizim Tekshiruvi</h1>
+        <p class="subtitle">MM Ko'p Korxonali Reyting Tizimi - Diagnostika</p>
+
+        <div class="summary" id="summary">
+            <h2>⏳ Tekshiruv boshlandi...</h2>
+        </div>
+
+        <div class="test-section">
+            <h2>📦 Fayllar Tekshiruvi</h2>
+            <div id="files-check"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔥 Firebase Ulanishi</h2>
+            <div id="firebase-check"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>📊 JavaScript Modullari</h2>
+            <div id="modules-check"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>📝 Console Log</h2>
+            <div class="log" id="console-log"></div>
+        </div>
+
+        <div class="actions">
+            <a href="index.html" class="btn">🚀 Tizimni Ishga Tushirish</a>
+            <button onclick="runTests()" class="btn btn-secondary">🔄 Qayta Tekshirish</button>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        const logs = [];
+        let testResults = {
+            passed: 0,
+            failed: 0,
+            warnings: 0
+        };
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            logs.push({ timestamp, message, type });
+            updateConsoleLog();
+        }
+
+        function updateConsoleLog() {
+            const logDiv = document.getElementById('console-log');
+            logDiv.innerHTML = logs.map(l =>
+                `<div class="log-line">[${l.timestamp}] ${l.message}</div>`
+            ).join('');
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function addTestResult(containerId, icon, label, detail, status) {
+            const container = document.getElementById(containerId);
+            const div = document.createElement('div');
+            div.className = `test-item ${status}`;
+            div.innerHTML = `
+                <div class="icon">${icon}</div>
+                <div class="test-content">
+                    <div class="test-label">${label}</div>
+                    <div class="test-detail">${detail}</div>
+                </div>
+            `;
+            container.appendChild(div);
+
+            if (status === 'success') testResults.passed++;
+            else if (status === 'error') testResults.failed++;
+            else if (status === 'warning') testResults.warnings++;
+        }
+
+        function updateSummary() {
+            const summaryDiv = document.getElementById('summary');
+            const total = testResults.passed + testResults.failed + testResults.warnings;
+            const status = testResults.failed === 0 ? '✅ TAYYOR' : '⚠️ MUAMMOLAR BOR';
+
+            summaryDiv.innerHTML = `
+                <h2>${status}</h2>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <div class="stat-value">${testResults.passed}</div>
+                        <div class="stat-label">✅ Muvaffaqiyatli</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">${testResults.warnings}</div>
+                        <div class="stat-label">⚠️ Ogohlantirishlar</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">${testResults.failed}</div>
+                        <div class="stat-label">❌ Xatolar</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function checkFile(filename) {
+            try {
+                const response = await fetch(filename);
+                if (response.ok) {
+                    const size = response.headers.get('content-length');
+                    return { exists: true, size: size ? `${(size / 1024).toFixed(1)} KB` : 'unknown' };
+                }
+                return { exists: false };
+            } catch (e) {
+                return { exists: false, error: e.message };
+            }
+        }
+
+        async function runTests() {
+            // Reset
+            testResults = { passed: 0, failed: 0, warnings: 0 };
+            logs.length = 0;
+            document.getElementById('files-check').innerHTML = '';
+            document.getElementById('firebase-check').innerHTML = '';
+            document.getElementById('modules-check').innerHTML = '';
+
+            log('🔍 Tizim tekshiruvi boshlandi...', 'info');
+
+            // Test 1: Check critical files
+            log('📦 Fayllar tekshirilmoqda...', 'info');
+            const files = [
+                'index.html',
+                'app.js',
+                'styles.css',
+                'data.js',
+                'auth.js',
+                'filter.js',
+                'hierarchy.js',
+                'roles.js'
+            ];
+
+            for (const file of files) {
+                const result = await checkFile(file);
+                if (result.exists) {
+                    addTestResult('files-check', '✅', file, `Fayl mavjud (${result.size})`, 'success');
+                    log(`✅ ${file} topildi`, 'success');
+                } else {
+                    addTestResult('files-check', '❌', file, 'Fayl topilmadi!', 'error');
+                    log(`❌ ${file} topilmadi!`, 'error');
+                }
+            }
+
+            // Test 2: Firebase connection
+            log('🔥 Firebase ulanishi tekshirilmoqda...', 'info');
+            try {
+                const firebaseConfig = {
+                    apiKey: "AIzaSyCgDZtXjpmO3hN2e6lEZKLMVYe9ZKBDyO4",
+                    authDomain: "nbt-kpi.firebaseapp.com",
+                    projectId: "nbt-kpi",
+                    storageBucket: "nbt-kpi.firebasestorage.app",
+                    messagingSenderId: "859763032556",
+                    appId: "1:859763032556:web:38ec98599f45376cf2c0c9"
+                };
+
+                if (typeof firebase !== 'undefined') {
+                    addTestResult('firebase-check', '✅', 'Firebase SDK', 'Kutubxona yuklangan', 'success');
+                    log('✅ Firebase SDK yuklangan', 'success');
+
+                    try {
+                        firebase.initializeApp(firebaseConfig);
+                        const db = firebase.firestore();
+                        addTestResult('firebase-check', '✅', 'Firebase Ulanishi', 'Muvaffaqiyatli ulandi', 'success');
+                        log('✅ Firebase muvaffaqiyatli ulandi', 'success');
+
+                        // Test Firestore read
+                        try {
+                            await db.collection('companies').limit(1).get();
+                            addTestResult('firebase-check', '✅', 'Firestore Ma\'lumotlar Bazasi', 'O\'qish mumkin', 'success');
+                            log('✅ Firestore ma\'lumotlar bazasiga kirish mumkin', 'success');
+                        } catch (e) {
+                            addTestResult('firebase-check', '⚠️', 'Firestore Ruxsatlari', e.message, 'warning');
+                            log(`⚠️ Firestore ruxsatlari: ${e.message}`, 'warning');
+                        }
+                    } catch (e) {
+                        addTestResult('firebase-check', '❌', 'Firebase Initsializatsiya', e.message, 'error');
+                        log(`❌ Firebase initsializatsiya xatosi: ${e.message}`, 'error');
+                    }
+                } else {
+                    addTestResult('firebase-check', '❌', 'Firebase SDK', 'Kutubxona yuklanmagan', 'error');
+                    log('❌ Firebase SDK yuklanmagan', 'error');
+                }
+            } catch (e) {
+                addTestResult('firebase-check', '❌', 'Firebase Test', e.message, 'error');
+                log(`❌ Firebase test xatosi: ${e.message}`, 'error');
+            }
+
+            // Test 3: Check for common errors
+            log('📊 JavaScript modullari tekshirilmoqda...', 'info');
+
+            // Check if Chart.js is loaded
+            if (typeof Chart !== 'undefined') {
+                addTestResult('modules-check', '✅', 'Chart.js', 'Grafik kutubxonasi yuklangan', 'success');
+                log('✅ Chart.js yuklangan', 'success');
+            } else {
+                addTestResult('modules-check', '⚠️', 'Chart.js', 'Kutubxona yuklanmagan', 'warning');
+                log('⚠️ Chart.js yuklanmagan', 'warning');
+            }
+
+            // Check localStorage
+            try {
+                localStorage.setItem('test', 'test');
+                localStorage.removeItem('test');
+                addTestResult('modules-check', '✅', 'LocalStorage', 'Ishlayapti', 'success');
+                log('✅ LocalStorage ishlayapti', 'success');
+            } catch (e) {
+                addTestResult('modules-check', '❌', 'LocalStorage', 'Ishlamayapti', 'error');
+                log('❌ LocalStorage ishlamayapti', 'error');
+            }
+
+            log('✅ Tekshiruv yakunlandi!', 'info');
+            updateSummary();
+        }
+
+        // Run tests on page load
+        window.addEventListener('load', runTests);
+    </script>
+</body>
+
+</html>

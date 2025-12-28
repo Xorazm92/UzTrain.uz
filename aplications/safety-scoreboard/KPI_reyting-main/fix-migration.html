@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔄 Firebase → Supabase Migration (FIXED)</title>
+    <style>
+        /* Styles omitted for brevity, same as before */
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #f0f2f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:disabled {
+            background: #ccc;
+        }
+
+        .log {
+            background: #333;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
+
+        .status {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔄 Ma'lumotlarni Ko'chirish (TUZATILGAN)</h1>
+        <div id="status" class="status">Tayyor</div>
+        <button id="start-btn" class="btn" onclick="startMigration()">🚀 BOSHLASH</button>
+        <div class="log" id="console-log"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // ✅ TO'G'RI URL (BO'SH JOYSIZ)
+        const SUPABASE_URL = 'https://uqxtzlmdvmseirolfwgq.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVxeHR6bG1kdm1zZWlyb2xmd2dxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ0NzQ1ODUsImV4cCI6MjA4MDA1MDU4NX0.Hzol82Uz0gxOX1lsgFB-zLmt3uuoRB8Dsrkx6vE9C5k';
+
+        function log(msg) {
+            const div = document.getElementById('console-log');
+            div.innerHTML += `<div>${new Date().toLocaleTimeString()} - ${msg}</div>`;
+            div.scrollTop = div.scrollHeight;
+        }
+
+        async function startMigration() {
+            const btn = document.getElementById('start-btn');
+            btn.disabled = true;
+            log('Boshlanmoqda...');
+
+            // 1. LocalStorage
+            const stored = localStorage.getItem('mm_companies');
+            if (!stored) {
+                log('❌ LocalStorage bo\'sh! Ma\'lumot yo\'q.');
+                return;
+            }
+            const companies = JSON.parse(stored);
+            log(`✅ LocalStorage: ${companies.length} ta korxona topildi.`);
+
+            // 2. Supabase
+            try {
+                const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                log('✅ Supabasega ulandi.');
+
+                let success = 0;
+                let fail = 0;
+
+                for (const company of companies) {
+                    // Data mapping
+                    const data = {
+                        id: company.id,
+                        name: company.name,
+                        level: company.level,
+                        parent: company.parent,
+                        profile: company.profile,
+                        employees: company.employees || 0,
+                        total_hours: company.totalHours || 0,
+                        overall_index: company.overallIndex || 0,
+                        zone: company.zone,
+                        date_added: company.dateAdded || new Date().toISOString(),
+                        raw_data: company.rawData || {},
+                        kpis: company.kpis || {}
+                    };
+
+                    const { error } = await supabase.from('companies').upsert(data, { onConflict: 'id' });
+
+                    if (error) {
+                        log(`❌ ${company.name}: ${error.message}`);
+                        fail++;
+                    } else {
+                        log(`✅ ${company.name}: OK`);
+                        success++;
+                    }
+                }
+
+                log(`🏁 TUGADI! Muvaffaqiyatli: ${success}, Xato: ${fail}`);
+                log('Endi index.html ni oching.');
+
+            } catch (e) {
+                log(`❌ Katta xatolik: ${e.message}`);
+            }
+        }
+    </script>
+</body>
+
+</html>

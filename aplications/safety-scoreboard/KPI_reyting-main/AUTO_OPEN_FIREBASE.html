@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Console - Avtomatik Ochish</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .countdown {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #667eea;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .info {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .steps {
+            margin: 20px 0;
+        }
+
+        .step {
+            background: #f9fafb;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #10b981;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .code-box {
+            background: #1e293b;
+            color: #10b981;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .copy-btn:hover {
+            background: #059669;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .success {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .warning {
+            color: #f59e0b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔥 Firebase Console</h1>
+
+        <div class="info">
+            <strong>Avtomatik ochilmoqda...</strong>
+            <div class="countdown" id="countdown">3</div>
+        </div>
+
+        <div class="steps">
+            <h3>Quyidagi qadamlarni bajaring:</h3>
+
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>Firestore Database → Rules</strong> ga o'ting
+            </div>
+
+            <div class="step">
+                <span class="step-number">2</span>
+                Barcha matnni o'chiring
+            </div>
+
+            <div class="step">
+                <span class="step-number">3</span>
+                Quyidagi kodni qo'ying:
+            </div>
+        </div>
+
+        <div class="code-box">
+            <button class="copy-btn" onclick="copyCode()">📋 Nusxa olish</button>
+            <pre id="code">rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}</pre>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <strong class="success">"Publish"</strong> tugmasini bosing
+        </div>
+
+        <div class="info">
+            <strong>⚠️ Muhim:</strong> Bu qoidalar faqat development uchun! Production uchun xavfsizroq qoidalar kerak.
+        </div>
+
+        <button class="btn" onclick="openFirebase()">🔄 Qayta ochish</button>
+        <button class="btn" onclick="openTest()" style="background: #10b981;">✅ Testlash sahifasini ochish</button>
+    </div>
+
+    <script>
+        let countdown = 3;
+        const countdownEl = document.getElementById('countdown');
+
+        // Countdown
+        const timer = setInterval(() => {
+            countdown--;
+            countdownEl.textContent = countdown;
+
+            if (countdown === 0) {
+                clearInterval(timer);
+                countdownEl.textContent = '✅';
+                openFirebase();
+            }
+        }, 1000);
+
+        function openFirebase() {
+            const url = 'https://console.firebase.google.com/project/nbt-kpi/firestore/rules';
+            window.open(url, '_blank');
+        }
+
+        function openTest() {
+            window.open('http://localhost:8000/index.html', '_blank');
+        }
+
+        function copyCode() {
+            const code = document.getElementById('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = '✅ Nusxa olindi!';
+                setTimeout(() => {
+                    btn.textContent = '📋 Nusxa olish';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+
+</html>

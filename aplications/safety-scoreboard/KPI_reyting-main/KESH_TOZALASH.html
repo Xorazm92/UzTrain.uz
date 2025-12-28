@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>MAJBURIY YANGILASH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .card {
+            background: white;
+            color: #333;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #e67e22;
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+
+        .alert {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .step {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .step h3 {
+            margin-top: 0;
+            color: #2e7d32;
+        }
+
+        button {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: none;
+            border: 2px solid #28a745;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+
+        .warning {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 5px solid #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>🔧 MAJBURIY KESH TOZALASH</h1>
+
+        <div class="alert">
+            <strong>⚠️ MUHIM!</strong><br>
+            Brauzer eski kodni ko'rsatyapti. Quyidagi qadamlarni <strong>TARTIB BILAN</strong> bajaring!
+        </div>
+
+        <div class="step">
+            <h3>1️⃣ BIRINCHI: LocalStorage ni Tozalash</h3>
+            <button onclick="clearStorage()">🗑️ STORAGE NI TOZALASH</button>
+            <p>Bu tugma brauzer xotirasini tozalaydi.</p>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ IKKINCHI: Brauzer Keshini Tozalash</h3>
+            <p><strong>CTRL + SHIFT + DELETE</strong> bosing, keyin:</p>
+            <ol>
+                <li>"Cached images and files" ni belgilang</li>
+                <li>"Time range" ni "All time" qiling</li>
+                <li>"Clear data" bosing</li>
+            </ol>
+            <p><strong>YO'Q BO'LSA:</strong></p>
+            <button onclick="hardReload()">🔄 HARD RELOAD</button>
+        </div>
+
+        <div class="step">
+            <h3>3️⃣ UCHINCHI: Yangi Oynada Ochish</h3>
+            <button onclick="openNew()" style="background: #27ae60; font-size: 24px;">
+                ✅ YANGI OYNADA OCHISH
+            </button>
+            <p>Bu tugma yangi brauzer oynasida tizimni ochadi (keshsiz).</p>
+        </div>
+
+        <div class="warning">
+            <strong>📌 ESLATMA:</strong> Agar hali ham ishlamasa:
+            <ol>
+                <li>Brauzerning <strong>Incognito/Private</strong> rejimida oching</li>
+                <li>Yoki <strong>boshqa brauzer</strong>da sinab ko'ring (Chrome → Firefox)</li>
+            </ol>
+        </div>
+
+        <div class="success" id="success">
+            ✅ Storage tozalandi! Endi "YANGI OYNADA OCHISH" tugmasini bosing.
+        </div>
+    </div>
+
+    <script>
+        function clearStorage() {
+            try {
+                localStorage.clear();
+                sessionStorage.clear();
+
+                // Clear all cookies
+                document.cookie.split(";").forEach(function (c) {
+                    document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+                });
+
+                document.getElementById('success').style.display = 'block';
+                console.log('✅ Storage tozalandi!');
+            } catch (e) {
+                alert('❌ Xato: ' + e.message);
+            }
+        }
+
+        function hardReload() {
+            location.reload(true);
+        }
+
+        function openNew() {
+            const timestamp = new Date().getTime();
+            window.open('index.html?v=' + timestamp, '_blank');
+        }
+
+        // Auto-clear on load
+        console.log('🔧 Kesh tozalash sahifasi yuklandi');
+        console.log('📍 Iltimos, qadamlarni tartib bilan bajaring!');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <title>📂 BACKUP TIKLASH</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #f0f8ff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #007bff;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:disabled {
+            background: #ccc;
+        }
+
+        .log {
+            background: #333;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
+
+        input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📂 BACKUP TIKLASH</h1>
+        <p>Iltimos, <b>MM_Reyting_2025-12-02.json</b> faylini tanlang:</p>
+
+        <input type="file" id="fileInput" accept=".json">
+        <button id="start-btn" class="btn" onclick="startRestore()">🚀 TIKLASHNI BOSHLASH</button>
+
+        <div class="log" id="console-log"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // ✅ SUPABASE CONFIG (FIXED URL)
+        const SUPABASE_URL = 'https://uqxtzlmdvmseirolfwgq.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVxeHR6bG1kdm1zZWlyb2xmd2dxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ0NzQ1ODUsImV4cCI6MjA4MDA1MDU4NX0.Hzol82Uz0gxOX1lsgFB-zLmt3uuoRB8Dsrkx6vE9C5k';
+
+        function log(msg) {
+            const div = document.getElementById('console-log');
+            div.innerHTML += `<div>${new Date().toLocaleTimeString()} - ${msg}</div>`;
+            div.scrollTop = div.scrollHeight;
+        }
+
+        async function startRestore() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Iltimos, avval faylni tanlang!");
+                return;
+            }
+
+            const btn = document.getElementById('start-btn');
+            btn.disabled = true;
+            log('📂 Fayl o\'qilmoqda...');
+
+            const reader = new FileReader();
+            reader.onload = async function (e) {
+                try {
+                    const json = JSON.parse(e.target.result);
+                    let companies = [];
+
+                    // Handle different JSON structures
+                    if (Array.isArray(json)) {
+                        companies = json;
+                    } else if (json.companies && Array.isArray(json.companies)) {
+                        companies = json.companies;
+                    } else {
+                        throw new Error("Noto'g'ri JSON formati! 'companies' massivi topilmadi.");
+                    }
+
+                    log(`✅ Fayl o'qildi: ${companies.length} ta korxona topildi.`);
+                    log('🚀 Supabasega yuklash boshlandi...');
+
+                    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+                    let success = 0;
+                    let fail = 0;
+
+                    for (const company of companies) {
+                        const data = {
+                            id: company.id,
+                            name: company.name,
+                            level: company.level,
+                            parent: company.parent,
+                            profile: company.profile,
+                            employees: company.employees || 0,
+                            total_hours: company.totalHours || company.total_hours || 0,
+                            overall_index: company.overallIndex || company.overall_index || 0,
+                            zone: company.zone,
+                            date_added: company.dateAdded || company.date_added || new Date().toISOString(),
+                            raw_data: company.rawData || company.raw_data || {},
+                            kpis: company.kpis || {}
+                        };
+
+                        const { error } = await supabase.from('companies').upsert(data, { onConflict: 'id' });
+
+                        if (error) {
+                            log(`❌ ${company.name}: ${error.message}`);
+                            fail++;
+                        } else {
+                            log(`✅ ${company.name}: OK`);
+                            success++;
+                        }
+                    }
+
+                    log(`🏁 TUGADI! Muvaffaqiyatli: ${success}, Xato: ${fail}`);
+
+                    // Update LocalStorage too
+                    localStorage.setItem('mm_companies', JSON.stringify(companies));
+                    log('💾 LocalStorage ham yangilandi.');
+                    log('🎉 Endi index.html ni ochib tekshiring!');
+
+                } catch (err) {
+                    log(`❌ Xatolik: ${err.message}`);
+                    btn.disabled = false;
+                }
+            };
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+projectni korxona qo'shish bo'limini yaxshilab qarab chiq va ui/ux ni yaxshilab ber hamda korxona samaradorligini xisoblash bo'yicha ishlab chiqilgan 15 bandli tizimni va koeffitsentlarni xalqaro talab va O'zbekiston tizimi hamda Temir yo'l tizimidagi korxonalarning xavflilik darajasi hamda baxtsiz xodisalar hamda barcha bo'limlardan kelib chiqqan xolda to'ldirib to'liq qilib ber
+Temir yo‘l kompaniyalari uchun chuqur tahlil va benchmarking.
+
+UX:
+
+10+ qadamli onboarding.
+
+Yillik soatlarni avtomatik hisoblash (shift jadvali import).
+
+Hodisa import (detailed): location, shift, root cause tags.
+
+Real-time benchmarking: sizning sektor (lokomotiv/yo‘l/elektr) median bilan solishtirish.
+
+Visual dashboard: LTIFR trend, TRIR trend, root-cause pie, top 5 hazards.
+
+Alerting: agar LTIFR yoki TRIR sanalararo thresholdni oshsa, email/telegram signal.
+
+KPI vaznlar (rail-optimized):
+
+Baxtsiz hodisalar (penalty → normalized score): 45%
+
+TRIR / Mikro-jarohatlar: 12%
+
+Bexavfsiz kunlar: 6%
+
+O‘qitish: 5%
+
+Uskuna nazorati (rolling stock): 6%
+
+SHHV va PPE: 5%
+
+Xavfni baholash: 5%
+
+Profilaktika (CAPEX/OPEX ratio): 4%
+
+Xabarlar va Safety Culture indicators (near-miss reporting rate): 4%
+
+Murojaatga reaksiya: 3%
+
+Nazorat rejasi: 3%
+
+Kasbiy kasalliklar: 2%
+
+Audit: 2%
+
+Avariya mashqlari: 2%
+
+Intizomiy: 1%
+
+Qo‘shimcha hisob: sektorga mos banding va peer grouping (soat hajmi asosida Band A/B/C).
+
+Hisoblash — professional formula to‘plami:
+
+LTIFR = (Lost Time Injuries × 1,000,000) / Total Hours Worked.
+EcoOnline
+
+TRIR = (Recordable Incidents / Total Hours Worked) × 200,000.
+Injury Facts
+
+Penalty → Score map: aniq jadval UI’da tahrir qilinadigan slider bilan.
+
+Benchmark z-score: (YourIndex − MeanPeer) / StdDevPeer → paginated ranking.
+
+Export/Reporting:
+
+PDF audit report (auto-filled qismi bilan).
+
+API endpoint: POST /companies, GET /companies/:id/kpi, PUT to update.
+
+Data model sifatida Firestore yoki PostgreSQL tavsiya etiladi. Schema namuna pastda.
+
+KPI normalizatsiya jadvali (tavsiyaviy, barcha variant uchun)
+
+Penalty → Score:
+
+0 → 100
+
+1–10 → 95–80 linear
+
+11–50 → 80–40 linear
+
+51–100→ 40–10 linear
+
+101–200→10–5 linear
+
+201–500→5–0 linear
+
+500 → 0
+
+TRIR/ LTIFR → Score:
+
+Industry-specific; yuqori xavf sanoatlarda 0.5 dan past LTIFR yaxshi.
+
+UI’da siz sanoat benchmarkini kiritishingiz mumkin.

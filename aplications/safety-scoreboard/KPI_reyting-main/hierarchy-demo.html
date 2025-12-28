@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM Ierarxik Tizim - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .role-selector {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .role-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .role-option {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .role-option:hover {
+            border-color: #F56400;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 100, 0, 0.2);
+        }
+
+        .role-option.active {
+            background: #FFF5F0;
+            border-color: #F56400;
+        }
+
+        .role-icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .role-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .role-desc {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .hierarchy-demo {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hierarchy-tree {
+            margin-top: 20px;
+        }
+
+        .hierarchy-level {
+            margin-bottom: 30px;
+        }
+
+        .hierarchy-level h3 {
+            color: #F56400;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .company-node {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ccc;
+        }
+
+        .company-node.management-node {
+            border-left-color: #3498db;
+            background: #EBF5FB;
+        }
+
+        .company-node.supervisor-node {
+            border-left-color: #9b59b6;
+            background: #F4ECF7;
+        }
+
+        .company-node.subsidiary-node {
+            border-left-color: #95a5a6;
+            background: #F8F9F9;
+        }
+
+        .node-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .node-name {
+            font-weight: bold;
+            color: #222;
+            flex: 1;
+        }
+
+        .node-details {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .supervisor-group {
+            margin-bottom: 20px;
+        }
+
+        .subsidiaries-list {
+            margin-left: 30px;
+            margin-top: 10px;
+            padding-left: 20px;
+            border-left: 2px dashed #ddd;
+        }
+
+        .zone-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .zone-badge.green {
+            background: #2d9f5d;
+            color: white;
+        }
+
+        .zone-badge.yellow {
+            background: #ffb84d;
+            color: #222;
+        }
+
+        .zone-badge.red {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .risk-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .risk-badge.high {
+            background: #ffe5e5;
+            color: #e74c3c;
+        }
+
+        .risk-badge.medium {
+            background: #fff5e5;
+            color: #ffb84d;
+        }
+
+        .risk-badge.low {
+            background: #e5f5ed;
+            color: #2d9f5d;
+        }
+
+        .current-role-badge {
+            background: #F56400;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="background: #fafafa;">
+    <div class="demo-container">
+        <h1 style="text-align: center; color: #F56400; margin-bottom: 30px;">
+            🏢 Ierarxik Mehnat Muhofazasi Tizimi - Demo
+        </h1>
+
+        <!-- Role Selector -->
+        <div class="role-selector">
+            <h2 style="color: #222; margin-bottom: 10px;">Rolni tanlang:</h2>
+            <p style="color: #666; margin-bottom: 20px;">Har xil rol uchun ko'rinish qanday bo'lishini ko'ring</p>
+
+            <div class="role-options">
+                <div class="role-option active" onclick="selectRole('management')">
+                    <span class="role-icon">🏢</span>
+                    <span class="role-name">Boshqaruv</span>
+                    <span class="role-desc">Barcha korxonalarni ko'rish va boshqarish</span>
+                </div>
+
+                <div class="role-option" onclick="selectRole('supervisor')">
+                    <span class="role-icon">👔</span>
+                    <span class="role-name">Nazoratchi</span>
+                    <span class="role-desc">O'z filiallaringizni boshqarish</span>
+                </div>
+
+                <div class="role-option" onclick="selectRole('subsidiary')">
+                    <span class="role-icon">🏭</span>
+                    <span class="role-name">Korxona</span>
+                    <span class="role-desc">Faqat o'z ma'lumotlaringiz</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="hierarchy-demo">
+            <div class="current-role-badge" id="current-role">
+                🏢 Joriy rol: Boshqaruv
+            </div>
+
+            <div id="demo-content">
+                <!-- JavaScript bilan to'ldiriladi -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Demo ma'lumotlar
+        const demoCompanies = [
+            // Management
+            { id: '1', name: 'O\'zbekiston Holding', level: 'management', overallIndex: 95.0, zone: 'green', riskGroup: 'low', employees: 50 },
+
+            // Supervisors
+            { id: '2', name: 'Toshkent Nazorat', level: 'supervisor', supervisorId: null, overallIndex: 88.5, zone: 'green', riskGroup: 'medium', employees: 120 },
+            { id: '3', name: 'Samarqand Nazorat', level: 'supervisor', supervisorId: null, overallIndex: 82.3, zone: 'green', riskGroup: 'medium', employees: 95 },
+
+            // Subsidiaries - Toshkent
+            { id: '4', name: 'Toshkent Zavod #1', level: 'subsidiary', supervisorId: '2', overallIndex: 92.1, zone: 'green', riskGroup: 'high', employees: 250 },
+            { id: '5', name: 'Toshkent Zavod #2', level: 'subsidiary', supervisorId: '2', overallIndex: 85.7, zone: 'green', riskGroup: 'high', employees: 180 },
+            { id: '6', name: 'Toshkent Logistika', level: 'subsidiary', supervisorId: '2', overallIndex: 78.4, zone: 'yellow', riskGroup: 'medium', employees: 90 },
+            { id: '7', name: 'Toshkent Ofis', level: 'subsidiary', supervisorId: '2', overallIndex: 95.2, zone: 'green', riskGroup: 'low', employees: 45 },
+
+            // Subsidiaries - Samarqand
+            { id: '8', name: 'Samarqand Zavod', level: 'subsidiary', supervisorId: '3', overallIndex: 88.9, zone: 'green', riskGroup: 'high', employees: 200 },
+            { id: '9', name: 'Samarqand Qurilish', level: 'subsidiary', supervisorId: '3', overallIndex: 72.5, zone: 'yellow', riskGroup: 'high', employees: 150 },
+            { id: '10', name: 'Samarqand Xizmat', level: 'subsidiary', supervisorId: '3', overallIndex: 65.3, zone: 'yellow', riskGroup: 'low', employees: 60 }
+        ];
+
+        let currentRole = 'management';
+
+        function selectRole(role) {
+            currentRole = role;
+
+            // Update active state
+            document.querySelectorAll('.role-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            event.target.closest('.role-option').classList.add('active');
+
+            // Update badge
+            const roleNames = {
+                management: '🏢 Boshqaruv',
+                supervisor: '👔 Nazoratchi (Toshkent Nazorat)',
+                subsidiary: '🏭 Korxona (Toshkent Zavod #1)'
+            };
+
+            document.getElementById('current-role').textContent = 'Joriy rol: ' + roleNames[role];
+
+            // Render content
+            renderDemoContent();
+        }
+
+        function renderDemoContent() {
+            const content = document.getElementById('demo-content');
+
+            if (currentRole === 'management') {
+                content.innerHTML = renderManagementView();
+            } else if (currentRole === 'supervisor') {
+                content.innerHTML = renderSupervisorView();
+            } else {
+                content.innerHTML = renderSubsidiaryView();
+            }
+        }
+
+        function renderManagementView() {
+            const tree = buildTree(demoCompanies);
+            let html = '<h3 style="color: #222; margin-bottom: 20px;">📊 Ierarxiya Daraxt (Barcha korxonalar)</h3>';
+            html += '<div class="hierarchy-tree">';
+
+            // Management
+            html += '<div class="hierarchy-level">';
+            html += '<h3>🏢 Boshqaruv</h3>';
+            tree.management.forEach(c => {
+                html += renderNode(c);
+            });
+            html += '</div>';
+
+            // Supervisors
+            html += '<div class="hierarchy-level">';
+            html += '<h3>👔 Nazoratchilar</h3>';
+            tree.supervisors.forEach(sup => {
+                html += '<div class="supervisor-group">';
+                html += renderNode(sup);
+                if (sup.subsidiaries.length > 0) {
+                    html += '<div class="subsidiaries-list">';
+                    sup.subsidiaries.forEach(sub => {
+                        html += renderNode(sub);
+                    });
+                    html += '</div>';
+                }
+                html += '</div>';
+            });
+            html += '</div>';
+
+            html += '</div>';
+            return html;
+        }
+
+        function renderSupervisorView() {
+            const mySubsidiaries = demoCompanies.filter(c => c.supervisorId === '2');
+            let html = '<h3 style="color: #222; margin-bottom: 20px;">👔 Mening Filiallarim (4 ta)</h3>';
+
+            mySubsidiaries.forEach(sub => {
+                html += renderNode(sub);
+            });
+
+            return html;
+        }
+
+        function renderSubsidiaryView() {
+            const myCompany = demoCompanies.find(c => c.id === '4');
+            let html = '<h3 style="color: #222; margin-bottom: 20px;">🏭 Mening Korxonam</h3>';
+            html += renderNode(myCompany);
+            html += '<p style="margin-top: 20px; color: #666;">Faqat o\'z ma\'lumotlaringizni ko\'rasiz va tahrirlaysiz.</p>';
+            return html;
+        }
+
+        function buildTree(companies) {
+            return {
+                management: companies.filter(c => c.level === 'management'),
+                supervisors: companies.filter(c => c.level === 'supervisor').map(sup => ({
+                    ...sup,
+                    subsidiaries: companies.filter(c => c.supervisorId === sup.id)
+                }))
+            };
+        }
+
+        function renderNode(company) {
+            const zoneLabels = {
+                green: '🟢 Yaxshi',
+                yellow: '🟡 Qoniqarli',
+                red: '🔴 Xavfli'
+            };
+
+            const riskLabels = {
+                high: '🔴 Yuqori xavfli',
+                medium: '🟡 O\'rtacha',
+                low: '🟢 Past xavfli'
+            };
+
+            return `
+                <div class="company-node ${company.level}-node">
+                    <div class="node-header">
+                        <span class="node-name">${company.name}</span>
+                        <span class="zone-badge ${company.zone}">${zoneLabels[company.zone]}</span>
+                    </div>
+                    <div class="node-details">
+                        <span>📊 ${company.overallIndex.toFixed(1)}</span>
+                        <span class="risk-badge ${company.riskGroup}">${riskLabels[company.riskGroup]}</span>
+                        <span>👥 ${company.employees} xodim</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initial render
+        renderDemoContent();
+    </script>
+</body>
+
+</html>

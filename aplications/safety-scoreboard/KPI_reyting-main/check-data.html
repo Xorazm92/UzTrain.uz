@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ LocalStorage Tekshiruvi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .status {
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .status.success {
+            background: #d1e7dd;
+            color: #0f5132;
+            border: 2px solid #badbcc;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #842029;
+            border: 2px solid #f5c2c7;
+        }
+
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 2px solid #ffeaa7;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .data-preview {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .company-item {
+            padding: 12px;
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .company-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .company-details {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 10px 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>✅ Ma'lumotlar Tekshiruvi</h1>
+        <p class="subtitle">LocalStorage'dagi ma'lumotlarni ko'rish</p>
+
+        <div id="status" class="status warning">
+            ⏳ Tekshirilmoqda...
+        </div>
+
+        <div id="stats-container" style="display: none;">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-companies">0</div>
+                    <div class="stat-label">Jami Korxonalar</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="total-employees">0</div>
+                    <div class="stat-label">Jami Xodimlar</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="avg-score">0</div>
+                    <div class="stat-label">O'rtacha Ball</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-container"></div>
+
+        <div id="data-preview" class="data-preview" style="display: none;"></div>
+
+        <div class="actions">
+            <a href="index.html" class="btn btn-success" id="continue-btn" style="display: none;">
+                ✅ Tizimga O'tish
+            </a>
+            <button class="btn" onclick="exportData()" id="export-btn" style="display: none;">
+                💾 Backup Olish
+            </button>
+            <button class="btn btn-danger" onclick="clearData()" id="clear-btn" style="display: none;">
+                🗑️ Tozalash
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let companiesData = [];
+
+        function checkLocalStorage() {
+            console.log('LocalStorage tekshirilmoqda...');
+
+            const stored = localStorage.getItem('mm_companies');
+
+            if (!stored) {
+                showError();
+                return;
+            }
+
+            try {
+                companiesData = JSON.parse(stored);
+                console.log('Ma\'lumotlar topildi:', companiesData.length);
+
+                if (companiesData.length === 0) {
+                    showEmpty();
+                } else {
+                    showSuccess();
+                }
+            } catch (e) {
+                console.error('Parse xatosi:', e);
+                showCorrupted();
+            }
+        }
+
+        function showSuccess() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = 'status success';
+            statusDiv.innerHTML = `✅ Ma'lumotlar Topildi! ${companiesData.length} ta korxona`;
+
+            // Show stats
+            document.getElementById('stats-container').style.display = 'block';
+
+            const totalEmployees = companiesData.reduce((sum, c) => sum + (c.employees || 0), 0);
+            const avgScore = companiesData.reduce((sum, c) => sum + (c.overallIndex || 0), 0) / companiesData.length;
+
+            document.getElementById('total-companies').textContent = companiesData.length;
+            document.getElementById('total-employees').textContent = totalEmployees.toLocaleString();
+            document.getElementById('avg-score').textContent = avgScore.toFixed(1);
+
+            // Show info
+            const infoDiv = document.getElementById('info-container');
+            infoDiv.innerHTML = `
+                <div class="info-box">
+                    <strong>✅ Hammasi tayyor!</strong>
+                    <p style="margin-top: 10px;">
+                        LocalStorage'da <strong>${companiesData.length} ta korxona</strong> ma'lumoti saqlangandir.
+                        <br><br>
+                        <strong>Endi qilishingiz kerak:</strong>
+                    </p>
+                    <ol style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>"Tizimga O'tish"</strong> tugmasini bosing</li>
+                        <li>Barcha ma'lumotlar ishlaydi</li>
+                        <li>Yangi korxona qo'shishingiz mumkin</li>
+                        <li>Firebase quota muammosi yo'q!</li>
+                    </ol>
+                </div>
+            `;
+
+            // Show data preview
+            const previewDiv = document.getElementById('data-preview');
+            previewDiv.style.display = 'block';
+            previewDiv.innerHTML = '<h3 style="margin-bottom: 15px;">📋 Korxonalar Ro\'yxati:</h3>' +
+                companiesData.map((c, i) => `
+                    <div class="company-item">
+                        <div>
+                            <div class="company-name">${i + 1}. ${c.name || 'Noma\'lum'}</div>
+                            <div class="company-details">
+                                Xodimlar: ${c.employees || 0} | 
+                                Ball: ${c.overallIndex?.toFixed(1) || 'N/A'} | 
+                                Zona: ${c.zone || 'N/A'}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+            // Show buttons
+            document.getElementById('continue-btn').style.display = 'inline-block';
+            document.getElementById('export-btn').style.display = 'inline-block';
+            document.getElementById('clear-btn').style.display = 'inline-block';
+        }
+
+        function showError() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = 'status error';
+            statusDiv.innerHTML = '❌ LocalStorage\'da ma\'lumot yo\'q';
+
+            const infoDiv = document.getElementById('info-container');
+            infoDiv.innerHTML = `
+                <div class="info-box" style="background: #f8d7da; border-left-color: #dc3545;">
+                    <strong>❌ Ma'lumot topilmadi</strong>
+                    <p style="margin-top: 10px;">
+                        LocalStorage'da hech qanday ma'lumot yo'q.
+                        <br><br>
+                        <strong>Ehtimol:</strong>
+                    </p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Brauzer keshi tozalangan</li>
+                        <li>Hali hech qanday ma'lumot kiritilmagan</li>
+                        <li>Boshqa brauzerda ishlayapsiz</li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        <strong>Yechim:</strong> Tizimga o'ting va yangi ma'lumot kiriting.
+                    </p>
+                </div>
+            `;
+
+            document.getElementById('continue-btn').style.display = 'inline-block';
+        }
+
+        function showEmpty() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = 'status warning';
+            statusDiv.innerHTML = '⚠️ Ma\'lumotlar bo\'sh';
+
+            const infoDiv = document.getElementById('info-container');
+            infoDiv.innerHTML = `
+                <div class="info-box" style="background: #fff3cd; border-left-color: #ffc107;">
+                    <strong>⚠️ Ma'lumotlar bo'sh</strong>
+                    <p style="margin-top: 10px;">
+                        LocalStorage mavjud, lekin ichida ma'lumot yo'q.
+                        <br><br>
+                        Tizimga o'ting va yangi korxona qo'shing.
+                    </p>
+                </div>
+            `;
+
+            document.getElementById('continue-btn').style.display = 'inline-block';
+        }
+
+        function showCorrupted() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = 'status error';
+            statusDiv.innerHTML = '❌ Ma\'lumotlar buzilgan';
+
+            const infoDiv = document.getElementById('info-container');
+            infoDiv.innerHTML = `
+                <div class="info-box" style="background: #f8d7da; border-left-color: #dc3545;">
+                    <strong>❌ Ma'lumotlar buzilgan</strong>
+                    <p style="margin-top: 10px;">
+                        LocalStorage'dagi ma'lumotlar o'qib bo'lmayapti.
+                        <br><br>
+                        <strong>Yechim:</strong> LocalStorage'ni tozalang va qayta boshlang.
+                    </p>
+                </div>
+            `;
+
+            document.getElementById('clear-btn').style.display = 'inline-block';
+            document.getElementById('continue-btn').style.display = 'inline-block';
+        }
+
+        function exportData() {
+            if (companiesData.length === 0) {
+                alert('❌ Export qilish uchun ma\'lumot yo\'q!');
+                return;
+            }
+
+            const dataStr = JSON.stringify(companiesData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `backup_${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+            URL.revokeObjectURL(url);
+
+            alert(`✅ Backup saqlandi!\n\n${companiesData.length} ta korxona export qilindi.`);
+        }
+
+        function clearData() {
+            if (confirm('⚠️ Barcha ma\'lumotlarni o\'chirmoqchimisiz?\n\nBu amalni bekor qilib bo\'lmaydi!')) {
+                localStorage.removeItem('mm_companies');
+                alert('✅ Ma\'lumotlar tozalandi!');
+                location.reload();
+            }
+        }
+
+        // Check on load
+        window.addEventListener('load', checkLocalStorage);
+    </script>
+</body>
+
+</html>

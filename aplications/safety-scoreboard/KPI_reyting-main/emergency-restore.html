@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <title>♻️ FAVQULODDA TIKLASH</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #fff0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid red;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.5em;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .btn:disabled {
+            background: #ccc;
+        }
+
+        .log {
+            background: #000;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            height: 400px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>♻️ FAVQULODDA TIKLASH</h1>
+        <p style="text-align: center;">Firebase'dan ma'lumotlarni majburan olib, Supabase'ga o'tkazish</p>
+
+        <button id="start-btn" class="btn" onclick="startEmergencyRestore()">♻️ TIKLASHNI BOSHLASH</button>
+        <div class="log" id="console-log"></div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        // FIREBASE CONFIG
+        const firebaseConfig = {
+            apiKey: "AIzaSyCgDZtXjpmO3hN2e6lEZKLMVYe9ZKBDyO4",
+            authDomain: "nbt-kpi.firebaseapp.com",
+            projectId: "nbt-kpi",
+            storageBucket: "nbt-kpi.firebasestorage.app",
+            messagingSenderId: "859763032556",
+            appId: "1:859763032556:web:38ec98599f45376cf2c0c9"
+        };
+
+        // SUPABASE CONFIG
+        const SUPABASE_URL = 'https://uqxtzlmdvmseirolfwgq.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVxeHR6bG1kdm1zZWlyb2xmd2dxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ0NzQ1ODUsImV4cCI6MjA4MDA1MDU4NX0.Hzol82Uz0gxOX1lsgFB-zLmt3uuoRB8Dsrkx6vE9C5k';
+
+        function log(msg) {
+            const div = document.getElementById('console-log');
+            div.innerHTML += `<div>${new Date().toLocaleTimeString()} - ${msg}</div>`;
+            div.scrollTop = div.scrollHeight;
+        }
+
+        async function startEmergencyRestore() {
+            const btn = document.getElementById('start-btn');
+            btn.disabled = true;
+            log('🚀 TIKLASH BOSHLANDI...');
+
+            let companies = [];
+
+            // 1. TRY FIREBASE
+            try {
+                log('🔥 Firebasega ulanmoqda...');
+                firebase.initializeApp(firebaseConfig);
+                const db = firebase.firestore();
+
+                // Try to get data once
+                const snapshot = await db.collection("companies").get();
+
+                if (snapshot.empty) {
+                    log('⚠️ Firebase bo\'sh yoki ruxsat yo\'q.');
+                } else {
+                    snapshot.forEach(doc => {
+                        companies.push(doc.data());
+                    });
+                    log(`✅ Firebase: ${companies.length} ta korxona topildi!`);
+                }
+            } catch (e) {
+                log(`❌ Firebase Xatosi: ${e.message}`);
+                log('Agar Quota Exceeded bo\'lsa, ertaga urinib ko\'rish kerak.');
+            }
+
+            // 2. TRY LOCALSTORAGE (Just in case)
+            if (companies.length === 0) {
+                log('💾 LocalStorage tekshirilmoqda...');
+                const stored = localStorage.getItem('mm_companies');
+                if (stored) {
+                    companies = JSON.parse(stored);
+                    log(`✅ LocalStorage: ${companies.length} ta korxona topildi!`);
+                } else {
+                    log('❌ LocalStorage ham bo\'sh.');
+                }
+            }
+
+            // 3. UPLOAD TO SUPABASE
+            if (companies.length > 0) {
+                log(`📤 Supabasega ${companies.length} ta korxona yuklanmoqda...`);
+
+                try {
+                    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+                    let success = 0;
+                    for (const company of companies) {
+                        const data = {
+                            id: company.id,
+                            name: company.name,
+                            level: company.level,
+                            parent: company.parent,
+                            profile: company.profile,
+                            employees: company.employees || 0,
+                            total_hours: company.totalHours || company.total_hours || 0,
+                            overall_index: company.overallIndex || company.overall_index || 0,
+                            zone: company.zone,
+                            date_added: company.dateAdded || company.date_added || new Date().toISOString(),
+                            raw_data: company.rawData || company.raw_data || {},
+                            kpis: company.kpis || {}
+                        };
+
+                        const { error } = await supabase.from('companies').upsert(data, { onConflict: 'id' });
+                        if (error) {
+                            log(`❌ ${company.name}: ${error.message}`);
+                        } else {
+                            success++;
+                        }
+                    }
+
+                    log(`🏁 TUGADI! ${success} ta korxona Supabasega o'tdi.`);
+
+                    // Save back to LocalStorage to be safe
+                    localStorage.setItem('mm_companies', JSON.stringify(companies));
+                    log('💾 LocalStorage qayta tiklandi.');
+
+                } catch (e) {
+                    log(`❌ Supabase Xatosi: ${e.message}`);
+                }
+            } else {
+                log('❌ ❌ ❌ MA\'LUMOT TOPILMADI! HECH QAYERDA YO\'Q!');
+                log('Iltimos, agar JSON backup olgan bo\'lsangiz, Import qiling.');
+            }
+        }
+    </script>
+</body>
+
+</html>
