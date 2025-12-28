@@ -1,0 +1,125 @@
+.kpi-app {
+    height: 100%;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+    color: white;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .header {
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    .kpi-table {
+        background: rgba(40, 40, 50, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        overflow: hidden;
+
+        .table-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr 1.2fr;
+            padding: 14px 20px;
+            background: rgba(30, 30, 40, 0.8);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .table-body {
+            .table-row {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 2fr 1.2fr;
+                padding: 16px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                align-items: center;
+                transition: background 0.15s ease;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.03);
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .name {
+                    font-weight: 500;
+                }
+
+                .value {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #34C759;
+                }
+
+                .target {
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+
+                .formula {
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.4);
+                    font-style: italic;
+                }
+
+                .status .badge {
+                    display: inline-block;
+                    padding: 6px 12px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .info-box {
+        background: rgba(40, 60, 80, 0.4);
+        border: 1px solid rgba(0, 122, 255, 0.2);
+        border-radius: 12px;
+        padding: 20px;
+
+        h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.7);
+                padding: 6px 0;
+                padding-left: 16px;
+                position: relative;
+
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    left: 0;
+                    color: #007AFF;
+                }
+            }
+        }
+    }
+}

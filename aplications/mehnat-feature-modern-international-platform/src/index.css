@@ -1,0 +1,1046 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 262.1 83.3% 57.8%;
+  }
+}
+
+/* Enhanced scrollbar with theme support */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb, hsl(var(--muted-foreground))) var(--scroll-track, hsl(var(--muted)));
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--scroll-track, hsl(var(--muted)));
+    border-radius: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb, hsl(var(--muted-foreground)));
+    border-radius: 4px;
+    transition: background 0.2s ease;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--foreground));
+  }
+
+  /* Global scrollbar styling */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb, hsl(var(--muted-foreground))) var(--scroll-track, hsl(var(--muted)));
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--scroll-track, hsl(var(--muted)));
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb, hsl(var(--muted-foreground)));
+    border-radius: 4px;
+    transition: background 0.2s ease;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--foreground));
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Railway.com inspired design system */
+  .railway-theme {
+    --railway-dark: hsl(250, 24%, 9%);
+    --railway-secondary: hsl(250, 21%, 11%);
+    --railway-purple: hsl(270, 60%, 52%);
+    --railway-blue: hsl(220, 80%, 55%);
+    --railway-cyan: hsl(180, 50%, 44%);
+    --railway-gray: hsl(246, 6%, 55%);
+    --railway-pink: hsl(320, 70%, 60%);
+    --railway-green: hsl(152, 38%, 42%);
+
+    /* Railway gradients */
+    --railway-hero-gradient: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%),
+                            linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%),
+                            linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%),
+                            #13111C;
+    --railway-card-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    --railway-border-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    --railway-glow: 0 0 30px hsla(270, 60%, 52%, 0.3);
+    --railway-spread-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary)) 50%, hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Shimmer loading effect */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+    content: '';
+  }
+
+  /* Focus visible improvements */
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Text truncation utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Railway-inspired effects */
+  .railway-glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+
+  .railway-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .railway-card:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+  }
+
+  .dark .railway-card {
+    background: rgba(15, 15, 23, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+
+  .dark .railway-card:hover {
+    background: rgba(15, 15, 23, 0.9);
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.25);
+  }
+
+  /* Dark mode improvements */
+  .dark {
+    color-scheme: dark;
+  }
+
+  .dark body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  /* Dark mode specific styles */
+  .dark .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--muted)));
+  }
+
+  .dark .bg-primary\/5 {
+    background: rgba(139, 92, 246, 0.05);
+  }
+
+  .dark .bg-primary\/10 {
+    background: rgba(139, 92, 246, 0.1);
+  }
+
+  .dark .text-primary {
+    color: hsl(var(--primary));
+  }
+
+  .dark .border-primary\/20 {
+    border-color: rgba(139, 92, 246, 0.2);
+  }
+
+  .dark .hover\:border-primary\/30:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+
+  .dark .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+
+  /* Dark mode for cards and components */
+  .dark .bg-card {
+    background: hsl(var(--card));
+  }
+
+  .dark .text-card-foreground {
+    color: hsl(var(--card-foreground));
+  }
+
+  .dark .border {
+    border-color: hsl(var(--border));
+  }
+
+  .dark .bg-muted {
+    background: hsl(var(--muted));
+  }
+
+  .dark .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Dark mode for buttons */
+  .dark .bg-primary {
+    background: hsl(var(--primary));
+  }
+
+  .dark .text-primary-foreground {
+    color: hsl(var(--primary-foreground));
+  }
+
+  .dark .hover\:bg-primary\/90:hover {
+    background: hsl(var(--primary) / 0.9);
+  }
+
+  /* Modern button styles */
+  .btn-railway {
+    background: linear-gradient(135deg, hsl(258 90% 66%), hsl(280 90% 70%));
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .btn-railway:hover {
+    background: linear-gradient(135deg, hsl(258 90% 56%), hsl(280 90% 60%));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+  }
+}
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brand-aligned light theme based on your guide */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Brand colors from your guide */
+    --brand-orange: 14 73% 58%;     /* #E67247 */
+    --brand-green: 142 45% 52%;     /* #40964B */
+    --brand-dark: 0 0% 24%;         /* #3C3C3C */
+
+    /* Primary using brand orange */
+    --primary: 14 73% 58%;          /* #E67247 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary using brand green */
+    --secondary: 142 45% 52%;       /* #40964B */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    /* Accent using brand dark */
+    --accent: 0 0% 24%;             /* #3C3C3C */
+    --accent-foreground: 0 0% 100%;
+
+    /* Warning colors */
+    --warning: 38 95% 62%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Safety colors using brand green */
+    --safety: 142 45% 52%;          /* #40964B */
+    --safety-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 14 73% 58%;             /* Brand orange for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Brand-inspired gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(14 73% 58%), hsl(142 45% 52%));
+    --gradient-hero: linear-gradient(135deg, hsl(14 73% 58%), hsl(0 0% 24%));
+    --gradient-brand: linear-gradient(135deg, hsl(14 73% 58%) 0%, hsl(142 45% 52%) 50%, hsl(0 0% 24%) 100%);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 14 73% 58%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 5.9% 90%;
+    --sidebar-ring: 14 73% 58%;
+  }
+
+  .dark {
+    /* Brand-aligned dark theme based on your guide */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Brand colors from your guide - enhanced for dark mode */
+    --brand-orange: 14 73% 65%;     /* Slightly brighter #E67247 for dark mode */
+    --brand-green: 142 45% 58%;     /* Slightly brighter #40964B for dark mode */
+    --brand-dark: 0 0% 85%;         /* Inverted for dark mode */
+
+    /* Primary using brand orange */
+    --primary: 14 73% 65%;
+    --primary-foreground: 240 10% 3.9%;
+
+    /* Secondary using brand green */
+    --secondary: 142 45% 58%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Accent using brand dark (inverted) */
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --warning: 38 95% 62%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Safety colors using brand green */
+    --safety: 142 45% 58%;
+    --safety-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 14 73% 65%;             /* Brand orange for focus rings */
+
+    /* Brand-inspired gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(14 73% 65%), hsl(142 45% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(14 73% 65%), hsl(0 0% 15%));
+    --gradient-brand: linear-gradient(135deg, hsl(14 73% 65%) 0%, hsl(142 45% 58%) 50%, hsl(0 0% 15%) 100%);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 14 73% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 14 73% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Smooth transitions for theme changes */
+  html {
+    transition: var(--theme-transition, all 0.3s cubic-bezier(0.4, 0, 0.2, 1));
+  }
+
+  /* Accessibility Enhancements */
+  .high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --border: 0 0% 30%;
+    --primary: 210 100% 70%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 80%;
+    --destructive: 0 100% 70%;
+    --ring: 210 100% 70%;
+  }
+
+  .large-text {
+    font-size: 1.125rem;
+  }
+
+  .large-text h1 { font-size: 2.5rem; }
+  .large-text h2 { font-size: 2rem; }
+  .large-text h3 { font-size: 1.75rem; }
+  .large-text h4 { font-size: 1.5rem; }
+  .large-text .text-sm { font-size: 1rem; }
+  .large-text .text-xs { font-size: 0.875rem; }
+
+  .reduced-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .enhanced-focus *:focus-visible {
+    outline: 3px solid hsl(var(--primary));
+    outline-offset: 2px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px hsl(var(--background));
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Skip to content link */
+  .skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s;
+  }
+
+  .skip-to-content:focus {
+    top: 6px;
+  }
+
+  /* Enhanced selection styles */
+  ::selection {
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--primary-foreground));
+  }
+
+  ::-moz-selection {
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Print styles */
+  @media print {
+    * {
+      background: transparent !important;
+      color: black !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+  }
+
+  /* Grid pattern background */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .dark .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  }
+
+  /* Enhanced animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Modern gradient backgrounds */
+  .bg-gradient-modern {
+    background: linear-gradient(135deg,
+      hsl(var(--primary) / 0.1) 0%,
+      hsl(var(--secondary) / 0.1) 50%,
+      hsl(var(--accent) / 0.1) 100%);
+  }
+
+  /* Brand-specific gradients */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-brand {
+    background: var(--gradient-brand);
+  }
+
+  /* Brand color utilities */
+  .text-brand-orange {
+    color: hsl(var(--brand-orange));
+  }
+
+  .text-brand-green {
+    color: hsl(var(--brand-green));
+  }
+
+  .text-brand-dark {
+    color: hsl(var(--brand-dark));
+  }
+
+  .bg-brand-orange {
+    background-color: hsl(var(--brand-orange));
+  }
+
+  .bg-brand-green {
+    background-color: hsl(var(--brand-green));
+  }
+
+  .bg-brand-dark {
+    background-color: hsl(var(--brand-dark));
+  }
+
+  .border-brand-orange {
+    border-color: hsl(var(--brand-orange));
+  }
+
+  .border-brand-green {
+    border-color: hsl(var(--brand-green));
+  }
+
+  .border-brand-dark {
+    border-color: hsl(var(--brand-dark));
+  }
+
+  /* Responsive design utilities */
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .responsive-grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-grid {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+    }
+  }
+
+  /* Brand-specific animations */
+  @keyframes brand-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(var(--brand-orange) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 10px hsl(var(--brand-orange) / 0);
+    }
+  }
+
+  .animate-brand-pulse {
+    animation: brand-pulse 2s infinite;
+  }
+
+  @keyframes brand-gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-brand-gradient {
+    background: linear-gradient(-45deg,
+      hsl(var(--brand-orange)),
+      hsl(var(--brand-green)),
+      hsl(var(--brand-dark)),
+      hsl(var(--brand-orange))
+    );
+    background-size: 400% 400%;
+    animation: brand-gradient 15s ease infinite;
+  }
+
+  /* Accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-brand-pulse,
+    .animate-brand-gradient,
+    .animate-float {
+      animation: none;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .card-professional {
+      border-width: 2px;
+      border-color: hsl(var(--foreground));
+    }
+
+    .text-brand-orange,
+    .text-brand-green,
+    .text-brand-dark {
+      color: hsl(var(--foreground));
+    }
+  }
+
+  /* Print optimizations */
+  @media print {
+    .card-professional {
+      background: white !important;
+      border: 1px solid black !important;
+      box-shadow: none !important;
+    }
+
+    .bg-gradient-primary,
+    .bg-gradient-brand {
+      background: white !important;
+      color: black !important;
+    }
+  }
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Responsive Design Helper Styles */
+  .show-grid::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(rgba(255, 0, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  .responsive-container {
+    transition: all 0.3s ease;
+  }
+
+  /* Railway.com inspired components */
+  .railway-hero {
+    background: var(--railway-hero-gradient);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .railway-card {
+    background: var(--railway-card-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .railway-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--railway-glow);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .railway-button {
+    background: linear-gradient(135deg, var(--railway-purple), var(--railway-blue));
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .railway-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .railway-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .railway-button:hover::before {
+    left: 100%;
+  }
+
+  .railway-text-gradient {
+    background: linear-gradient(135deg, var(--railway-purple), var(--railway-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .railway-glow-effect {
+    position: relative;
+  }
+
+  .railway-glow-effect::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--railway-purple), var(--railway-blue), var(--railway-cyan));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .railway-glow-effect:hover::before {
+    opacity: 1;
+  }
+
+  /* Professional card styles */
+  .card-professional {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .dark .card-professional {
+    background: rgba(15, 15, 23, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .card-professional:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: hsl(var(--primary) / 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .card-professional:hover {
+    background: rgba(15, 15, 23, 0.95);
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05);
+  }
+
+  /* Professional Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInDelay {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeInDelay 0.6s ease-out 0.2s both;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Professional Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f97316, #dc2626);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ea580c, #b91c1c);
+  }
+
+  /* Selection styling */
+  ::selection {
+    background: rgba(249, 115, 22, 0.3);
+    color: white;
+  }
+
+  /* Focus improvements */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-railway-dark;
+  }
+
+  /* Professional shadows */
+  .shadow-professional {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .shadow-professional-lg {
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* Smooth page transitions */
+  .page-transition {
+    animation: pageEnter 0.3s ease-out;
+  }
+
+  @keyframes pageEnter {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Professional loading states */
+  .loading-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.05) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* Accessibility improvements */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .railway-card {
+      border: 2px solid white;
+    }
+
+    .railway-button {
+      border: 2px solid currentColor;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+
+    .railway-card {
+      border: 1px solid #000;
+      background: white !important;
+      color: black !important;
+    }
+  }
+}

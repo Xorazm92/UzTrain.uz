@@ -1,0 +1,522 @@
+.korxonalar-app {
+    height: 100%;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+    color: white;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .app-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-left {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+
+            h1 {
+                font-size: 28px;
+                font-weight: 700;
+            }
+
+            .count {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .header-right {
+            display: flex;
+            gap: 12px;
+
+            .search-box {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                padding: 10px 14px;
+                width: 280px;
+
+                .search-icon {
+                    width: 16px;
+                    height: 16px;
+                    color: rgba(255, 255, 255, 0.4);
+                }
+
+                input {
+                    flex: 1;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: white;
+                    font-size: 14px;
+
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.4);
+                    }
+                }
+            }
+
+            .add-btn {
+                padding: 10px 20px;
+                background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+                border: none;
+                border-radius: 8px;
+                color: white;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    filter: brightness(1.1);
+                }
+            }
+        }
+    }
+
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+
+        .stat-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: rgba(40, 40, 50, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background: rgba(50, 50, 60, 0.8);
+                transform: translateY(-2px);
+            }
+
+            .stat-icon {
+                font-size: 32px;
+            }
+
+            .stat-info {
+                display: flex;
+                flex-direction: column;
+
+                .stat-value {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+
+                .stat-label {
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+
+    .companies-table {
+        background: rgba(20, 20, 35, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        overflow: hidden;
+
+        .table-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr 1.5fr;
+            padding: 16px 20px;
+            background: rgba(30, 30, 40, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.05em;
+        }
+
+        .table-body {
+            .table-row {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr 1.5fr;
+                padding: 16px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                align-items: center;
+                transition: background 0.15s ease;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.03);
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .col-name {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 500;
+
+                    .company-icon {
+                        font-size: 20px;
+                    }
+                }
+
+                .col-region {
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 14px;
+                }
+
+                .col-employees {
+                    font-size: 14px;
+                }
+
+                .col-score {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .score-bar {
+                        flex: 1;
+                        height: 6px;
+                        background: rgba(255, 255, 255, 0.1);
+                        border-radius: 3px;
+                        overflow: hidden;
+                        max-width: 80px;
+
+                        .score-fill {
+                            height: 100%;
+                            border-radius: 3px;
+                        }
+                    }
+
+                    span {
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+
+                .col-status {
+                    .status-badge {
+                        display: inline-block;
+                        padding: 6px 12px;
+                        border-radius: 20px;
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+
+                .col-actions {
+                    display: flex;
+                    gap: 8px;
+
+                    .action-btn {
+                        padding: 6px 12px;
+                        background: rgba(255, 255, 255, 0.08);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-radius: 6px;
+                        color: rgba(255, 255, 255, 0.8);
+                        font-size: 12px;
+                        cursor: pointer;
+                        transition: all 0.15s ease;
+
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.12);
+                            border-color: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(5, 5, 20, 0.68);
+        backdrop-filter: blur(18px);
+        display: grid;
+        place-items: center;
+        z-index: 1000;
+        padding: 24px;
+
+        .modal-content {
+            width: min(640px, 100%);
+            background: linear-gradient(145deg, rgba(24, 24, 40, 0.95), rgba(16, 16, 28, 0.92));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+            h2 {
+                margin: 0;
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            .close-btn {
+                background: transparent;
+                border: none;
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 20px;
+                cursor: pointer;
+                transition: color 0.2s ease;
+
+                &:hover:not(:disabled) {
+                    color: white;
+                }
+
+                &:disabled {
+                    opacity: 0.4;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        .modal-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .form-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 18px;
+
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    font-size: 13px;
+                    letter-spacing: 0.04em;
+                    text-transform: uppercase;
+                    color: rgba(255, 255, 255, 0.6);
+
+                    input,
+                    select {
+                        border: 1px solid rgba(255, 255, 255, 0.12);
+                        background: rgba(255, 255, 255, 0.06);
+                        border-radius: 12px;
+                        padding: 12px 14px;
+                        color: white;
+                        font-size: 14px;
+                        transition: border 0.2s ease, background 0.2s ease;
+
+                        &:focus {
+                            outline: none;
+                            border-color: rgba(10, 132, 255, 0.6);
+                            background: rgba(10, 132, 255, 0.1);
+                        }
+
+                        &::placeholder {
+                            color: rgba(255, 255, 255, 0.4);
+                        }
+                    }
+                }
+            }
+
+            .form-error {
+                margin: 0;
+                padding: 12px 16px;
+                border-radius: 12px;
+                background: rgba(255, 59, 48, 0.16);
+                border: 1px solid rgba(255, 59, 48, 0.24);
+                color: #ff9f97;
+                font-size: 14px;
+            }
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            padding: 0 24px 24px;
+
+            button {
+                padding: 12px 20px;
+                border-radius: 12px;
+                font-size: 14px;
+                font-weight: 500;
+                border: none;
+                cursor: pointer;
+                transition: transform 0.15s ease, filter 0.2s ease;
+
+                &:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                }
+
+                &:hover:not(:disabled) {
+                    transform: translateY(-1px);
+                }
+            }
+
+            .secondary {
+                background: rgba(255, 255, 255, 0.08);
+                color: rgba(255, 255, 255, 0.85);
+
+                &:hover:not(:disabled) {
+                    filter: brightness(1.1);
+                }
+            }
+
+            .primary {
+                background: linear-gradient(135deg, #0a84ff 0%, #5856d6 100%);
+                color: white;
+
+                &:hover:not(:disabled) {
+                    filter: brightness(1.08);
+                }
+            }
+        }
+    }
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    .modal-content {
+        background: rgba(30, 30, 30, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        width: 500px;
+        max-width: 90%;
+        padding: 24px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        animation: modalFadeIn 0.2s ease-out;
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+
+            h2 {
+                margin: 0;
+                font-size: 1.2rem;
+                color: white;
+            }
+
+            .close-btn {
+                background: none;
+                border: none;
+                color: #8e8e93;
+                font-size: 1.2rem;
+                cursor: pointer;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        .modal-body {
+            .detail-row {
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+                .label {
+                    color: #8e8e93;
+                }
+
+                .value {
+                    color: white;
+                    font-weight: 500;
+                }
+
+                .value.highlight {
+                    font-weight: bold;
+                }
+            }
+
+            .kpi-breakdown {
+                margin-top: 20px;
+
+                h3 {
+                    font-size: 1rem;
+                    color: white;
+                    margin-bottom: 10px;
+                }
+
+                .kpi-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 8px;
+
+                    .kpi-label {
+                        width: 120px;
+                        font-size: 0.8rem;
+                        color: #ccc;
+                    }
+
+                    .kpi-score-bar {
+                        flex: 1;
+                        height: 6px;
+                        background: rgba(255, 255, 255, 0.1);
+                        border-radius: 3px;
+                        overflow: hidden;
+
+                        .fill {
+                            height: 100%;
+                            transition: width 0.5s ease;
+                        }
+                    }
+
+                    .kpi-value {
+                        width: 30px;
+                        text-align: right;
+                        font-size: 0.8rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

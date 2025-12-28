@@ -1,0 +1,53 @@
+@import "../Page/Page.scss";
+
+.context-menu {
+    width: 16em;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    z-index: 2 !important;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(15px);
+
+    position: absolute;
+    left: 0;
+    top: 30px;
+    padding: 11px 4px 8px 7px;
+    box-shadow: 0px 0px 3.35px black;
+    
+    .first{
+            margin-top: 2px;
+    }
+
+    .context-item {
+        color: white;
+        margin-bottom: 3px;
+        padding: 0px 8px;
+        font-size: 14px;
+        font-family: "SF Regular";
+        transform: scaleY(1.03);
+        border: none;
+        border-radius: 4px;
+
+        &:hover{
+            background-color: var(--sys-color);
+            color: black !important;
+            cursor: pointer;
+        }
+    }
+
+    .context-divider{
+        margin: 2px 3px 3px 0px;
+        height: 1px;
+        background-color: rgba(255,255,255,0.4);
+    }
+}
+
+#context-menu{
+    // visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}

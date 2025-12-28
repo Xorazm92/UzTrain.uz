@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Main Page -->
+  <url>
+    <loc>https://safedocs.uz/</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://safedocs.uz/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://safedocs.uz/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://safedocs.uz/en/" />
+  </url>
+
+  <!-- Safety Laws -->
+  <url>
+    <loc>https://safedocs.uz/qonunlar</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://safedocs.uz/qonunlar" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://safedocs.uz/ru/qonunlar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://safedocs.uz/en/laws" />
+  </url>
+
+  <!-- Safety Rules -->
+  <url>
+    <loc>https://safedocs.uz/qoidalar</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://safedocs.uz/qoidalar" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://safedocs.uz/ru/qoidalar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://safedocs.uz/en/rules" />
+  </url>
+
+  <!-- Video Materials -->
+  <url>
+    <loc>https://safedocs.uz/video-materiallar</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://safedocs.uz/video-materiallar" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://safedocs.uz/ru/video-materiallar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://safedocs.uz/en/video-materials" />
+  </url>
+
+  <!-- Presentations/Slides -->
+  <url>
+    <loc>https://safedocs.uz/slaydlar</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://safedocs.uz/slaydlar" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://safedocs.uz/ru/slaydlar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://safedocs.uz/en/presentations" />
+  </url>
+
+  <!-- Railway Documents -->
+  <url>
+    <loc>https://safedocs.uz/temir-yol</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://safedocs.uz/temir-yol" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://safedocs.uz/ru/temir-yol" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://safedocs.uz/en/railway" />
+  </url>
+
+  <!-- Banners -->
+  <url>
+    <loc>https://safedocs.uz/bannerlar</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://safedocs.uz/bannerlar" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://safedocs.uz/ru/bannerlar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://safedocs.uz/en/banners" />
+  </url>
+
+  <!-- Job Manuals -->
+  <url>
+    <loc>https://safedocs.uz/kasb-yoriqnomalari</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://safedocs.uz/kasb-yoriqnomalari" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://safedocs.uz/ru/kasb-yoriqnomalari" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://safedocs.uz/en/job-manuals" />
+  </url>
+
+</urlset>

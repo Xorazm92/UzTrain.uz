@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  nbt-platform:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Add a reverse proxy with SSL
+  nginx-proxy:
+    image: nginx:alpine
+    ports:
+      - "443:443"
+    volumes:
+      - ./ssl:/etc/nginx/ssl
+      - ./proxy.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - nbt-platform
+    restart: unless-stopped

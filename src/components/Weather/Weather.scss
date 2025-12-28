@@ -1,0 +1,64 @@
+.window {
+  border: 1px solid #3f3f47;
+  background-color: #1e1f23;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 8px 15px #050505, 0px 12px 15px #050505,
+    0px 40px 70px #050505;
+  margin-bottom: 10.5vh;
+  opacity: 1;
+  z-index: 3;
+
+
+  #handle {
+    cursor: pointer;
+    width: 100%;
+
+  }
+}
+
+.openWeather {
+  position: absolute;
+  top: 29px;
+  width: 50vw;
+  height: 40vw;
+}
+
+.closedWeather {
+  transition: 0.4s all;
+  transform: scale(0.0001) !important;
+  transition: transform none;
+  position: absolute;
+  top: 29px;
+  width: 50vw;
+  height: 40vw;
+}
+
+.minimizedWeather {
+  transition: 0.6s all;
+  transform: scale(0.0001) !important;
+  transition: transform none;
+  position: absolute;
+  right: 120px;
+  top: 375px;
+  width: 50vw;
+  height: 40vw;
+
+}
+
+.stretchedWeather {
+  // transition: 0.4s all;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 29px);
+  z-index: 6;
+}
+.weather_z{
+  z-index: 8 !important;
+
+}

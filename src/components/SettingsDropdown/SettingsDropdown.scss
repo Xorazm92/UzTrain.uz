@@ -1,0 +1,165 @@
+.settings-dropdown {
+    background-color: hsla(240,3%,11%,0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 16px;
+    height: 360px;
+    width: 312px;
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: -155px;
+    top: 28px;
+    box-shadow: 0px 0px 4px #1c1c1c;
+    transition: 0.4s all;
+    padding: 11px 11px;
+    gap: 12px;
+
+    .functions{
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+
+        .func {
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            background-color: hsla(240,3%,11%,0.4);
+            color: white;
+            font-family: "SF Bold";
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 19px 16px 16px;
+            cursor: pointer;
+            box-shadow: 0px 0px 2px black;
+        }
+        .airdrop-btn{
+            *{
+                margin-bottom: 2px;
+                pointer-events: none;
+            }
+        }
+        button {
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            transition: 0.25s all;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 8px;
+            cursor: pointer;
+
+            *{
+                height: 17px;
+                width: 17px;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.sys-colors {
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    background-color: hsla(240,3%,11%,0.4);
+    color: white;
+    font-family: 'SF Bold';
+    padding: 9px 11px 11px 11px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    box-shadow: 0px 0px 2px black;
+
+    .colors{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-left: 1px;
+        margin-top: 13px;
+
+        .color{
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            border: 2px transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .orangey {
+            background-color: rgb(244, 227, 196);
+        }
+
+        .greeny {
+            background-color: rgb(193, 247, 193);
+        }
+
+        .bluey {
+            background-color: lightblue;
+        }
+
+        .pinky {
+            background-color: lightpink;
+        }
+
+        .whitey {
+            background-color: #f5f5f5;
+        }
+
+        .greyy {
+            background-color: grey;
+        }
+
+        .yellowy {
+            background-color: rgb(248, 248, 151);
+        }
+    }
+}
+
+.wallpaper-container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-start;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    cursor: pointer;
+
+    *{
+        pointer-events: none;
+    }
+
+    .preview{
+        border: none;
+        border-radius: 8px;
+        height: 100px;
+        width: 150px;
+    }
+
+    .desc-container{
+        padding-top: 3px;
+        padding-left: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: beige;
+
+        h2{
+            font-size: 16px;
+
+        }
+
+        h3{
+            margin-top: 1px;
+            font-size: 14px;
+        }
+    }
+}

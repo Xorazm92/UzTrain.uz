@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucket Yaratish</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+        .success {
+            color: #059669;
+            background: #d1fae5;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        .error {
+            color: #dc2626;
+            background: #fee2e2;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        .info {
+            color: #1d4ed8;
+            background: #dbeafe;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        #status {
+            margin: 20px 0;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗂️ Supabase Storage Bucket Yaratish</h1>
+        <p>Bu sahifa "materials" bucket'ini yaratish uchun ishlatiladi.</p>
+        
+        <div id="status"></div>
+        
+        <button onclick="checkBuckets()" id="checkBtn">📋 Bucket'larni Tekshirish</button>
+        <button onclick="createBucket()" id="createBtn">➕ Materials Bucket Yaratish</button>
+        <button onclick="testUpload()" id="testBtn" disabled>🧪 Upload Test</button>
+        
+        <div id="bucketList"></div>
+    </div>
+
+    <script>
+        const SUPABASE_URL = "https://hbzmwbkcogzbgeykxnoc.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhiem13Ymtjb2d6YmdleWt4bm9jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIxMzkwNjEsImV4cCI6MjA2NzcxNTA2MX0.t1z6SR4J5PmI2lhWTf9lEJzTd3s6bLCXQSe6zxNKYT8";
+        
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        
+        function showStatus(message, type = 'info') {
+            const status = document.getElementById('status');
+            status.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+        
+        function setButtonLoading(buttonId, loading) {
+            const btn = document.getElementById(buttonId);
+            btn.disabled = loading;
+            if (loading) {
+                btn.textContent = btn.textContent.replace(/^[^\s]+/, '⏳');
+            }
+        }
+        
+        async function checkBuckets() {
+            setButtonLoading('checkBtn', true);
+            showStatus('Bucket\'lar tekshirilmoqda...', 'info');
+            
+            try {
+                const { data, error } = await supabase.storage.listBuckets();
+                
+                if (error) {
+                    showStatus(`❌ Xatolik: ${error.message}`, 'error');
+                    return;
+                }
+                
+                const bucketList = document.getElementById('bucketList');
+                const materialsBucket = data.find(bucket => bucket.name === 'materials');
+                
+                if (materialsBucket) {
+                    showStatus('✅ Materials bucket mavjud!', 'success');
+                    document.getElementById('testBtn').disabled = false;
+                } else {
+                    showStatus('⚠️ Materials bucket topilmadi. Yaratish kerak.', 'error');
+                }
+                
+                bucketList.innerHTML = `
+                    <h3>Mavjud Bucket'lar:</h3>
+                    <ul>
+                        ${data.map(bucket => `
+                            <li>
+                                <strong>${bucket.name}</strong> 
+                                (${bucket.public ? 'Public' : 'Private'})
+                                ${bucket.name === 'materials' ? ' ✅' : ''}
+                            </li>
+                        `).join('')}
+                    </ul>
+                `;
+                
+            } catch (error) {
+                showStatus(`❌ Xatolik: ${error.message}`, 'error');
+            } finally {
+                setButtonLoading('checkBtn', false);
+                document.getElementById('checkBtn').textContent = '📋 Bucket\'larni Tekshirish';
+            }
+        }
+        
+        async function createBucket() {
+            setButtonLoading('createBtn', true);
+            showStatus('Materials bucket yaratilmoqda...', 'info');
+            
+            try {
+                const { data, error } = await supabase.storage.createBucket('materials', {
+                    public: true,
+                    allowedMimeTypes: [
+                        'image/*',
+                        'video/*',
+                        'application/pdf',
+                        'application/msword',
+                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                        'application/vnd.ms-powerpoint',
+                        'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+                    ],
+                    fileSizeLimit: 52428800 // 50MB
+                });
+                
+                if (error) {
+                    if (error.message.includes('already exists')) {
+                        showStatus('✅ Materials bucket allaqachon mavjud!', 'success');
+                        document.getElementById('testBtn').disabled = false;
+                    } else {
+                        showStatus(`❌ Bucket yaratishda xatolik: ${error.message}`, 'error');
+                    }
+                } else {
+                    showStatus('✅ Materials bucket muvaffaqiyatli yaratildi!', 'success');
+                    document.getElementById('testBtn').disabled = false;
+                    // Refresh bucket list
+                    setTimeout(checkBuckets, 1000);
+                }
+                
+            } catch (error) {
+                showStatus(`❌ Xatolik: ${error.message}`, 'error');
+            } finally {
+                setButtonLoading('createBtn', false);
+                document.getElementById('createBtn').textContent = '➕ Materials Bucket Yaratish';
+            }
+        }
+        
+        async function testUpload() {
+            setButtonLoading('testBtn', true);
+            showStatus('Upload test qilinmoqda...', 'info');
+            
+            try {
+                // Create a test file
+                const testContent = 'Bu test fayli';
+                const testFile = new Blob([testContent], { type: 'text/plain' });
+                const fileName = `test-${Date.now()}.txt`;
+                
+                const { error: uploadError } = await supabase.storage
+                    .from('materials')
+                    .upload(`test/${fileName}`, testFile);
+                
+                if (uploadError) {
+                    showStatus(`❌ Upload xatoligi: ${uploadError.message}`, 'error');
+                } else {
+                    showStatus('✅ Upload test muvaffaqiyatli!', 'success');
+                    
+                    // Clean up test file
+                    await supabase.storage
+                        .from('materials')
+                        .remove([`test/${fileName}`]);
+                }
+                
+            } catch (error) {
+                showStatus(`❌ Test xatoligi: ${error.message}`, 'error');
+            } finally {
+                setButtonLoading('testBtn', false);
+                document.getElementById('testBtn').textContent = '🧪 Upload Test';
+            }
+        }
+        
+        // Auto-check on page load
+        window.onload = checkBuckets;
+    </script>
+</body>
+</html>

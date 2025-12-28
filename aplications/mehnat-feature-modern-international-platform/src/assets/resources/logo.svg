@@ -1,0 +1,25 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Railway track lines -->
+  <rect x="8" y="16" width="104" height="2" fill="currentColor"/>
+  <rect x="8" y="22" width="104" height="2" fill="currentColor"/>
+  
+  <!-- Railway ties/sleepers -->
+  <rect x="12" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="20" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="28" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="36" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="44" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="52" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="60" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="68" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="76" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="84" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="92" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="100" y="14" width="2" height="12" fill="currentColor"/>
+  <rect x="108" y="14" width="2" height="12" fill="currentColor"/>
+  
+  <!-- Train/locomotive simplified -->
+  <rect x="4" y="12" width="8" height="16" rx="2" fill="currentColor"/>
+  <circle cx="6" cy="30" r="2" fill="currentColor"/>
+  <circle cx="10" cy="30" r="2" fill="currentColor"/>
+</svg>

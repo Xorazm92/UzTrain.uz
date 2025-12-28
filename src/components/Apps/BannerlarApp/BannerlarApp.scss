@@ -1,0 +1,89 @@
+.bannerlar-app {
+    height: 100%;
+    background: linear-gradient(135deg, #2a1a3e 0%, #1a1a2e 100%);
+    color: white;
+    padding: 24px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .add-btn {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #AF52DE 0%, #5856D6 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(1.1);
+            }
+        }
+    }
+
+    .banners-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .banner-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: rgba(50, 40, 70, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background: rgba(60, 50, 80, 0.8);
+                transform: translateX(4px);
+            }
+
+            .banner-preview {
+                width: 60px;
+                height: 60px;
+                background: rgba(175, 82, 222, 0.2);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 28px;
+            }
+
+            .banner-info {
+                flex: 1;
+
+                h3 {
+                    font-size: 15px;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+
+                .banner-meta {
+                    display: flex;
+                    gap: 16px;
+                    font-size: 13px;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+
+            .status {
+                padding: 6px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+}

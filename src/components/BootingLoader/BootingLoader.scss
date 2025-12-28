@@ -1,0 +1,121 @@
+@keyframes identifier {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: gray;
+    }
+}
+
+.booting-loader {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: 1s all;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    align-items: center;
+    justify-content: center;
+}
+
+.boot {
+    transition: 1s opacity;
+    cursor: none;
+    animation: 0.1s ease-out 0s 1 load !important;
+
+    .booting-loader-logo {
+        height: 70px;
+        width: 70px;
+        -webkit-user-drag: none;
+        pointer-events: none;
+        justify-self: flex-start;
+        margin-top: 7px;
+        margin-right: 12px;
+    }
+
+    .bar-container {
+        margin-top: 45px;
+        padding: 0;
+        position: relative;
+
+        .bar-background {
+            margin: 0;
+            background-color: #424242;
+            border: none;
+            border-radius: 9999px;
+            width: 150px;
+            height: 4px;
+        }
+
+        .bar {
+            position: absolute;
+            height: 4px;
+            width: 0px;
+            border-radius: 9999px;
+            border: none;
+            top: 0;
+            background-color: white;
+        }
+    }
+}
+
+.vanished {
+    opacity: 0;
+    z-index: 90;
+    background-color: black;
+    width: 0vw;
+    height: 0vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    transition: 1s all;
+    cursor: none;
+
+    .booting-loader-logo {
+        visibility: hidden;
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        justify-self: flex-start;
+        margin-top: 7px;
+        margin-right: 12px;
+    }
+
+    .bar-container {
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 37px;
+        padding: 0;
+        position: relative;
+
+        .bar-background {
+            opacity: 0;
+            visibility: hidden;
+            margin: 0;
+            background-color: #424242;
+            border: none;
+            border-radius: 9999px;
+            width: 150px;
+            height: 4px;
+        }
+
+        .bar {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            height: 4px;
+            width: 0px;
+            border-radius: 9999px;
+            border: none;
+            top: 0;
+            background-color: white;
+        }
+    }
+}

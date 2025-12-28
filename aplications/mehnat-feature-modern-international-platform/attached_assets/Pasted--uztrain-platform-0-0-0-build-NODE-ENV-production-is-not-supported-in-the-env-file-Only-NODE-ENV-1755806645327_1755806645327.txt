@@ -1,0 +1,98 @@
+
+> uztrain-platform@0.0.0 build
+NODE_ENV=production is not supported in the .env file. Only NODE_ENV=development is supported to create a development build of your project. If you need to set process.env.NODE_ENV, you can set it in the Vite config instead.
+vite v5.4.10 building for production...
+✓ 2767 modules transformed.
+dist/registerSW.js                           0.13 kB
+dist/manifest.webmanifest                    0.47 kB
+dist/index.html                              8.37 kB │ gzip:   2.25 kB
+dist/assets/index-BN9dNyuv.css             118.39 kB │ gzip:  19.21 kB
+dist/assets/chevron-down-A3Ypl_e-.js         0.30 kB │ gzip:   0.25 kB
+dist/assets/chevron-right-CmnrN0b5.js        0.30 kB │ gzip:   0.25 kB
+dist/assets/play-BXXl7Ncx.js                 0.30 kB │ gzip:   0.25 kB
+dist/assets/loader-circle-Cq9x3m_2.js        0.31 kB │ gzip:   0.26 kB
+dist/assets/filter-bU5IN3Cm.js               0.33 kB │ gzip:   0.26 kB
+dist/assets/search-5VskL-8i.js               0.34 kB │ gzip:   0.27 kB
+dist/assets/pause-CiRHhtxj.js                0.38 kB │ gzip:   0.27 kB
+dist/assets/activity-IKGhkHvX.js             0.40 kB │ gzip:   0.30 kB
+dist/assets/chart-column-AHMVfFzg.js         0.42 kB │ gzip:   0.30 kB
+dist/assets/external-link-BXNw8hxM.js        0.42 kB │ gzip:   0.30 kB
+dist/assets/download-B5wbpTU9.js             0.43 kB │ gzip:   0.32 kB
+dist/assets/image-8q47o66b.js                0.44 kB │ gzip:   0.32 kB
+dist/assets/users-C81GYThV.js                0.47 kB │ gzip:   0.32 kB
+dist/assets/trash-2-0A6oTHUe.js              0.53 kB │ gzip:   0.34 kB
+dist/assets/trending-up-VyaCTRb4.js          0.71 kB │ gzip:   0.34 kB
+dist/assets/NotFound-SLp0cOf0.js             0.74 kB │ gzip:   0.44 kB
+dist/assets/video-CxyWM2k_.js                0.87 kB │ gzip:   0.43 kB
+dist/assets/input-DYxMfHPJ.js                0.89 kB │ gzip:   0.55 kB
+dist/assets/alert-BRq-JbfA.js                0.98 kB │ gzip:   0.50 kB
+dist/assets/zoom-in-feeFbFb8.js              1.14 kB │ gzip:   0.45 kB
+dist/assets/textarea-Zn9LLAA4.js             1.40 kB │ gzip:   0.78 kB
+dist/assets/useRealStats-hWFdkHFP.js         2.03 kB │ gzip:   1.06 kB
+dist/assets/dialog-D9l-K6Y9.js               2.03 kB │ gzip:   0.82 kB
+dist/assets/fileUpload-hktDaSik.js           2.56 kB │ gzip:   1.31 kB
+dist/assets/SEO-C-eHzOhO.js                  2.66 kB │ gzip:   1.22 kB
+dist/assets/progress-C9iPliZv.js             2.91 kB │ gzip:   1.37 kB
+dist/assets/useTranslation-DyPl9juI.js       3.15 kB │ gzip:   1.54 kB
+dist/assets/tabs-DX0_ejGw.js                 3.24 kB │ gzip:   1.37 kB
+dist/assets/select-DF7fOM2u.js               3.30 kB │ gzip:   1.28 kB
+dist/assets/RailwayDocuments-CQtREV7C.js     3.61 kB │ gzip:   1.66 kB
+dist/assets/dropdown-menu-BRcY0O_b.js        3.79 kB │ gzip:   1.13 kB
+dist/assets/JobManuals-B65U0vED.js           4.25 kB │ gzip:   1.82 kB
+dist/assets/Laws-DHWWRk0j.js                 4.45 kB │ gzip:   1.98 kB
+dist/assets/Slides-DTrixS50.js               4.47 kB │ gzip:   1.97 kB
+dist/assets/Rules-BYucDJQf.js                4.94 kB │ gzip:   2.00 kB
+dist/assets/Laws-C_54LmWO.js                 5.60 kB │ gzip:   2.28 kB
+dist/assets/Rules-BFyjP9JH.js                5.60 kB │ gzip:   2.28 kB
+dist/assets/Decisions-DC4EYkul.js            5.61 kB │ gzip:   2.28 kB
+dist/assets/Dashboard-D1tAVbI3.js            5.76 kB │ gzip:   1.78 kB
+dist/assets/RailwayDocuments-DaJM64Ts.js     5.79 kB │ gzip:   2.31 kB
+dist/assets/JobManuals-nnPzXiw_.js           5.80 kB │ gzip:   2.31 kB
+dist/assets/VideoMaterials-DvsNtscb.js       5.90 kB │ gzip:   2.36 kB
+dist/assets/NormativDocuments-CSdKWAwS.js    6.57 kB │ gzip:   2.54 kB
+dist/assets/Slides-DuDbDKaq.js               6.69 kB │ gzip:   2.52 kB
+dist/assets/AdminLayout-BwOPoG83.js          6.83 kB │ gzip:   2.40 kB
+dist/assets/Analytics-Bl3r1qPW.js            8.25 kB │ gzip:   2.50 kB
+dist/assets/BucketSetup-DBdHxLwu.js          8.35 kB │ gzip:   2.88 kB
+dist/assets/Banners-CoYLdqBl.js              8.44 kB │ gzip:   3.20 kB
+dist/assets/Settings-CbgizqAo.js            11.80 kB │ gzip:   3.99 kB
+dist/assets/Footer-BydP8sPw.js              12.30 kB │ gzip:   3.17 kB
+dist/assets/VideoMaterials-Z4qMwrgv.js      13.55 kB │ gzip:   4.92 kB
+dist/assets/scroll-area-CgEJSYw1.js         16.56 kB │ gzip:   5.28 kB
+dist/assets/RailwayIndex-C-mBGJjJ.js        16.81 kB │ gzip:   4.09 kB
+dist/assets/fileService-DzxwXUnC.js         17.09 kB │ gzip:   5.58 kB
+dist/assets/Navbar-YIdHcnhU.js              17.60 kB │ gzip:   5.56 kB
+dist/assets/Banners-BOMZvJwA.js             20.46 kB │ gzip:   5.33 kB
+dist/assets/utils-B2cb_wdg.js               30.17 kB │ gzip:  10.10 kB
+dist/assets/index.esm-nUjsS90v.js           88.96 kB │ gzip:  27.05 kB
+dist/assets/ui-JbvMlztS.js                 100.63 kB │ gzip:  32.18 kB
+dist/assets/supabase-C5akYo8p.js           112.44 kB │ gzip:  30.94 kB
+dist/assets/vendor-BbxfYFPR.js             141.86 kB │ gzip:  45.57 kB
+dist/assets/index-C7-_HCgF.js              204.84 kB │ gzip:  62.81 kB
+dist/assets/Pagination-D89aL0dP.js         418.82 kB │ gzip: 123.65 kB
+✓ built in 16.66s
+
+PWA v1.0.2
+mode      generateSW
+precache  77 entries (2307.04 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-1ea6f077.js
+
+> uztrain-platform@0.0.0 generate-sitemap
+> node scripts/generate-sitemap.js
+
+node:internal/modules/cjs/loader:1215
+  throw err;
+  ^
+
+Error: Cannot find module '/home/runner/workspace/scripts/generate-sitemap.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+    at Module._load (node:internal/modules/cjs/loader:1043:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.19.3

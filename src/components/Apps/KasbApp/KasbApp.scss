@@ -1,0 +1,134 @@
+.kasb-app {
+    height: 100%;
+    background: linear-gradient(135deg, #1a2a1a 0%, #0f1f0f 100%);
+    color: white;
+    padding: 24px;
+    overflow-y: auto;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .header-left {
+            h1 {
+                font-size: 26px;
+                font-weight: 600;
+                margin-bottom: 6px;
+            }
+
+            p {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .search-box {
+            input {
+                padding: 10px 16px;
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                color: white;
+                font-size: 14px;
+                width: 250px;
+                outline: none;
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.4);
+                }
+            }
+        }
+    }
+
+    .manuals-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+        gap: 16px;
+
+        .manual-card {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            background: rgba(40, 60, 40, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background: rgba(50, 70, 50, 0.7);
+                transform: translateY(-4px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .manual-icon {
+                width: 60px;
+                height: 60px;
+                background: rgba(52, 199, 89, 0.2);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 32px;
+                flex-shrink: 0;
+            }
+
+            .manual-content {
+                flex: 1;
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 6px;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: rgba(255, 255, 255, 0.6);
+                    margin-bottom: 10px;
+                }
+
+                .manual-meta {
+                    display: flex;
+                    gap: 16px;
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+
+            .manual-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                button {
+                    padding: 8px 16px;
+                    border-radius: 6px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    transition: all 0.15s ease;
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                    background: transparent;
+                    color: rgba(255, 255, 255, 0.8);
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.08);
+                    }
+
+                    &.primary {
+                        background: linear-gradient(135deg, #34C759 0%, #30B0C7 100%);
+                        border: none;
+                        color: white;
+
+                        &:hover {
+                            filter: brightness(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

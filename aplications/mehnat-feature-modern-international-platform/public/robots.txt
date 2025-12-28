@@ -1,0 +1,30 @@
+# SafeDocs - Xavfsizlik Ta'limi Platformasi
+# https://safedocs.uz
+
+User-agent: *
+Allow: /
+
+# Priority pages
+Allow: /qonunlar
+Allow: /qoidalar  
+Allow: /video-materiallar
+Allow: /slaydlar
+Allow: /temir-yol
+Allow: /bannerlar
+Allow: /kasb-yoriqnomalari
+
+# Block admin areas from public crawling
+Disallow: /admin/
+Disallow: /api/
+
+# Block sensitive files
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://safedocs.uz/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

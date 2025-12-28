@@ -1,0 +1,168 @@
+.app-window {
+  position: absolute;
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border-radius: 12px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 
+      0 30px 60px -15px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(255, 255, 255, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  &.maximized {
+    border-radius: 0;
+    position: fixed !important;
+    transform: none !important;
+  }
+
+  .app-window-header {
+    height: 52px;
+    background: linear-gradient(180deg, rgba(60, 60, 60, 0.9) 0%, rgba(40, 40, 40, 0.9) 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    cursor: grab;
+    user-select: none;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    .window-controls {
+      display: flex;
+      gap: 8px;
+      margin-right: 16px;
+
+      .control-btn {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.15s ease;
+        padding: 0;
+
+        svg {
+          opacity: 0;
+          transition: opacity 0.15s ease;
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        &:hover svg {
+          opacity: 1;
+        }
+
+        &.close {
+          background: linear-gradient(180deg, #ff6058 0%, #e33e37 100%);
+          box-shadow: 
+            inset 0 1px 0 rgba(255, 255, 255, 0.3),
+            0 1px 2px rgba(0, 0, 0, 0.2);
+
+          &:hover {
+            background: linear-gradient(180deg, #ff7268 0%, #f04840 100%);
+          }
+        }
+
+        &.minimize {
+          background: linear-gradient(180deg, #ffbd2e 0%, #e09e17 100%);
+          box-shadow: 
+            inset 0 1px 0 rgba(255, 255, 255, 0.3),
+            0 1px 2px rgba(0, 0, 0, 0.2);
+
+          &:hover {
+            background: linear-gradient(180deg, #ffca45 0%, #f0ad25 100%);
+          }
+        }
+
+        &.maximize {
+          background: linear-gradient(180deg, #28c940 0%, #1aab29 100%);
+          box-shadow: 
+            inset 0 1px 0 rgba(255, 255, 255, 0.3),
+            0 1px 2px rgba(0, 0, 0, 0.2);
+
+          &:hover {
+            background: linear-gradient(180deg, #3dda55 0%, #25bf35 100%);
+          }
+        }
+      }
+    }
+
+    .window-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+
+      .window-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+      }
+    }
+
+    .window-spacer {
+      width: 80px;
+    }
+  }
+
+  .app-window-content {
+    flex: 1;
+    overflow: auto;
+    background: rgba(20, 20, 20, 0.95);
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+// Animation for window opening
+@keyframes windowOpen {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.app-window {
+  animation: windowOpen 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}

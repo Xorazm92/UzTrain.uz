@@ -1,0 +1,30 @@
+
+
+// :root {
+//     --bg-image: url("../../resources/images/catalina.jpg");
+//   }
+
+:root{
+    --sys-color : lightblue;
+}
+    
+*{
+    user-select: none;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    -webkit-transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
+    // background-image: var(--bg-image);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}

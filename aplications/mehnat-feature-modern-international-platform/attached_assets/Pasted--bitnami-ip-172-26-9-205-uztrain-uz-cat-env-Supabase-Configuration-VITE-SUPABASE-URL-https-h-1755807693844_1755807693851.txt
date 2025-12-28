@@ -1,0 +1,42 @@
+
+bitnami@ip-172-26-9-205:~/uztrain.uz$ cat .env
+# Supabase Configuration
+VITE_SUPABASE_URL=https://hbzmwbkcogzbgeykxnoc.supabase.co
+VITE_SUPABASE_ANON_KEY=sb_publishable_tIZr0dpNxjGNddCEZ7TQEA_hzaxfIMc
+
+# App Configuration
+VITE_APP_TITLE=UzTrain Platform
+VITE_APP_DESCRIPTION=O'zbekiston Temir Yo'l Ta'limi Platformasi
+VITE_APP_VERSION=1.0.0
+VITE_APP_DOMAIN=uztrain.uz
+
+# Feature Flags
+VITE_ENABLE_PWA=true
+VITE_ENABLE_ANALYTICS=true
+VITE_ENABLE_LOCAL_FALLBACK=true
+bitnami@ip-172-26-9-205:~/uztrain.uz$ pm2 start ecosystem.config.js --env production
+[PM2][ERROR] File ecosystem.config.js not found
+bitnami@ip-172-26-9-205:~/uztrain.uz$ pm2 stop all && pm2 delete all && pm2 start ecosystem.config.js --env production && pm2 save && pm2 startup
+[PM2] Applying action stopProcessId on app [all](ids: [ 0, 1, 2, 3 ])
+[PM2] [webhook-server](1) ✓
+[PM2] [zufariy-server](2) ✓
+[PM2] [inbola-backend](0) ✓
+[PM2] [zufariy-server](3) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ inbola-backend     │ fork     │ 65   │ stopped   │ 0%       │ 0b       │
+│ 1  │ webhook-server     │ cluster  │ 1    │ stopped   │ 0%       │ 0b       │
+│ 2  │ zufariy-server     │ cluster  │ 1    │ stopped   │ 0%       │ 0b       │
+│ 3  │ zufariy-server     │ cluster  │ 1    │ stopped   │ 0%       │ 0b       │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+[PM2] Applying action deleteProcessId on app [all](ids: [ 0, 1, 2, 3 ])
+[PM2] [inbola-backend](0) ✓
+[PM2] [webhook-server](1) ✓
+[PM2] [zufariy-server](2) ✓
+[PM2] [zufariy-server](3) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+[PM2][ERROR] File ecosystem.config.js not found
+bitnami@ip-172-26-9-205:~/uztrain.uz$ 
