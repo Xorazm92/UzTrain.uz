@@ -13,7 +13,6 @@ import ContextMenu from './components/ContextMenu/ContextMenu.tsx';
 
 // Import all apps
 import {
-  QonunlarApp,
   QoidalarApp,
   VideoApp,
   SlaydlarApp,
@@ -52,7 +51,6 @@ const App = () => {
             <Launchpad />
 
             {/* Mehnat Platform Apps */}
-            <QonunlarApp />
             <QoidalarApp />
             <VideoApp />
             <SlaydlarApp />

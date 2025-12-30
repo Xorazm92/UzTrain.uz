@@ -79,10 +79,11 @@ const Dock = () => {
                 </div>
 
                 {/* Qonunlar */}
-                <div className="dock-item" onClick={openApp('qonunlar')}>
-                    <div className='tool-tip'>Qonunlar</div>
-                    <img src={appIcons.qonunlar} alt="Qonunlar" className='dock-icon dock-icon--image qonunlar' />
-                    {!state.qonunlarWindow?.closed && <div className='point' />}
+                {/* Normativ Hujjatlar */}
+                <div className="dock-item" onClick={openApp('qoidalar')}>
+                    <div className='tool-tip'>Normativ Hujjatlar</div>
+                    <img src={appIcons.qoidalar} alt="Normativ Hujjatlar" className='dock-icon dock-icon--image qoidalar' />
+                    {!state.qoidalarWindow?.closed && <div className='point' />}
                 </div>
 
                 {/* Temir Yo'l */}

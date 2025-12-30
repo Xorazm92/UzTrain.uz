@@ -4,6 +4,7 @@ type DockIconKey =
   | 'globaldash'
   | 'kpi'
   | 'qonunlar'
+  | 'qoidalar'
   | 'temiryol'
   | 'video'
   | 'korxonalar'
@@ -19,6 +20,7 @@ const AppIcons: DockIconMap = {
   globaldash: '/apps/global_dashboard.png',
   kpi: '/apps/KPI.jpg',
   qonunlar: '/apps/qonunlar.png',
+  qoidalar: '/apps/qoidalar.png',
   temiryol: '/apps/temiryol.png',
   video: '/apps/video.png',
   korxonalar: '/apps/korxonalar.png',

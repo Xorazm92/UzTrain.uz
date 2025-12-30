@@ -11,8 +11,8 @@ interface AppItem {
 
 const apps: AppItem[] = [
     // Mehnat Platform Apps
-    { id: 'qonunlar', name: 'Qonunlar', icon: '/apps/qonunlar.png', category: 'mehnat' },
-    { id: 'qoidalar', name: 'Qoidalar', icon: '/apps/qoidalar.png', category: 'mehnat' },
+    // Mehnat Platform Apps
+    { id: 'qoidalar', name: 'Normativ Hujjatlar', icon: '/apps/qoidalar.png', category: 'mehnat' },
     { id: 'video', name: 'Video Materiallar', icon: '/apps/video.png', category: 'mehnat' },
     { id: 'slaydlar', name: 'Slaydlar', icon: '/apps/slide.png', category: 'mehnat' },
     { id: 'temiryol', name: "Temir Yo'l", icon: '/apps/temiryol.png', category: 'mehnat' },

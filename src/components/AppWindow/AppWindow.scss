@@ -13,6 +13,8 @@
   flex-direction: column;
   z-index: 100;
   transition: box-shadow 0.2s ease;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 48px);
 
   &:hover {
     box-shadow: 
@@ -20,6 +22,31 @@
       0 0 0 1px rgba(255, 255, 255, 0.15),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
+
+@media (max-width: 640px) {
+  .app-window {
+    border-radius: 16px;
+    max-width: calc(100vw - 12px);
+    max-height: calc(100vh - 32px);
+
+    .app-window-header {
+      padding: 0 12px;
+      height: 48px;
+
+      .window-controls {
+        gap: 6px;
+      }
+
+      .window-spacer {
+        width: 60px;
+      }
+    }
+
+    .app-window-content {
+      border-radius: inherit;
+    }
+  }
+}
 
   &.maximized {
     border-radius: 0;

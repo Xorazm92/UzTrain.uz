@@ -35,6 +35,16 @@ interface TrendPoint {
     value: number;
 }
 
+ type DocumentSection = 'Qonunlar' | 'Qarorlar' | 'Qoidalar';
+
+ interface NormativeDocument {
+     id: string;
+     section: DocumentSection;
+     direction: string;
+     title: string;
+     url: string;
+ }
+
 const MOCK_COMPANIES: Company[] = [
     { id: '1', name: 'Toshkent MTU', parent: 'Boshqarma', level: 'management', profile: 'Regional', employees: 1250, total_hours: 156000, overall_index: 85, zone: 'green', kpis: { 'Mehnat Muhofazasi': { value: 0, score: 90 }, 'Texnika Xavfsizligi': { value: 0, score: 80 } }, updated_at: '', date_added: '', raw_data: {} },
     { id: '2', name: "Qo'qon MTU", parent: 'Boshqarma', level: 'management', profile: 'Regional', employees: 980, total_hours: 120000, overall_index: 72, zone: 'yellow', kpis: { 'Mehnat Muhofazasi': { value: 0, score: 70 }, 'Texnika Xavfsizligi': { value: 0, score: 75 } }, updated_at: '', date_added: '', raw_data: {} },
@@ -62,6 +72,254 @@ const getStatusColor = (status: 'green' | 'yellow' | 'red' | string) => {
             return '#8E8E93';
     }
 };
+
+ const NORMATIVE_DOCUMENTS: NormativeDocument[] = [
+     {
+         id: 'law-1',
+         section: 'Qonunlar',
+         direction: 'Mehnat muhofazasi',
+         title: '“Mehnatni muhofaza qilish toʻgʻrisida”gi Qonun',
+         url: 'https://lex.uz/uz/docs/-3031427',
+     },
+     {
+         id: 'law-2',
+         section: 'Qonunlar',
+         direction: 'Sanoat xavfsizligi',
+         title: 'Xavfli ishlab chiqarish obyektlarining sanoat xavfsizligi toʻgʻrisida Qonun',
+         url: 'https://www.lex.uz/docs/-1061181',
+     },
+     {
+         id: 'law-3',
+         section: 'Qonunlar',
+         direction: 'Yong’in xavfsizligi',
+         title: 'Yongʻin xavfsizligi toʻgʻrisida Qonun',
+         url: 'https://lex.uz/docs/-1521661',
+     },
+     {
+         id: 'law-4',
+         section: 'Qonunlar',
+         direction: 'Ekologik nazorat',
+         title: 'Ekologik nazorat toʻgʻrisida Qonun',
+         url: 'http://lex.uz/ru/docs/-2304953',
+     },
+     {
+         id: 'law-5',
+         section: 'Qonunlar',
+         direction: 'Sog’liqni saqlash',
+         title: 'Fuqarolar sogʻligʻini saqlash toʻgʻrisida Qonun',
+         url: 'https://lex.uz/ru/docs/-26013',
+     },
+     {
+         id: 'law-6',
+         section: 'Qonunlar',
+         direction: 'Yo’l harakati',
+         title: 'Yoʻl harakati toʻgʻrisida Qonun',
+         url: 'https://lex.uz/docs/-6764454',
+     },
+     {
+         id: 'decree-1',
+         section: 'Qarorlar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Mehnatni muhofaza qilish sohasiga ayrim nizomlarni tasdiqlash to’g’risidagi qaror',
+         url: 'https://lex.uz/ru/docs/-7942768',
+     },
+     {
+         id: 'decree-2',
+         section: 'Qarorlar',
+         direction: 'Sanoat xavfsizligi',
+         title: '“Xavfli ishlab chiqarish obyektlarining sanoat xavfsizligi toʻgʻrisida”gi Qonunni amalga oshirishga doir qoʻshimcha chora-tadbirlar haqida',
+         url: 'https://lex.uz/docs/-1413931',
+     },
+     {
+         id: 'decree-3',
+         section: 'Qarorlar',
+         direction: 'Yong’in xavfsizligi',
+         title: '“Yongʻin xavfsizligi toʻgʻrisida”gi Qonunni amalga oshirish chora-tadbirlari haqida',
+         url: 'https://lex.uz/docs/-2149546',
+     },
+     {
+         id: 'decree-4',
+         section: 'Qarorlar',
+         direction: 'Ekologik nazorat',
+         title: 'Davlat ekologik nazoratini amalga oshirish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida',
+         url: 'https://www.lex.uz/docs/-2443091',
+     },
+     {
+         id: 'decree-5',
+         section: 'Qarorlar',
+         direction: 'Elektr xavfsizligi',
+         title: 'Iste’molchilar elektr qurilmalarini texnik ekspluatatsiya qilish qoidalari va xavfsizlik texnikasi qoidalarini tasdiqlash toʻgʻrisida',
+         url: 'https://lex.uz/uz/docs/5091758',
+     },
+     {
+         id: 'decree-6',
+         section: 'Qarorlar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Mehnatni muhofaza qilishni boshqarish tizimini joriy etish toʻgʻrisida',
+         url: 'https://lex.uz/uz/docs/-7640822',
+     },
+     {
+         id: 'decree-7',
+         section: 'Qarorlar',
+         direction: 'Sanoat xavfsizligi',
+         title: '“Xavfli ishlab chiqarish obyektlarining sanoat xavfsizligi toʻgʻrisida”gi Qonunni amalga oshirishga doir qoʻshimcha chora-tadbirlar toʻgʻrisida',
+         url: 'https://lex.uz/docs/4817439',
+     },
+     {
+         id: 'decree-8',
+         section: 'Qarorlar',
+         direction: 'Sanoat xavfsizligi',
+         title: 'Gaz xoʻjaligida xavfsizlik qoidalarini tasdiqlash toʻgʻrisida',
+         url: 'https://lex.uz/docs/-4244878',
+     },
+     {
+         id: 'decree-9',
+         section: 'Qarorlar',
+         direction: 'Elektr xavfsizligi',
+         title: 'Elektr qurilmalarini ekspluatatsiya qilishda texnika xavfsizligi qoidalarini tasdiqlash toʻgʻrisida',
+         url: 'https://lex.uz/docs/-5038211',
+     },
+     {
+         id: 'decree-10',
+         section: 'Qarorlar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Xodimlarga mehnat vazifalarini bajarish bilan bogʻliq holda yetkazilgan zararni toʻlash qoidalarini tasdiqlash toʻgʻrisida',
+         url: 'https://lex.uz/ru/docs/-492899',
+     },
+     {
+         id: 'decree-11',
+         section: 'Qarorlar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Ishlab chiqarishdagi baxtsiz hodisalarni tekshirish va hisobga olish toʻgʻrisidagi nizomni tasdiqlash haqida',
+         url: 'https://lex.uz/docs/-545128',
+     },
+     {
+         id: 'decree-12',
+         section: 'Qarorlar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Ish beruvchining fuqarolik javobgarligini majburiy sugʻurta qilish toʻgʻrisidagi Qonunni amalga oshirish chora-tadbirlari haqida',
+         url: 'https://lex.uz/docs/-1493389',
+     },
+     {
+         id: 'decree-13',
+         section: 'Qarorlar',
+         direction: 'Sog’liqni saqlash',
+         title: 'Imtiyozli shartlarda pensiyaga chiqish huquqini beruvchi roʻyxat va kiritish tartibi toʻgʻrisidagi nizomni tasdiqlash haqida',
+         url: 'https://lex.uz/uz/docs/-7765716',
+     },
+     {
+         id: 'decree-14',
+         section: 'Qarorlar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Xodimlar mehnatini muhofaza qilish chora-tadbirlarini yanada takomillashtirish toʻgʻrisida',
+         url: 'https://lex.uz/docs/-2463973',
+     },
+     {
+         id: 'rule-1',
+         section: 'Qoidalar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Balandlikda ishlaganda mehnatni muhofaza qilish qoidalarini tasdiqlash haqida',
+         url: 'https://lex.uz/docs/1433207',
+     },
+     {
+         id: 'rule-2',
+         section: 'Qoidalar',
+         direction: 'Sanoat xavfsizligi',
+         title: 'Xavfli ishlab chiqarish obyektlarida ishlab chiqarish nazoratini tashkil etish va amalga oshirish qoidalarini tasdiqlash toʻgʻrisida',
+         url: 'https://lex.uz/docs/-1808749',
+     },
+     {
+         id: 'rule-3',
+         section: 'Qoidalar',
+         direction: 'Sanoat xavfsizligi',
+         title: 'Gazdan xavfli ishlarni xavfsiz olib borishni tashkillashtirish bo‘yicha namunaviy yo‘riqnoma',
+         url: 'https://lex.uz/docs/-1851864',
+     },
+     {
+         id: 'rule-4',
+         section: 'Qoidalar',
+         direction: 'Sog’liqni saqlash',
+         title: 'Xodimlarni tibbiy ko‘rikdan o‘tkazish tartibi to‘g‘risidagi nizomni tasdiqlash haqida',
+         url: 'https://lex.uz/docs/2046010',
+     },
+     {
+         id: 'rule-5',
+         section: 'Qoidalar',
+         direction: 'Elektr xavfsizligi',
+         title: 'Elektr uskunalaridan foydalaniladigan himoya vositalarini qo‘llash va sinash qoidalari',
+         url: 'https://lex.uz/docs/1958099',
+     },
+     {
+         id: 'rule-6',
+         section: 'Qoidalar',
+         direction: 'Mehnat muhofazasi',
+         title: '18 yoshgacha bo‘lgan xodimlar ko‘tarishi va tashishi mumkin bo‘lgan og‘ir yuk normalari',
+         url: 'https://lex.uz/ru/docs/-1479061',
+     },
+     {
+         id: 'rule-7',
+         section: 'Qoidalar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Yuk ko‘targich (minora)larni o‘rnatish va ulardan foydalanishda xavfsizlik qoidalari',
+         url: 'https://lex.uz/ru/docs/-1935733',
+     },
+     {
+         id: 'rule-8',
+         section: 'Qoidalar',
+         direction: 'Sog’liqni saqlash',
+         title: 'Mehnatga layoqatsizlik varaqalarini berish tartibi toʻgʻrisidagi yoʻriqnoma',
+         url: 'https://lex.uz/docs/-2625878',
+     },
+     {
+         id: 'rule-9',
+         section: 'Qoidalar',
+         direction: 'Elektr xavfsizligi',
+         title: 'Elektr priborlari va tashkiliy texnika bilan ishlashda mehnatni muhofaza qilish qoidalari',
+         url: 'https://lex.uz/uz/docs/-2182278',
+     },
+     {
+         id: 'rule-10',
+         section: 'Qoidalar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Temir yo‘l transporti ta’mirlash tashkilotlari xodimlari uchun mehnatni muhofaza qilish qoidalari',
+         url: 'https://lex.uz/ru/docs/-1578222',
+     },
+     {
+         id: 'rule-11',
+         section: 'Qoidalar',
+         direction: 'Sanoat xavfsizligi',
+         title: 'Neft bazalari va avtoyoqilgʻi quyish shoxobchalaridan foydalanishda xavfsizlik qoidalari',
+         url: 'https://lex.uz/uz/docs/-2386922',
+     },
+     {
+         id: 'rule-13',
+         section: 'Qoidalar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Bugʻ va issiq suv quvurlari qurish va ulardan foydalanishda mehnatni muhofaza qilish qoidalari',
+         url: 'https://lex.uz/docs/-2514335',
+     },
+     {
+         id: 'rule-14',
+         section: 'Qoidalar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Ortiqcha bosimli suv isitish qozonlari va bugʻ qozonlarini oʻrnatish hamda foydalanish qoidalari',
+         url: 'https://lex.uz/docs/-2818096',
+     },
+     {
+         id: 'rule-15',
+         section: 'Qoidalar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Yuk ko‘tarish mashinalarini xavfsiz ishlatishni nazorat qiluvchi xodimlar uchun namunaviy yo‘riqnoma',
+         url: 'https://lex.uz/uz/docs/-2821982',
+     },
+     {
+         id: 'rule-16',
+         section: 'Qoidalar',
+         direction: 'Mehnat muhofazasi',
+         title: 'Yuk ko‘tarish kranlari tuzilishi va ularni xavfsiz ishlatish qoidalari (PDF)',
+         url: 'https://api-portal.gov.uz/uploads/c9cc58b8-559d-1fb1-805b-d66981dcc05e_media_.pdf',
+     },
+ ];
 
 const calculateRegionalStats = (companies: Company[]): RegionalStat[] => {
     const mtuIds = ['14', '15', '16', '17', '18', '19'];
@@ -185,6 +443,10 @@ const GlobalDashboardApp: React.FC = () => {
     const [globalIndex, setGlobalIndex] = useState(0);
     const [trendSeries, setTrendSeries] = useState<TrendPoint[]>([]);
     const [lastUpdated, setLastUpdated] = useState<string>('');
+
+     const [docSection, setDocSection] = useState<DocumentSection>('Qonunlar');
+     const [docDirection, setDocDirection] = useState<string>('Barchasi');
+     const [docSearch, setDocSearch] = useState<string>('');
 
     const applyDataset = useCallback((dataset: Company[]) => {
         const totalScore = dataset.reduce((acc, c) => acc + (c.overall_index || 0), 0);
@@ -320,6 +582,44 @@ const GlobalDashboardApp: React.FC = () => {
             footer: `${riskAlerts.length} ta shoshilinch reja`,
         },
     ];
+
+     const documentSections: DocumentSection[] = ['Qonunlar', 'Qarorlar', 'Qoidalar'];
+
+     const availableDirections = useMemo(() => {
+         const dirs = Array.from(
+             new Set(
+                 NORMATIVE_DOCUMENTS
+                     .filter(d => d.section === docSection)
+                     .map(d => d.direction)
+             )
+         ).sort((a, b) => a.localeCompare(b, 'uz'));
+
+         return ['Barchasi', ...dirs];
+     }, [docSection]);
+
+     useEffect(() => {
+         if (!availableDirections.includes(docDirection)) {
+             setDocDirection('Barchasi');
+         }
+     }, [availableDirections, docDirection]);
+
+     const filteredDocuments = useMemo(() => {
+         const needle = docSearch.trim().toLowerCase();
+         return NORMATIVE_DOCUMENTS
+             .filter(d => d.section === docSection)
+             .filter(d => docDirection === 'Barchasi' ? true : d.direction === docDirection)
+             .filter(d => {
+                 if (!needle) return true;
+                 return (
+                     d.title.toLowerCase().includes(needle) ||
+                     d.direction.toLowerCase().includes(needle)
+                 );
+             });
+     }, [docDirection, docSearch, docSection]);
+
+     const openDocument = useCallback((url: string) => {
+         window.open(url, '_blank', 'noopener,noreferrer');
+     }, []);
 
     if (isWindowClosed) {
         return null;
@@ -581,6 +881,88 @@ const GlobalDashboardApp: React.FC = () => {
                         </ul>
                     </article>
                 </section>
+
+                 <section className="glass-grid documents-grid">
+                     <article className="glass-card normative-documents">
+                         <header className="card-header">
+                             <h2>Normativ hujjatlar</h2>
+                             <span className="card-subtitle">Qonunlar · Qarorlar · Qoidalar</span>
+                         </header>
+
+                         <div className="normative-documents__controls">
+                             <div className="normative-documents__tabs" role="tablist" aria-label="Hujjatlar bo‘limlari">
+                                 {documentSections.map(section => (
+                                     <button
+                                         key={section}
+                                         type="button"
+                                         className={`normative-documents__tab ${section === docSection ? 'is-active' : ''}`}
+                                         onClick={() => setDocSection(section)}
+                                         role="tab"
+                                         aria-selected={section === docSection}
+                                     >
+                                         {section}
+                                     </button>
+                                 ))}
+                             </div>
+
+                             <div className="normative-documents__filters">
+                                 <label className="normative-documents__field">
+                                     <span>Yo‘nalish</span>
+                                     <select value={docDirection} onChange={e => setDocDirection(e.target.value)}>
+                                         {availableDirections.map(d => (
+                                             <option key={d} value={d}>{d}</option>
+                                         ))}
+                                     </select>
+                                 </label>
+                                 <label className="normative-documents__field">
+                                     <span>Qidirish</span>
+                                     <input
+                                         value={docSearch}
+                                         onChange={e => setDocSearch(e.target.value)}
+                                         placeholder="Nomi bo‘yicha..."
+                                     />
+                                 </label>
+                             </div>
+                         </div>
+
+                         <div className="normative-documents__table-wrap">
+                             <table className="normative-documents__table">
+                                 <thead>
+                                     <tr>
+                                         <th style={{ width: '34%' }}>Yo‘nalish</th>
+                                         <th>Nomi</th>
+                                         <th style={{ width: 120, textAlign: 'right' }}>Havola</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     {filteredDocuments.length === 0 ? (
+                                         <tr>
+                                             <td colSpan={3} className="normative-documents__empty">
+                                                 Mos hujjat topilmadi.
+                                             </td>
+                                         </tr>
+                                     ) : (
+                                         filteredDocuments.map(doc => (
+                                             <tr key={doc.id}>
+                                                 <td className="normative-documents__direction">{doc.direction}</td>
+                                                 <td className="normative-documents__title">{doc.title}</td>
+                                                 <td style={{ textAlign: 'right' }}>
+                                                     <button
+                                                         type="button"
+                                                         className="normative-documents__open"
+                                                         onClick={() => openDocument(doc.url)}
+                                                     >
+                                                         Ochish
+                                                     </button>
+                                                 </td>
+                                             </tr>
+                                         ))
+                                     )}
+                                 </tbody>
+                             </table>
+                         </div>
+                     </article>
+                 </section>
             </div>
         </AppWindow>
     );
