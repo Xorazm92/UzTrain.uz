@@ -26,6 +26,7 @@ const apps: AppItem[] = [
     { id: 'kpi', name: "KPI Ko'rsatkichlari", icon: '/apps/KPI.jpg', category: 'safety' },
     { id: 'admin', name: 'Admin', icon: '/apps/admin.png', category: 'safety' },
     { id: 'profil', name: 'Profil', icon: '/apps/profile.png', category: 'safety' },
+    { id: 'safetypro', name: 'SafetyPro OS', icon: '/apps/safetypro.png', category: 'safety' },
 ];
 
 const Launchpad: React.FC = () => {

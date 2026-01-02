@@ -11,6 +11,11 @@ const QoidalarApp: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedDoc, setSelectedDoc] = useState<DocItem | null>(null);
     const [isPreviewExpanded, setPreviewExpanded] = useState(false);
+    const [isPreviewLoading, setPreviewLoading] = useState(false);
+    const [previewError, setPreviewError] = useState<string | null>(null);
+    const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle');
+    const [previewKey, setPreviewKey] = useState(0);
+    const previewTimeoutRef = React.useRef<number | null>(null);
 
     const isWindowClosed = state.qoidalarWindow?.closed;
 
@@ -33,24 +38,51 @@ const QoidalarApp: React.FC = () => {
         });
     }, [docsForActiveTab, activeCategory, searchTerm]);
 
+    const totalDocs = docsForActiveTab.length;
+    const filteredCount = filteredDocs.length;
+    const activeCategoryLabel = activeCategory ?? 'Barcha yo‘nalishlar';
+
     const docsToRender: DocItem[] = filteredDocs;
 
     const handleDocumentSelect = (doc: DocItem) => {
         setSelectedDoc(doc);
+        setPreviewExpanded(false);
+        setPreviewLoading(true);
+        setPreviewError(null);
+        setPreviewKey(prev => prev + 1);
     };
 
     const handleClearSelection = () => {
         setSelectedDoc(null);
         setPreviewExpanded(false);
+        setPreviewLoading(false);
+        setPreviewError(null);
     };
 
     const handleOpenInNewTab = (link: string) => {
         window.open(link, '_blank', 'noopener,noreferrer');
     };
 
+    const handleCopyLink = async (link: string) => {
+        try {
+            await navigator.clipboard.writeText(link);
+            setCopyStatus('copied');
+        } catch (error) {
+            console.error('Havolani nusxalashda xato:', error);
+            setCopyStatus('error');
+        } finally {
+            window.setTimeout(() => setCopyStatus('idle'), 1500);
+        }
+    };
+
     useEffect(() => {
         if (!selectedDoc) {
             setPreviewExpanded(false);
+            setPreviewLoading(false);
+            setPreviewError(null);
+            if (previewTimeoutRef.current) {
+                window.clearTimeout(previewTimeoutRef.current);
+            }
         }
     }, [selectedDoc]);
 
@@ -62,6 +94,27 @@ const QoidalarApp: React.FC = () => {
             setSelectedDoc(null);
         }
     }, [filteredDocs, selectedDoc]);
+
+    useEffect(() => {
+        if (!selectedDoc) {
+            return;
+        }
+
+        if (previewTimeoutRef.current) {
+            window.clearTimeout(previewTimeoutRef.current);
+        }
+
+        previewTimeoutRef.current = window.setTimeout(() => {
+            setPreviewLoading(false);
+            setPreviewError('Hujjatni ichki oynada ko‘rsatib bo‘lmadi. Iltimos, to‘liq ko‘rish tugmasidan yoki yangi oynada ochishdan foydalaning.');
+        }, 7000);
+
+        return () => {
+            if (previewTimeoutRef.current) {
+                window.clearTimeout(previewTimeoutRef.current);
+            }
+        };
+    }, [selectedDoc, previewKey]);
 
     const getTabLabel = (tab: DocType) => {
         switch (tab) {
@@ -80,10 +133,10 @@ const QoidalarApp: React.FC = () => {
         <AppWindow
             appId="qoidalar"
             title="Normativ Hujjatlar"
-            defaultWidth={1000}
-            defaultHeight={700}
-            defaultX={110}
-            defaultY={55}
+            defaultWidth={1380}
+            defaultHeight={840}
+            defaultX={72}
+            defaultY={36}
         >
             <div className="qoidalar-app">
                 <div className="app-sidebar">
@@ -136,107 +189,191 @@ const QoidalarApp: React.FC = () => {
                 </div>
 
                 <div className="app-main">
-                    <div className="main-header">
-                        <h2>{getTabLabel(activeTab)}</h2>
-                        <div className="header-actions">
-                            <input
-                                type="text"
-                                placeholder="Hujjatni qidirish..."
-                                className="search-input"
-                                value={searchTerm}
-                                onChange={(e) => { setSearchTerm(e.target.value); setSelectedDoc(null); }}
-                            />
+                    <header className="document-toolbar">
+                        <div className="document-toolbar__meta">
+                            <span className="document-toolbar__eyebrow">Normativ ma'lumotnoma</span>
+                            <h1>Normativ hujjatlar</h1>
+                            <p>
+                                {getTabLabel(activeTab)} · {filteredCount} ta hujjat · {activeCategoryLabel}
+                            </p>
                         </div>
-                    </div>
-
-                    <div className="docs-layout">
-                        <div className="docs-content">
-                            <table className="docs-table">
-                                <thead>
-                                    <tr>
-                                        <th>Nomi</th>
-                                        <th>Toifa</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {docsToRender.map((doc: DocItem) => (
-                                        <tr
-                                            key={doc.id}
-                                            className={`document-row ${selectedDoc?.id === doc.id ? 'is-active' : ''}`}
-                                            onClick={() => handleDocumentSelect(doc)}
-                                        >
-                                            <td className="doc-title-cell">
-                                                <div className="doc-icon">📄</div>
-                                                <div className="doc-info">
-                                                    <span className="doc-name">{doc.title}</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span className="category-badge">{doc.category}</span>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                    {filteredDocs.length === 0 && (
-                                        <tr>
-                                            <td colSpan={2} className="no-data">
-                                                Hujjatlar topilmadi
-                                            </td>
-                                        </tr>
-                                    )}
-                                </tbody>
-                            </table>
+                        <div className="document-toolbar__actions">
+                            <div className="segmented-control" role="tablist" aria-label="Hujjat bo‘limlari">
+                                <button
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={activeTab === 'qonunlar'}
+                                    className={`segmented-control__item ${activeTab === 'qonunlar' ? 'is-active' : ''}`}
+                                    onClick={() => { setActiveTab('qonunlar'); setActiveCategory(null); setSelectedDoc(null); }}
+                                >
+                                    ⚖️ Qonunlar
+                                </button>
+                                <button
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={activeTab === 'qarorlar'}
+                                    className={`segmented-control__item ${activeTab === 'qarorlar' ? 'is-active' : ''}`}
+                                    onClick={() => { setActiveTab('qarorlar'); setActiveCategory(null); setSelectedDoc(null); }}
+                                >
+                                    📜 Qarorlar
+                                </button>
+                                <button
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={activeTab === 'qoidalar'}
+                                    className={`segmented-control__item ${activeTab === 'qoidalar' ? 'is-active' : ''}`}
+                                    onClick={() => { setActiveTab('qoidalar'); setActiveCategory(null); setSelectedDoc(null); }}
+                                >
+                                    📋 Qoidalar
+                                </button>
+                            </div>
+                            <div className="document-toolbar__search">
+                                <input
+                                    type="text"
+                                    placeholder="Hujjat nomi yoki yo‘nalishi..."
+                                    value={searchTerm}
+                                    onChange={(e) => { setSearchTerm(e.target.value); setSelectedDoc(null); }}
+                                />
+                            </div>
                         </div>
+                    </header>
 
-                        <aside className={`doc-preview ${selectedDoc ? 'has-doc' : 'is-empty'}`}>
+                    <div className="workspace">
+                        <section className="workspace__list">
+                            <header className="workspace__list-header">
+                                <div>
+                                    <span className="workspace__list-eyebrow">Ro‘yxat</span>
+                                    <h2>{getTabLabel(activeTab)} hujjatlari</h2>
+                                </div>
+                                <span className="workspace__badge">{filteredCount} / {totalDocs}</span>
+                            </header>
+
+                            <div className="workspace__summary">
+                                <span className="workspace__chip">{activeCategoryLabel}</span>
+                                <span className="workspace__chip workspace__chip--muted">
+                                    {selectedDoc ? 'Tanlangan: ' + selectedDoc.title : 'Hujjat tanlanmagan'}
+                                </span>
+                            </div>
+
+                            <div className="workspace__documents">
+                                {docsToRender.map(doc => (
+                                    <button
+                                        type="button"
+                                        key={doc.id}
+                                        className={`document-card ${selectedDoc?.id === doc.id ? 'is-active' : ''}`}
+                                        onClick={() => handleDocumentSelect(doc)}
+                                    >
+                                        <div className="document-card__icon" aria-hidden>
+                                            📄
+                                        </div>
+                                        <div className="document-card__body">
+                                            <span className="document-card__title">{doc.title}</span>
+                                            <span className="document-card__subtitle">{doc.category}</span>
+                                        </div>
+                                        <div className="document-card__chevron" aria-hidden>
+                                            ➜
+                                        </div>
+                                    </button>
+                                ))}
+
+                                {filteredDocs.length === 0 && (
+                                    <div className="workspace__empty">
+                                        <div className="workspace__empty-icon">🔍</div>
+                                        <h3>Hujjat topilmadi</h3>
+                                        <p>Qidiruv so‘zini o‘zgartiring yoki boshqa toifani tanlab ko‘ring.</p>
+                                    </div>
+                                )}
+                            </div>
+                        </section>
+
+                        <section className={`workspace__viewer ${selectedDoc ? 'has-doc' : 'is-empty'}`}>
                             {selectedDoc ? (
                                 <>
-                                    <div className="doc-preview__header">
-                                        <div className="doc-preview__meta">
-                                            <span className="doc-preview__category">{selectedDoc.category}</span>
-                                            <h2 className="doc-preview__title">{selectedDoc.title}</h2>
-                                        </div>
-                                        <div className="doc-preview__actions">
-                                            <button
-                                                type="button"
-                                                className="doc-preview__action"
-                                                onClick={() => handleClearSelection()}
-                                            >
+                                    <header className="viewer-header">
+                                        <div className="viewer-header__tag">{selectedDoc.category}</div>
+                                        <h2>{selectedDoc.title}</h2>
+                                        <p>
+                                            Ushbu hujjat rasmiy manbadan olingan. Quyidagi oynada to‘liq matnni ko‘rishingiz yoki
+                                            tezkor amallardan foydalanishingiz mumkin.
+                                        </p>
+                                        <div className="viewer-header__actions">
+                                            <button type="button" className="viewer-action viewer-action--ghost" onClick={handleClearSelection}>
                                                 Tanlovni tozalash
                                             </button>
-                                            <button
-                                                type="button"
-                                                className="doc-preview__action doc-preview__action--ghost"
-                                                onClick={() => setPreviewExpanded(true)}
-                                            >
+                                            <button type="button" className="viewer-action viewer-action--ghost" onClick={() => setPreviewExpanded(true)}>
                                                 To‘liq ko‘rish
                                             </button>
                                             <button
                                                 type="button"
-                                                className="doc-preview__action doc-preview__action--primary"
+                                                className="viewer-action viewer-action--primary"
                                                 onClick={() => handleOpenInNewTab(selectedDoc.link)}
                                             >
                                                 Yangi oynada ochish
                                             </button>
+                                            <button
+                                                type="button"
+                                                className="viewer-action viewer-action--ghost viewer-action--compact"
+                                                onClick={() => handleCopyLink(selectedDoc.link)}
+                                                aria-live="polite"
+                                            >
+                                                {copyStatus === 'copied' ? 'Havola nusxalandi' : copyStatus === 'error' ? 'Xatolik' : 'Havolani nusxalash'}
+                                            </button>
                                         </div>
-                                    </div>
-                                    <div className="doc-preview__frame">
-                                        <iframe
-                                            key={selectedDoc.id}
-                                            src={selectedDoc.link}
-                                            title={selectedDoc.title}
-                                            referrerPolicy="no-referrer"
-                                            allow="fullscreen; clipboard-read; clipboard-write"
-                                        />
+                                    </header>
+                                    <div className="viewer-frame">
+                                        <div className="viewer-frame__stage">
+                                            {isPreviewLoading && !previewError && (
+                                                <div className="viewer-frame__overlay" role="status" aria-live="polite">
+                                                    <span className="viewer-frame__spinner" />
+                                                    <span>Hujjat yuklanmoqda…</span>
+                                                </div>
+                                            )}
+
+                                            {previewError ? (
+                                                <div className="viewer-frame__fallback">
+                                                    <div className="viewer-frame__fallback-icon">⚠️</div>
+                                                    <h3>Hujjatni ko‘rsatib bo‘lmadi</h3>
+                                                    <p>{previewError}</p>
+                                                    <div className="viewer-frame__fallback-actions">
+                                                        <button type="button" onClick={() => handleOpenInNewTab(selectedDoc.link)}>
+                                                            Havolani ochish
+                                                        </button>
+                                                        <button type="button" onClick={() => handleCopyLink(selectedDoc.link)}>
+                                                            Havolani nusxalash
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <iframe
+                                                    key={`preview-${previewKey}`}
+                                                    src={selectedDoc.link}
+                                                    title={selectedDoc.title}
+                                                    referrerPolicy="no-referrer"
+                                                    allow="fullscreen; clipboard-read; clipboard-write"
+                                                    onLoad={() => {
+                                                        setPreviewLoading(false);
+                                                        setPreviewError(null);
+                                                        if (previewTimeoutRef.current) {
+                                                            window.clearTimeout(previewTimeoutRef.current);
+                                                        }
+                                                    }}
+                                                    onError={() => {
+                                                        setPreviewLoading(false);
+                                                        setPreviewError('Hujjatni ichki oynada ko‘rsatib bo‘lmadi. Iltimos, havolani tashqi oynada oching.');
+                                                    }}
+                                                />
+                                            )}
+                                        </div>
                                     </div>
                                 </>
                             ) : (
-                                <div className="doc-preview__empty">
-                                    <div className="doc-preview__empty-icon">📄</div>
+                                <div className="viewer-empty">
+                                    <div className="viewer-empty__icon">🗂️</div>
                                     <h3>Hujjat tanlanmagan</h3>
-                                    <p>Chap tomondagi roʻyxatdan hujjatni tanlang yoki qidiruvdan foydalaning.</p>
+                                    <p>Chap tomondagi ro‘yxatdan hujjatni tanlab, shu oynada ko‘rib chiqing.</p>
                                 </div>
                             )}
-                        </aside>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -261,13 +398,15 @@ const QoidalarApp: React.FC = () => {
                             </div>
                         </header>
                         <div className="doc-preview-modal__frame">
-                            <iframe
-                                key={`modal-${selectedDoc.id}`}
-                                src={selectedDoc.link}
-                                title={`${selectedDoc.title} — kengaytirilgan ko‘rinish`}
-                                referrerPolicy="no-referrer"
-                                allow="fullscreen; clipboard-read; clipboard-write"
-                            />
+                            <div className="doc-preview-modal__stage">
+                                <iframe
+                                    key={`modal-${previewKey}`}
+                                    src={selectedDoc.link}
+                                    title={`${selectedDoc.title} — kengaytirilgan ko‘rinish`}
+                                    referrerPolicy="no-referrer"
+                                    allow="fullscreen; clipboard-read; clipboard-write"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

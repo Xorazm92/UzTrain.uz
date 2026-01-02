@@ -78,6 +78,7 @@ interface storeType {
   kpiWindow: AppWindow;
   adminWindow: AppWindow;
   profilWindow: AppWindow;
+  safetyproWindow: AppWindow;
   city: string;
   currentColor: string,
 }

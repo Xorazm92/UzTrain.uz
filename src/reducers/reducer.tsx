@@ -378,6 +378,14 @@ const reducer: Reducer<storeType, AnyAction> = (state = sampleStore, action) => 
         case "profil/MINI":
             return { ...state, profilWindow: { ...state.profilWindow, minimized: true } };
 
+        // SafetyPro OS — SHHV
+        case "safetypro/OPEN":
+            return { ...state, safetyproWindow: { closed: false, minimized: false, maximized: false } };
+        case "safetypro/CLOSE":
+            return { ...state, safetyproWindow: { closed: true, minimized: false, maximized: false } };
+        case "safetypro/MINI":
+            return { ...state, safetyproWindow: { ...state.safetyproWindow, minimized: true } };
+
         default:
             // Uncomment for debugging unknown actions
             // console.log("Unknown action type:", action.type);

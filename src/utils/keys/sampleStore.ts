@@ -68,6 +68,7 @@ const sampleStore: storeType = {
     kpiWindow: { closed: true },
     adminWindow: { closed: true },
     profilWindow: { closed: true },
+    safetyproWindow: { closed: true },
     city: "Toshkent",
     currentColor: "lightblue",
 

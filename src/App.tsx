@@ -25,6 +25,7 @@ import {
   KpiApp,
   AdminApp,
   ProfilApp,
+  SafetyProApp,
 } from './components/Apps';
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -65,6 +66,7 @@ const App = () => {
             <KpiApp />
             <AdminApp />
             <ProfilApp />
+            <SafetyProApp />
           </Page>
 
         </StoreProvider>

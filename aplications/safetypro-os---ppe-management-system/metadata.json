@@ -1,0 +1,8 @@
+
+{
+  "name": "SafetyPro OS - PPE Management System",
+  "description": "A high-end Mac OS-inspired web application for managing Special Clothing and Personal Protective Equipment (PPE) compliant with Uzbekistan (OTY) and international standards.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -12,3 +12,4 @@ export { default as KorxonalarApp } from './KorxonalarApp/KorxonalarApp';
 export { default as KpiApp } from './KpiApp/KpiApp';
 export { default as AdminApp } from './AdminApp/AdminApp';
 export { default as ProfilApp } from './ProfilApp/ProfilApp';
+export { default as SafetyProApp } from './SafetyProApp';
